@@ -3,11 +3,13 @@ public class Process {
 	private int cpuBurst;
 	private int ioBurst;
 	private int period;
-
-	public Process(int PID, int cpuBurst, int ioBurst, int period) {
+	private int priority;
+	
+	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
 		this.PID = PID;
-		this.PID = cpuBurst;
+		this.cpuBurst = cpuBurst;
 		this.ioBurst = ioBurst;
+		this.priority = priority;
 		this.period = period;
 	}
 
@@ -17,14 +19,6 @@ public class Process {
 
 	public void setCpuBurst(int cpuBurst) {
 		this.cpuBurst = cpuBurst;
-	}
-
-	public int getIoBurst() {
-		return ioBurst;
-	}
-
-	public void setIoBurst(int ioBurst) {
-		this.ioBurst = ioBurst;
 	}
 
 	public void setPID(int pID) {
@@ -49,5 +43,17 @@ public class Process {
 
 	public int getPeriod() {
 		return period;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	
+	public String toString() {
+		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCpuBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
 	}
 }
