@@ -1,29 +1,53 @@
 public class Process {
-  private int PID;
-  private int cpuBurst;
-  private int ioBurst;
-  private int period;
+	private int PID;
+	private int cpuBurst;
+	private int ioBurst;
+	private int period;
 
-  public Process(int PID, int cpuBurst, int ioBurst, int period) {
-    this.PID = PID;
-    this.PID = cpuBurst;
-    this.ioBurst = ioBurst;
-    this.period = period;
-  }
+	public Process(int PID, int cpuBurst, int ioBurst, int period) {
+		this.PID = PID;
+		this.PID = cpuBurst;
+		this.ioBurst = ioBurst;
+		this.period = period;
+	}
 
-  public int getPID() {
-    return PID;
-  }
+	public int getCpuBurst() {
+		return cpuBurst;
+	}
 
-  public int getCPUBurst() {
-    return cpuBurst;
-  }
+	public void setCpuBurst(int cpuBurst) {
+		this.cpuBurst = cpuBurst;
+	}
 
-  public int getIOBurst() {
-    return ioBurst;
-  }
+	public int getIoBurst() {
+		return ioBurst;
+	}
 
-  public int getPeriod() {
-    return period;
-  }
+	public void setIoBurst(int ioBurst) {
+		this.ioBurst = ioBurst;
+	}
+
+	public void setPID(int pID) {
+		PID = pID;
+	}
+
+	public void setPeriod(int period) {
+		this.period = period;
+	}
+
+	public int getPID() {
+		return PID;
+	}
+
+	public int getCPUBurst() {
+		return cpuBurst;
+	}
+
+	public int getIOBurst() {
+		return ioBurst;
+	}
+
+	public int getPeriod() {
+		return period;
+	}
 }
