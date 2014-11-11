@@ -6,23 +6,20 @@ public abstract class Scheduler {
   public Scheduler(ProcessList processList) {
     this.processList = processList;
     //Move all the processes into the ready queue to start;
-    processList.initQueues();
+    processList.reinitialize();
   }
 
   public void schedule() {
-    if (currentProcess.isTerminated()) {
-      currentProcess = getNextReadyProcess();
-    } else if (currentProcess.isWaiting()) {
-      processList.startWaitingTimer(currentProcess);
+    if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
       currentProcess = getNextReadyProcess();
     }
     
-    processList.decrementWaitingProcesses();
+    processList.decrementCurentProcessesWaiting();
   }
 
   public Process getCurrentProcess() {
     return currentProcess;
   }
 
-  private abstract Process getNextReadyProcess();
+  public abstract Process getNextReadyProcess();
 }

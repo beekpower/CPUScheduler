@@ -44,7 +44,6 @@ public class ProcessList {
 					processes.add(process); // PI add this process to our master list of processes
 				}
 				lineNumber++; // PI increment our line number so we can parse the next line (if not empty)
-
 			}
 			fileReader.close(); // PI close out the file reader
 		} catch (IOException e) {
