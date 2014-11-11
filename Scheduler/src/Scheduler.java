@@ -11,6 +11,8 @@ public abstract class Scheduler {
     processList.reinitialize();
 
     this.currentProcess = this.getNextReadyProcess();
+    System.out.print(currentProcess.getPID() + " > ");
+
 
   }
 
@@ -21,7 +23,7 @@ public abstract class Scheduler {
     } else {
       if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
         currentProcess = getNextReadyProcess();
-        System.out.println(currentProcess.getPID());
+        System.out.print(currentProcess.getPID() + " > ");
       }
     }
     processList.decrementCurentProcessesWaiting();
