@@ -1,13 +1,12 @@
+public class SJFScheduler extends Scheduler {
 
-public class FCFSScheduler extends Scheduler{
-
-  public FCFSScheduler(ProcessList processList) {
-	  super(processList);
+  public SJFScheduler(ProcessList processList) {
+    super(processList);
   }
 
   public Process getNextReadyProcess() {
     if (processList.hasProcessInReadyQueue()) {
-      return processList.takeFirstProcessInReadyQueue();
+      return processList.takeReadyProcessWithShortestCPUBurst();
     } else {
       //Set the current process to null. The CPU will see this and enter an idle state
       return null;
