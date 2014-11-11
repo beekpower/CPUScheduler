@@ -58,11 +58,44 @@ public class ProcessList {
 	 * @return true if successfully found / removed
 	 */
 	public boolean removeFromReadyQueue(int pid) {
-		
+		boolean removed = false; //  PI return bool
+		Process process = this.findProcessInProcessList(pid); // PI grab process based on PID
+		if(process != null) { // PI make sure the process isnt null
+			this.readyQueue.remove(process); // PI remove process from ready queue
+			removed = true;
+		}
+		return removed;
 	}
 	
-	public void addtoReadyQueue(int pid) {
-		
+	/**
+	 * PI Adds the given process to the ready queue
+	 * @param pid
+	 */
+	public boolean addtoReadyQueue(int pid) {
+		boolean added = false; //  PI return bool
+		Process process = this.findProcessInProcessList(pid); // PI grab process based on PID
+		if(process != null) { // PI make sure the process isnt null
+			this.readyQueue.add(process); // PI add process to ready queue
+			added = true;
+		}
+		return added;
+	}
+	
+	/**
+	 * PI finds a process in the process list based on the supplied PID
+	 * @param pid process id
+	 * @return return a process; if not found return null
+	 */
+	private Process findProcessInProcessList(int pid) {
+		Process returnProcess = null;
+		// PI alright, loop through all processes and see if we can find it
+		for(Process process: this.processes) {
+			if(process.getPID() == pid) { // PI we found it!
+				returnProcess = process;
+				break;
+			}
+		}
+		return returnProcess;
 	}
 	
 	/**
