@@ -23,7 +23,7 @@ public abstract class Scheduler {
         System.out.print(currentProcess.getPID() + ">");
       }
     }
-    processList.decrementCurrentProcessesWaiting();
+    processList.decrementCurentProcessesWaiting();
   }
 
   public Process getCurrentProcess() {
