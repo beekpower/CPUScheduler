@@ -17,6 +17,7 @@ public class ProcessList {
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
+		readyQueue = new ArrayList<Process>() // PI instantiate the array list of the ready queue
 		try {
 			File file = new File(dataFile);		// PI Let's create a file object with a path to the data file
 			FileReader fileReader = new FileReader(file);	// PI create a new file reader
@@ -49,5 +50,25 @@ public class ProcessList {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * PI Searches for the process in the ready queue, and removes it if found
+	 * @param pid PID of the program to search for
+	 * @return true if successfully found / removed
+	 */
+	public boolean removeFromReadyQueue(int pid) {
+		
+	}
+	
+	public void addtoReadyQueue(int pid) {
+		
+	}
+	
+	/**
+	 * PI this method loops through all the processes, and for all processes that have the isWaiting flag set to true, it decrements that processes IO burst time 
+	 */
+	public void decrementCurentProcessesWaiting() {
+		// loop through all processes w/ flag isWaiting set to true, and decrement 
 	}
 }
