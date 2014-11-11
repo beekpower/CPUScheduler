@@ -7,7 +7,7 @@ public abstract class Scheduler {
     this.processList = processList;
     //Move all the processes into the ready queue to start;
     processList.reinitialize();
-    
+
     this.currentProcess = this.getNextReadyProcess();
     
   }
@@ -16,8 +16,8 @@ public abstract class Scheduler {
     if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
       currentProcess = getNextReadyProcess();
     }
-    
-    processList.decrementCurentProcessesWaiting();
+
+    processList.decrementCurrentProcessesWaiting();
   }
 
   public Process getCurrentProcess() {
