@@ -11,6 +11,7 @@ public abstract class Scheduler {
     processList.reinitialize();
 
     this.currentProcess = this.getNextReadyProcess();
+    
   }
 
   public void schedule() {
