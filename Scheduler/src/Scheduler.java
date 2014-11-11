@@ -7,6 +7,8 @@ public abstract class Scheduler {
     this.processList = processList;
     //Move all the processes into the ready queue to start;
     processList.reinitialize();
+    
+    this.currentProcess = this.getNextReadyProcess();
   }
 
   public void schedule() {

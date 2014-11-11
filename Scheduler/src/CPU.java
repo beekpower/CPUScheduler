@@ -10,7 +10,7 @@ public class CPU {
   }
 
   public void execute() {
-    while (true) {
+    while (scheduler.processList.anyJobsLeft()) {
       Process process = scheduler.getCurrentProcess();
       if (process != null) {
         process.processInstruction();

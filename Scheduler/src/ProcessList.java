@@ -122,4 +122,40 @@ public class ProcessList {
 			this.readyQueue.add(process); // PI add this process into the ready queue
 		}
 	}
+
+	/**
+	 * PI check to see if we have any processes left in the ready queue
+	 * @return
+	 */
+	public boolean hasProcessInReadyQueue() {
+		if(this.processes.size() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * PI check to see if we have any jobs left (any processes that are isTerminated
+	 * @return true / false to see if we have any processes left to process
+	 */
+	public boolean anyJobsLeft() {
+		boolean anyJobsLeft = false;
+		for(Process process: this.readyQueue) {
+			if(!process.isTerminated()) {
+				anyJobsLeft = true;
+				break;
+			}
+			
+		}
+		return anyJobsLeft;
+	}
+
+	/**
+	 * PI get the next process to be executed in the ready queue
+	 * @return the process located at index 0 in our ready queue array list
+	 */
+	public Process getFirstProcessInReadyQueue() {
+		return this.readyQueue.get(0);
+	}
 }
