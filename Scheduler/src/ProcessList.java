@@ -128,7 +128,7 @@ public class ProcessList {
 	 * @return
 	 */
 	public boolean hasProcessInReadyQueue() {
-		if(this.processes.size() > 0) {
+		if(this.readyQueue.size() > 0) { // PI check to see the size of the proceses in ready queue
 			return true;
 		} else {
 			return false;
@@ -141,12 +141,11 @@ public class ProcessList {
 	 */
 	public boolean anyJobsLeft() {
 		boolean anyJobsLeft = false;
-		for(Process process: this.readyQueue) {
-			if(!process.isTerminated()) {
-				anyJobsLeft = true;
+		for(Process process: this.readyQueue) { // PI loop through all processes
+			if(!process.isTerminated()) { // PI check to see if this process HASN'T been terminated
+				anyJobsLeft = true; // PI process is still active, we have jobs left!
 				break;
 			}
-			
 		}
 		return anyJobsLeft;
 	}
