@@ -152,10 +152,25 @@ public class ProcessList {
 	}
 
 	/**
-	 * PI get the next process to be executed in the ready queue
+	 * PI get the next process to be executed in the ready queue, AND remove it from the ready queue
 	 * @return the process located at index 0 in our ready queue array list
 	 */
-	public Process getFirstProcessInReadyQueue() {
-		return this.readyQueue.get(0);
+	public Process takeFirstProcessInReadyQueue() {
+		return this.readyQueue.remove(0);
+	}
+	
+	/**
+	 * PI returns the process with the shortest CPU burst, and removes it from the ready queue
+	 * @return
+	 */
+	public Process takeProcessWithShortestCPUBurst() {
+		Process processWithLeastCPUBurst = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getCPUBurst() < processWithLeastCPUBurst.getCPUBurst()) { // PI if the cur process' CPU test is less...
+				processWithLeastCPUBurst = process; // PI current process' CPU burst is less - let's use this process as the least
+			}
+		}
+		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
+		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
 }
