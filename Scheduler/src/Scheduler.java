@@ -22,7 +22,7 @@ public abstract class Scheduler {
         currentProcess = getNextReadyProcess();
       }
     }
-    processList.decrementCurrentProcessesWaiting();
+    processList.decrementCurentProcessesWaiting();
   }
 
   public Process getCurrentProcess() {
