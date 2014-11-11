@@ -98,18 +98,22 @@ public class Process {
 		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCPUBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
 	}
 
+	//Check the terminated state of the process
 	public boolean isTerminated() {
 		return isTerminated;
 	}
 
+  //Set the terminated state of the process
 	public void setTerminated(boolean isTerminated) {
 		this.isTerminated = isTerminated;
 	}
 
+	//Check the waiting state of teh process
 	public boolean isWaiting() {
 		return isWaiting;
 	}
 
+	//Set the waiting state of the process
 	public void setWaiting(boolean isWaiting) {
 		this.isWaiting = isWaiting;
 	}
