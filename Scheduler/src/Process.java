@@ -2,7 +2,7 @@ public class Process {
 	private int PID;
 	private int initCPUBurst;
 	private int cpuBurst;
-	private int initIOBurst
+	private int initIOBurst;
 	private int ioBurst;
 	private int period;
 	private int priority;
@@ -25,13 +25,13 @@ public class Process {
 		cpuBurst--;
 		//If the CPU burst reaches 0, then the process is terminated
 		if (cpuBurst == 0) {
-			isTerminated = true;
+			setTerminated(true);
 		}
 
 		//If we have processed half of the CPU burst
 		//then it is time to enter the I/O burst and enter the waiting state
-		if (initBurst / 2 == cpuBurst) {
-			isWaiting = true;
+		if (initCPUBurst / 2 == cpuBurst) {
+			setWaiting(true);
 		}
 	}
 
@@ -39,8 +39,8 @@ public class Process {
 	public void reset() {
 		this.cpuBurst = initCPUBurst;
 		this.ioBurst = initIOBurst;
-		isTerminated = false;
-		isWaiting = false;
+		setTerminated(false);
+		setWaiting(false);
 	}
 
 	//Decrement the IO Burst
@@ -95,6 +95,22 @@ public class Process {
 
 	//Convert the propreties to string format
 	public String toString() {
-		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCpuBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
+		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCPUBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
+	}
+
+	public boolean isTerminated() {
+		return isTerminated;
+	}
+
+	public void setTerminated(boolean isTerminated) {
+		this.isTerminated = isTerminated;
+	}
+
+	public boolean isWaiting() {
+		return isWaiting;
+	}
+
+	public void setWaiting(boolean isWaiting) {
+		this.isWaiting = isWaiting;
 	}
 }
