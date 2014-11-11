@@ -102,6 +102,10 @@ public class ProcessList {
 	 * PI this method loops through all the processes, and for all processes that have the isWaiting flag set to true, it decrements that processes IO burst time 
 	 */
 	public void decrementCurentProcessesWaiting() {
-		// loop through all processes w/ flag isWaiting set to true, and decrement 
+		for(Process process: this.processes) { // PI loop through all processes
+			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
+				process.decrementIOBurst(); // PI decrement process' I/O burst
+			}
+		}
 	}
 }
