@@ -16,6 +16,8 @@ public abstract class Scheduler {
       processList.startWaitingTimer(currentProcess);
       currentProcess = getNextReadyProcess();
     }
+    
+    processList.decrementWaitingProcesses();
   }
 
   public Process getCurrentProcess() {
