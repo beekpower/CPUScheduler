@@ -6,8 +6,8 @@ public class Process {
 	private int ioBurst;
 	private int period;
 	private int priority;
-	private boolean isTerminated = false;
-	private boolean isWaiting = false;
+	private boolean terminated = false;
+	private boolean waiting = false;
 
 	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
 		this.PID = PID;
@@ -46,6 +46,9 @@ public class Process {
 	//Decrement the IO Burst
 	public void decrementIOBurst() {
 		ioBurst--;
+		if (ioBurst == 0) {
+			setWaiting(false);
+		}
 	}
 
 	//Return the CPU Burst of the process
@@ -100,21 +103,21 @@ public class Process {
 
 	//Check the terminated state of the process
 	public boolean isTerminated() {
-		return isTerminated;
+		return terminated;
 	}
 
   //Set the terminated state of the process
-	public void setTerminated(boolean isTerminated) {
-		this.isTerminated = isTerminated;
+	public void setTerminated(boolean terminated) {
+		this.terminated = terminated;
 	}
 
 	//Check the waiting state of teh process
 	public boolean isWaiting() {
-		return isWaiting;
+		return waiting;
 	}
 
 	//Set the waiting state of the process
-	public void setWaiting(boolean isWaiting) {
-		this.isWaiting = isWaiting;
+	public void setWaiting(boolean waiting) {
+		this.waiting = waiting;
 	}
 }
