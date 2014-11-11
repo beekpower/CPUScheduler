@@ -13,7 +13,7 @@ public class CPU {
     while (true) {
       Process process = scheduler.getCurrentProcess();
       if (process != null) {
-        process.processIntruction;
+        process.processInstruction();
         busyCycles++;
       } else {
         idleCycles++;
