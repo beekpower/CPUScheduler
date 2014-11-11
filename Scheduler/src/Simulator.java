@@ -21,7 +21,7 @@ public class Simulator {
     }
 
 		//Create an FCFSScheduler and execute it
-		FCFSScheduler fcfsScheduler = new FCFSScheduler(processList);
+		Scheduler fcfsScheduler = new FCFSScheduler(processList);
 		CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
 		fcfsCPU.execute();
 
