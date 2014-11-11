@@ -2,7 +2,6 @@ public class SJFScheduler extends Scheduler {
 
   public SJFScheduler(ProcessList processList) {
     super(processList);
-    preemptive = true;
   }
 
   public Process getNextReadyProcess() {

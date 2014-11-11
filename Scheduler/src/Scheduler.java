@@ -15,12 +15,13 @@ public abstract class Scheduler {
   }
 
   public void schedule() {
+
     if (preemptive) {
       getNextReadyProcess();
     } else {
       if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
         currentProcess = getNextReadyProcess();
-        System.out.print(currentProcess.getPID() + ">");
+        System.out.println(currentProcess.getPID());
       }
     }
     processList.decrementCurentProcessesWaiting();

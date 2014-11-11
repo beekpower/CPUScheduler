@@ -3,7 +3,6 @@ public class FCFSScheduler extends Scheduler{
 
   public FCFSScheduler(ProcessList processList) {
 	  super(processList);
-    preemptive = true;
   }
 
   public Process getNextReadyProcess() {

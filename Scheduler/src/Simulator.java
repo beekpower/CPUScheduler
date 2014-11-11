@@ -20,9 +20,10 @@ public class Simulator {
     } else {
     	System.out.println("You must enter in the name of the datafile + number of cycles to snapshot as an argument!");
     }
-	//Create an FCFSScheduler and execute it
-	Scheduler fcfsScheduler = new FCFSScheduler(processList);
-	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
-	fcfsCPU.execute();
+	  //Create an FCFSScheduler and execute it
+	  Scheduler fcfsScheduler = new FCFSScheduler(processList);
+	  CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
+		System.out.println("Starting CPU Execution of FCFS");
+	  fcfsCPU.execute();
   }
 }
