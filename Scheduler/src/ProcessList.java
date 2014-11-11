@@ -99,13 +99,28 @@ public class ProcessList {
 	}
 	
 	/**
-	 * PI this method loops through all the processes, and for all processes that have the isWaiting flag set to true, it decrements that processes IO burst time 
+	 * PI this method loops through all the processes, and for all processes 
+	 * that have the isWaiting flag set to true, it decrements that processes IO burst time 
 	 */
 	public void decrementCurentProcessesWaiting() {
 		for(Process process: this.processes) { // PI loop through all processes
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
 				process.decrementIOBurst(); // PI decrement process' I/O burst
 			}
+		}
+	}
+	
+	/**
+	 * PI called whenever the process list is to reinitalize itself by clearing the
+	 *  ready queue, reset  all it's processes, and then move all the processes into 
+	 *  the ready queue
+	 */
+	public void reinitialize() {
+		this.readyQueue.clear(); // PI clear ready queue
+		// PI now reset all processes
+		for(Process process: this.processes) {
+			process.reset(); // PI reset the current process back to it's initial state
+			this.readyQueue.add(process); // PI add this process into the ready queue
 		}
 	}
 }
