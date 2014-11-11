@@ -2,6 +2,8 @@
 public abstract class Scheduler {
   Process currentProcess;
   ProcessList processList;
+  Boolean preemptive = false;
+
 
   public Scheduler(ProcessList processList) {
     this.processList = processList;
@@ -12,10 +14,13 @@ public abstract class Scheduler {
   }
 
   public void schedule() {
-    if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-      currentProcess = getNextReadyProcess();
+    if (preemptive) {
+      getNextReadyProcess();
+    } else {
+      if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        currentProcess = getNextReadyProcess();
+      }
     }
-
     processList.decrementCurrentProcessesWaiting();
   }
 
