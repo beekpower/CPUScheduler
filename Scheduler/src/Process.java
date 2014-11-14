@@ -18,6 +18,14 @@ public class Process {
 		this.priority = priority;
 		this.period = period;
 	}
+	
+	/**
+	 * PI copy's this process and returns a new one
+	 * @return
+	 */
+	public Process copyProcess() {
+		return new Process(this.getPID(), this.getCPUBurst(), this.getIOBurst(), this.getPriority(), this.getPriority());
+	}
 
   //The CPU calls this to process the next inrcution/CPU burst
 	public void processInstruction() {
