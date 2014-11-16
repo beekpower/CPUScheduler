@@ -176,4 +176,13 @@ public class ProcessList {
 		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
 		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
+
+	/**
+	 * PI take a snapshot of the current CPU
+	 * @param cpu CPU to take a snapshot of
+	 */
+	public void takeSnapshot(CPU cpu) {
+		// TODO Auto-generated method stub
+		
+	}
 }
