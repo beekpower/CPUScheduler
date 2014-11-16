@@ -3,6 +3,7 @@ public class SJRScheduler extends Scheduler {
   public SJRScheduler(ProcessList processList) {
     super(processList);
     preemptive = true;
+    this.readableName = "SJR";
   }
 
   public Process getNextProcess() {

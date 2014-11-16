@@ -2,6 +2,7 @@ public class SJFScheduler extends Scheduler {
 
   public SJFScheduler(ProcessList processList) {
     super(processList);
+    this.readableName = "SJF";
   }
 
   public Process getNextProcess() {
