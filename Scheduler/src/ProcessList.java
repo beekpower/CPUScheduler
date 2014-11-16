@@ -199,7 +199,8 @@ public class ProcessList {
 		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), cpu.currentProcessProcessing.getPID(), cpu.cycleCount);
 		// PI now print the snapshot
 		try {
-			FileWriter fileWriter = new FileWriter("snapshot.dat", true);
+			FileWriter fileWriter = new FileWriter("snapshot.dat", true); // PI make a new file writer
+			// PI now ouput all the junk needed
 			fileWriter.write("==================================================\n");
 			fileWriter.write(snapshot.scheduler.readableName+" Snapshot at Cycle "+snapshot.cycle+"\n");
 			fileWriter.write("\n");
@@ -222,9 +223,9 @@ public class ProcessList {
 			} else {
 				fileWriter.write("None\n");
 			}
-			fileWriter.close();
+			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
-			
+			// uh oh
 		}
 	}
 }
