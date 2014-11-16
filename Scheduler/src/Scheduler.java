@@ -35,5 +35,5 @@ public abstract class Scheduler {
     return currentProcess;
   }
 
-  public abstract Process getNextReadyProcess();
+  public abstract Process getNextProcess();
 }
