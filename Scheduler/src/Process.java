@@ -6,6 +6,7 @@ public class Process {
 	private int ioBurst;
 	private int period;
 	private int priority;
+	private int counter;
 	private boolean terminated = false;
 	private boolean waiting = false;
 
@@ -17,8 +18,9 @@ public class Process {
 		this.initIOBurst = ioBurst;
 		this.priority = priority;
 		this.period = period;
+		this.counter = 0;
 	}
-	
+
 	/**
 	 * PI copy's this process and returns a new one
 	 * @return
@@ -29,6 +31,8 @@ public class Process {
 
   //The CPU calls this to process the next inrcution/CPU burst
 	public void processInstruction() {
+		//increment the counter for RR
+		counter++;
 		//Decrement the CPU burst
 		cpuBurst--;
 		//If the CPU burst reaches 0, then the process is terminated
@@ -43,12 +47,21 @@ public class Process {
 		}
 	}
 
+	public void resetCounter() {
+		counter = 0;
+	}
+
+	public int getCounter() {
+		return counter;
+	}
+
 	//Reset the state of the process back to when it was first loaded in
 	public void reset() {
 		this.cpuBurst = initCPUBurst;
 		this.ioBurst = initIOBurst;
 		setTerminated(false);
 		setWaiting(false);
+		counter = 0;
 	}
 
 	//Decrement the IO Burst
