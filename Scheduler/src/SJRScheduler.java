@@ -5,16 +5,19 @@ public class SJRScheduler extends Scheduler {
     preemptive = true;
   }
 
-  public Process getNextReadyProcess() {
+  public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
-      if (currentProcess != null) {
-        if (currentProcess.getCPUBurst() > processList.getProcessWithShortestCPUBurst().getCPUBurst()) {
+      if (currentProcess == null) {
+        return processList.takeProcessWithShortestCPUBurst();
+      } else {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+          return processList.takeProcessWithShortestCPUBurst();
+        } else if (currentProcess.getCPUBurst() > processList.getProcessWithShortestCPUBurst().getCPUBurst()) {
+          processList.addtoReadyQueue(currentProcess);
           return processList.takeProcessWithShortestCPUBurst();
         } else {
           return currentProcess;
         }
-      } else {
-        return processList.takeProcessWithShortestCPUBurst();
       }
     } else {
       //Set the current process to null. The CPU will see this and enter an idle state
