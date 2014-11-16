@@ -24,5 +24,10 @@ public class Simulator {
 	  Scheduler fcfsScheduler = new FCFSScheduler(processList);
 	  CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
 	  fcfsCPU.execute();
+
+		//Create an SJF Scheduler and execute it
+		Scheduler sjfScheduler = new SJFScheduler(processList);
+		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
+		sjfCPU.execute();
   }
 }

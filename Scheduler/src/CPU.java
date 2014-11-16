@@ -30,6 +30,7 @@ public class CPU {
       }
       scheduler.schedule();
     }
+    System.out.println("\ncomplete execute \n\n");
   }
 
 }
