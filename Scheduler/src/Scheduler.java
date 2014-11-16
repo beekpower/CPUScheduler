@@ -11,7 +11,7 @@ public abstract class Scheduler {
     //Move all the processes into the ready queue to start;
     processList.reinitialize();
 
-    this.currentProcess = this.getNextReadyProcess();
+    this.currentProcess = this.getNextProcess();
     System.out.print(currentProcess.getPID() + " > ");
 
 
@@ -20,11 +20,11 @@ public abstract class Scheduler {
   public void schedule() {
 
     if (preemptive) {
-      getNextReadyProcess();
+      currentProcess = getNextProcess();
       System.out.print(currentProcess.getPID() + " > ");
     } else {
       if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-        currentProcess = getNextReadyProcess();
+        currentProcess = getNextProcess();
         System.out.print(currentProcess.getPID() + " > ");
       }
     }
@@ -35,5 +35,5 @@ public abstract class Scheduler {
     return currentProcess;
   }
 
-  public abstract Process getNextReadyProcess();
+  public abstract Process getNextProcess();
 }
