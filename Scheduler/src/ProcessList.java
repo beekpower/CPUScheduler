@@ -12,7 +12,9 @@ import java.util.ArrayList;
 public class ProcessList {
 	private ArrayList<Process> processes;
 	private ArrayList<Process> readyQueue;
+	private ArrayList<Process> ioQueue; // TODO
 	private int numberProcesses;
+	private int processesCurrentlyProcessing; // TODO
 	private int quantum;
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
@@ -182,7 +184,7 @@ public class ProcessList {
 	 * @param cpu CPU to take a snapshot of
 	 */
 	public void takeSnapshot(CPU cpu) {
-		// TODO Auto-generated method stub
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.ioQueue, processesCurrentlyProcessing, cpu.cycleCount);
 		
 	}
 }
