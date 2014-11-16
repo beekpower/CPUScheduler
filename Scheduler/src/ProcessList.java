@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -14,13 +15,15 @@ public class ProcessList {
 	private ArrayList<Process> readyQueue;
 	private ArrayList<Process> ioQueue; // TODO
 	private int numberProcesses;
-	private int processesCurrentlyProcessing; // TODO
 	private int quantum;
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
 		ioQueue = new ArrayList<Process>(); // PI instantiate the IO queue
+		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
+		snapshotFile.delete();
+		
 		try {
 			File file = new File(dataFile);		// PI Let's create a file object with a path to the data file
 			FileReader fileReader = new FileReader(file);	// PI create a new file reader
@@ -185,7 +188,35 @@ public class ProcessList {
 	 * @param cpu CPU to take a snapshot of
 	 */
 	public void takeSnapshot(CPU cpu) {
-		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.ioQueue, processesCurrentlyProcessing, cpu.cycleCount);
-		
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.ioQueue, cpu.currentProcessProcessing.getPID(), cpu.cycleCount);
+		// PI now print the snapshot
+		try {
+			FileWriter fileWriter = new FileWriter("snapshot.dat", true);
+			fileWriter.write("==================================================\n");
+			fileWriter.write(snapshot.scheduler.readableName+" Snapshot at Cycle "+snapshot.cycle+"\n");
+			fileWriter.write("\n");
+			fileWriter.write("Process Currently Processing: "+snapshot.processCurrentlyProcessing+"\n");
+			fileWriter.write("\n");
+			fileWriter.write("Processes in Ready Queue\n");
+			if(snapshot.processesInReadyQueue.size() > 0) {
+				for(Integer pid: snapshot.processesInReadyQueue) {
+					fileWriter.write(">"+pid+"\n");
+				}
+			} else {
+				fileWriter.write("None\n");
+			}
+			fileWriter.write("\n");
+			fileWriter.write("Processes in IO\n");
+			if(snapshot.processesInIO.size() > 0) {
+				for(Integer pid: snapshot.processesInIO) {
+					fileWriter.write(">"+pid+"\n");
+				}
+			} else {
+				fileWriter.write("None\n");
+			}
+			fileWriter.close();
+		} catch (IOException e) {
+			
+		}
 	}
 }

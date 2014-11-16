@@ -3,6 +3,7 @@ public abstract class Scheduler {
   Process currentProcess;
   ProcessList processList;
   Boolean preemptive = false;
+  public String readableName;
 
 
   public Scheduler(ProcessList processList) {

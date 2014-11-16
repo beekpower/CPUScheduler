@@ -3,6 +3,7 @@ public class FCFSScheduler extends Scheduler{
 
   public FCFSScheduler(ProcessList processList) {
 	  super(processList);
+	  this.readableName = "FCFS";
   }
 
   public Process getNextReadyProcess() {

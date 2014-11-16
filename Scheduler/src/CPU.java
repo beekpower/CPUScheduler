@@ -6,6 +6,7 @@ public class CPU {
   long idleCycles = 0;
   int cycleCount = 0; // PI add in a cycle counter
   int snapshotInterval = 0;
+  Process currentProcessProcessing;
 
   public CPU(Scheduler scheduler, int snapshotInterval) {
     this.scheduler = scheduler;
@@ -15,9 +16,9 @@ public class CPU {
 
   public void execute() {
     while (scheduler.processList.anyJobsLeft()) {
-      Process process = scheduler.getCurrentProcess();
-      if (process != null) {
-        process.processInstruction();
+      currentProcessProcessing = scheduler.getCurrentProcess();
+      if (currentProcessProcessing != null) {
+    	  currentProcessProcessing.processInstruction();
         busyCycles++;
       } else {
         idleCycles++;
