@@ -4,7 +4,7 @@ public class SJFScheduler extends Scheduler {
     super(processList);
   }
 
-  public Process getNextReadyProcess() {
+  public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
       return processList.takeProcessWithShortestCPUBurst();
     } else {

@@ -6,7 +6,7 @@ public class FCFSScheduler extends Scheduler{
 	  this.readableName = "FCFS";
   }
 
-  public Process getNextReadyProcess() {
+  public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
       return processList.takeFirstProcessInReadyQueue();
     } else {
