@@ -20,6 +20,7 @@ public class ProcessList {
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
+		ioQueue = new ArrayList<Process>(); // PI instantiate the IO queue
 		try {
 			File file = new File(dataFile);		// PI Let's create a file object with a path to the data file
 			FileReader fileReader = new FileReader(file);	// PI create a new file reader
