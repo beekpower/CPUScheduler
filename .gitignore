@@ -1,1 +1,4 @@
 bin/
+.metadata/
+Scheduler/FinalReport.txt
+Scheduler/snapshot.dat
