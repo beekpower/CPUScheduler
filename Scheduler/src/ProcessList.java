@@ -13,14 +13,12 @@ import java.util.ArrayList;
 public class ProcessList {
 	private ArrayList<Process> processes;
 	private ArrayList<Process> readyQueue;
-	private ArrayList<Process> ioQueue; // TODO
 	private int numberProcesses;
 	private int quantum;
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
-		ioQueue = new ArrayList<Process>(); // PI instantiate the IO queue
 		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
 		snapshotFile.delete();
 		
@@ -182,13 +180,23 @@ public class ProcessList {
 		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
 		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
+	
+	public ArrayList<Process> getProcessesInIO() {
+		ArrayList<Process> returnProcesses = new ArrayList<Process>();
+		for(Process process: this.processes) {
+			if(process.isWaiting() && !process.isTerminated()) {
+				returnProcesses.add(process);
+			}
+		}
+		return returnProcesses;
+	}
 
 	/**
 	 * PI take a snapshot of the current CPU
 	 * @param cpu CPU to take a snapshot of
 	 */
 	public void takeSnapshot(CPU cpu) {
-		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.ioQueue, cpu.currentProcessProcessing.getPID(), cpu.cycleCount);
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), cpu.currentProcessProcessing.getPID(), cpu.cycleCount);
 		// PI now print the snapshot
 		try {
 			FileWriter fileWriter = new FileWriter("snapshot.dat", true);
