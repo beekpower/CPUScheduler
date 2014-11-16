@@ -29,12 +29,15 @@ public class FinalReport {
 	 * @param process process to add
 	 */
 	public void addProcess(Process process) {
+		int pid = process.getPID();
 		if(lastAddedPID > -1) {
-			if(lastAddedPID != process.getPID()) {
-				executionOrder.add(process.getPID());
+			if(lastAddedPID != pid) {
+				lastAddedPID = pid;
+				executionOrder.add(pid);
 			}
 		} else {
-			executionOrder.add(process.getPID());
+			lastAddedPID = pid;
+			executionOrder.add(pid);
 		}
 	}
 
