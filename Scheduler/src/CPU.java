@@ -34,6 +34,8 @@ public class CPU {
       scheduler.schedule();
     }
     System.out.println("\ncomplete execute \n\n");
+    // PI now print out the report
+    finalReport.printFinalReport();
   }
 
 }

@@ -21,6 +21,8 @@ public class ProcessList {
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
 		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
 		snapshotFile.delete();
+		File finalReportFile = new File("FinalReport.txt");// P IDelete the existing snapshot.dat file
+		finalReportFile.delete();
 
 		try {
 			File file = new File(dataFile);		// PI Let's create a file object with a path to the data file
@@ -77,6 +79,19 @@ public class ProcessList {
 	public boolean addtoReadyQueue(int pid) {
 		boolean added = false; //  PI return bool
 		Process process = this.findProcessInProcessList(pid); // PI grab process based on PID
+		if(process != null) { // PI make sure the process isnt null
+			this.readyQueue.add(process); // PI add process to ready queue
+			added = true;
+		}
+		return added;
+	}
+	
+	/**
+	 * PI Adds the given process to the ready queue
+	 * @param process process to add
+	 */
+	public boolean addtoReadyQueue(Process process) {
+		boolean added = false; //  PI return bool
 		if(process != null) { // PI make sure the process isnt null
 			this.readyQueue.add(process); // PI add process to ready queue
 			added = true;

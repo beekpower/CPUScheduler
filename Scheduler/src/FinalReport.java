@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -33,6 +35,32 @@ public class FinalReport {
 			}
 		} else {
 			executionOrder.add(process.getPID());
+		}
+	}
+
+	public void printFinalReport() {
+		try {
+			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer
+			// PI now output all the junk needed
+			fileWriter.write("==================================================\n");
+			fileWriter.write("Final report for "+this.cpu.scheduler.readableName+"\n");
+			fileWriter.write("CPU Execution order for "+this.cpu.scheduler.readableName+"\n");
+			for(Integer pid: executionOrder) {
+				fileWriter.write(">"+pid+"\n");
+			}/*
+			fileWriter.write("\n");
+			fileWriter.write("Processes in IO\n");
+			if(processesInIO.size() > 0) {
+				for(Integer pid: processesInIO) {
+					fileWriter.write(">"+pid+"\n");
+				}
+			} else {
+				fileWriter.write("None\n");
+			}*/
+			fileWriter.close(); // PI close the file writer
+		} catch (IOException e) {
+			// uh oh
+			e.printStackTrace();
 		}
 	}
 }
