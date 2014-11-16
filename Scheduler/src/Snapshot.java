@@ -36,7 +36,7 @@ public class Snapshot {
 	 */
 	public void printSnapshot(FileWriter fileWriter) {
 		try {
-			// PI now ouput all the junk needed
+			// PI now output all the junk needed
 			fileWriter.write("==================================================\n");
 			fileWriter.write(scheduler.readableName+" Snapshot at Cycle "+cycle+"\n");
 			fileWriter.write("\n");
