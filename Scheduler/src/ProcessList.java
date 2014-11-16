@@ -21,7 +21,7 @@ public class ProcessList {
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
 		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
 		snapshotFile.delete();
-		
+
 		try {
 			File file = new File(dataFile);		// PI Let's create a file object with a path to the data file
 			FileReader fileReader = new FileReader(file);	// PI create a new file reader
@@ -54,7 +54,7 @@ public class ProcessList {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * PI Searches for the process in the ready queue, and removes it if found
 	 * @param pid PID of the program to search for
@@ -69,7 +69,7 @@ public class ProcessList {
 		}
 		return removed;
 	}
-	
+
 	/**
 	 * PI Adds the given process to the ready queue
 	 * @param pid
@@ -83,7 +83,7 @@ public class ProcessList {
 		}
 		return added;
 	}
-	
+
 	/**
 	 * PI finds a process in the process list based on the supplied PID
 	 * @param pid process id
@@ -100,10 +100,10 @@ public class ProcessList {
 		}
 		return returnProcess;
 	}
-	
+
 	/**
-	 * PI this method loops through all the processes, and for all processes 
-	 * that have the isWaiting flag set to true, it decrements that processes IO burst time 
+	 * PI this method loops through all the processes, and for all processes
+	 * that have the isWaiting flag set to true, it decrements that processes IO burst time
 	 */
 	public void decrementCurentProcessesWaiting() {
 		for(Process process: this.processes) { // PI loop through all processes
@@ -116,10 +116,10 @@ public class ProcessList {
 			}
 		}
 	}
-	
+
 	/**
 	 * PI called whenever the process list is to reinitalize itself by clearing the
-	 *  ready queue, reset  all it's processes, and then move all the processes into 
+	 *  ready queue, reset  all it's processes, and then move all the processes into
 	 *  the ready queue
 	 */
 	public void reinitialize() {
@@ -165,7 +165,7 @@ public class ProcessList {
 	public Process takeFirstProcessInReadyQueue() {
 		return this.readyQueue.remove(0);
 	}
-	
+
 	/**
 	 * PI returns the process with the shortest CPU burst, and removes it from the ready queue
 	 * @return
@@ -180,7 +180,17 @@ public class ProcessList {
 		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
 		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
-	
+
+	public Process getProcessWithShortestCPUBurst() {
+		Process processWithLeastCPUBurst = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getCPUBurst() < processWithLeastCPUBurst.getCPUBurst()) { // PI if the cur process' CPU test is less...
+				processWithLeastCPUBurst = process; // PI current process' CPU burst is less - let's use this process as the least
+			}
+		}
+		return processWithLeastCPUBurst; // PI return the process with least CPU burst
+	}
+
 	public ArrayList<Process> getProcessesInIO() {
 		ArrayList<Process> returnProcesses = new ArrayList<Process>();
 		for(Process process: this.processes) {

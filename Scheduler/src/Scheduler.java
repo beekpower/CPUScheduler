@@ -21,6 +21,7 @@ public abstract class Scheduler {
 
     if (preemptive) {
       getNextReadyProcess();
+      System.out.print(currentProcess.getPID() + " > ");
     } else {
       if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
         currentProcess = getNextReadyProcess();
