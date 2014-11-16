@@ -59,7 +59,6 @@ public class FinalReport {
 			}
 			fileWriter.write("Done\n");
 			fileWriter.write("\n");
-			fileWriter.write("Processes in IO\n");
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
 			// uh oh
