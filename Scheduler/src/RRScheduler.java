@@ -1,11 +1,9 @@
 public class RRScheduler extends Scheduler {
-  int quantum;
 
-  public RRScheduler(ProcessList processList, int quantum) {
+  public RRScheduler(ProcessList processList) {
     super(processList);
     preemptive = true;
     this.readableName = "RR";
-    this.quantum = quantum;
   }
 
   public Process getNextProcess() {
@@ -16,7 +14,7 @@ public class RRScheduler extends Scheduler {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
           currentProcess.resetCounter();
           return processList.takeFirstProcessInReadyQueue();
-        } else if (currentProcess.getCounter() == quantum) {
+        } else if (currentProcess.getCounter() == processList.getQuantum()) {
           currentProcess.resetCounter();
           processList.addtoReadyQueue(currentProcess);
           return processList.takeFirstProcessInReadyQueue();

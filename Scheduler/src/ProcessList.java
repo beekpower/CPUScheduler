@@ -85,7 +85,7 @@ public class ProcessList {
 		}
 		return added;
 	}
-	
+
 	/**
 	 * PI Adds the given process to the ready queue
 	 * @param process process to add
@@ -215,7 +215,7 @@ public class ProcessList {
 		}
 		return returnProcesses;
 	}
-	
+
 	/**
 	 * PI get process with highest priority
 	 * @return
@@ -229,6 +229,10 @@ public class ProcessList {
 		}
 		this.readyQueue.remove(processWithHighestPriority);
 		return processWithHighestPriority; // PI return the process with highest priority
+	}
+
+	public int getQuantum() {
+		return quantum;
 	}
 
 	/**
