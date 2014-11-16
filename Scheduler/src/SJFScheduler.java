@@ -6,7 +6,7 @@ public class SJFScheduler extends Scheduler {
 
   public Process getNextReadyProcess() {
     if (processList.hasProcessInReadyQueue()) {
-      return processList.takeReadyProcessWithShortestCPUBurst();
+      return processList.takeProcessWithShortestCPUBurst();
     } else {
       //Set the current process to null. The CPU will see this and enter an idle state
       return null;
