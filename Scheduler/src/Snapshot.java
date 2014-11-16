@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -25,6 +27,41 @@ public class Snapshot {
 		// PI copy all the processes in the IO queue to our array list
 		for(Process process: ioQueue) {
 			this.processesInIO.add(process.getPID());
+		}
+	}
+	
+	/**
+	 * Prints this snapshot to the file writer
+	 * @param fileWriter
+	 */
+	public void printSnapshot(FileWriter fileWriter) {
+		try {
+			// PI now ouput all the junk needed
+			fileWriter.write("==================================================\n");
+			fileWriter.write(scheduler.readableName+" Snapshot at Cycle "+cycle+"\n");
+			fileWriter.write("\n");
+			fileWriter.write("Process Currently Processing: "+processCurrentlyProcessing+"\n");
+			fileWriter.write("\n");
+			fileWriter.write("Processes in Ready Queue\n");
+			if(processesInReadyQueue.size() > 0) {
+				for(Integer pid: processesInReadyQueue) {
+					fileWriter.write(">"+pid+"\n");
+				}
+			} else {
+				fileWriter.write("None\n");
+			}
+			fileWriter.write("\n");
+			fileWriter.write("Processes in IO\n");
+			if(processesInIO.size() > 0) {
+				for(Integer pid: processesInIO) {
+					fileWriter.write(">"+pid+"\n");
+				}
+			} else {
+				fileWriter.write("None\n");
+			}
+		} catch (IOException e) {
+			// uh oh
+			e.printStackTrace();
 		}
 	}
 }

@@ -200,29 +200,7 @@ public class ProcessList {
 		// PI now print the snapshot
 		try {
 			FileWriter fileWriter = new FileWriter("snapshot.dat", true); // PI make a new file writer
-			// PI now ouput all the junk needed
-			fileWriter.write("==================================================\n");
-			fileWriter.write(snapshot.scheduler.readableName+" Snapshot at Cycle "+snapshot.cycle+"\n");
-			fileWriter.write("\n");
-			fileWriter.write("Process Currently Processing: "+snapshot.processCurrentlyProcessing+"\n");
-			fileWriter.write("\n");
-			fileWriter.write("Processes in Ready Queue\n");
-			if(snapshot.processesInReadyQueue.size() > 0) {
-				for(Integer pid: snapshot.processesInReadyQueue) {
-					fileWriter.write(">"+pid+"\n");
-				}
-			} else {
-				fileWriter.write("None\n");
-			}
-			fileWriter.write("\n");
-			fileWriter.write("Processes in IO\n");
-			if(snapshot.processesInIO.size() > 0) {
-				for(Integer pid: snapshot.processesInIO) {
-					fileWriter.write(">"+pid+"\n");
-				}
-			} else {
-				fileWriter.write("None\n");
-			}
+			snapshot.printSnapshot(fileWriter);
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
 			// uh oh
