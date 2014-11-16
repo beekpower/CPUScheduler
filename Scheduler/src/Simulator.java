@@ -20,19 +20,24 @@ public class Simulator {
     } else {
     	System.out.println("You must enter in the name of the datafile + number of cycles to snapshot as an argument!");
     }
-	  //Create an FCFSScheduler and execute it
-	  Scheduler fcfsScheduler = new FCFSScheduler(processList);
-	  CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
-	  fcfsCPU.execute();
+    	//Create an FCFSScheduler and execute it
+	  	Scheduler fcfsScheduler = new FCFSScheduler(processList);
+	  	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
+	  	fcfsCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjfScheduler = new SJFScheduler(processList);
 		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
 		sjfCPU.execute();
-
+	
 		//Create an SJF Scheduler and execute it
 		Scheduler sjrScheduler = new SJRScheduler(processList);
 		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 		sjrCPU.execute();
+		
+		//Create a PS Scheduler and execute it
+		Scheduler psScheduler = new PSScheduler(processList);
+		CPU psCPU = new CPU(psScheduler, snapshotInterval);
+		psCPU.execute();
   }
 }
