@@ -35,14 +35,14 @@ public class Simulator {
 		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 		sjrCPU.execute();
 
-		//Create a RR Scheduler and execute it
-		Scheduler rrScheduler = new RRScheduler(processList);
-		CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
-		rrCPU.execute();
-
 		//Create a PS Scheduler and execute it
 		Scheduler psScheduler = new PSScheduler(processList);
 		CPU psCPU = new CPU(psScheduler, snapshotInterval);
 		psCPU.execute();
+
+		//Create a RR Scheduler and execute it
+		Scheduler rrScheduler = new RRScheduler(processList);
+		CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
+		rrCPU.execute();
   }
 }
