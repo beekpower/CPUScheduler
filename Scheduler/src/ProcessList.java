@@ -164,7 +164,7 @@ public class ProcessList {
 	 */
 	public boolean anyJobsLeft() {
 		boolean anyJobsLeft = false;
-		for(Process process: this.readyQueue) { // PI loop through all processes
+		for(Process process: this.processes) { // PI loop through all processes
 			if(!process.isTerminated()) { // PI check to see if this process HASN'T been terminated
 				anyJobsLeft = true; // PI process is still active, we have jobs left!
 				break;
