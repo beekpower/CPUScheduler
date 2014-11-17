@@ -52,6 +52,9 @@ public class FinalReport {
 			fileWriter.write("CPU Execution order for "+this.cpu.scheduler.readableName+"\n");
 			int outputCount = 0;
 			for(Integer pid: executionOrder) {
+				if(outputCount == 0) { // PI is this the first line?
+					fileWriter.write("\t"); // PI put in a tab for format
+				}
 				fileWriter.write("PID"+pid+" >> ");
 				outputCount++;
 				if(outputCount >= 6) {
