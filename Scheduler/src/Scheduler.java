@@ -19,8 +19,12 @@ public abstract class Scheduler {
     if (preemptive) {
       currentProcess = getNextProcess();
     } else {
-      if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+      if (currentProcess == null) {
         currentProcess = getNextProcess();
+      } else {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+          currentProcess = getNextProcess();
+        }
       }
     }
     processList.decrementCurentProcessesWaiting();
