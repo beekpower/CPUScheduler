@@ -21,8 +21,16 @@ public class SJRScheduler extends Scheduler {
         }
       }
     } else {
-      //Set the current process to null. The CPU will see this and enter an idle state
-      return null;
+
+      if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        //current process could still be executing, so return it
+        return currentProcess;
+      } else {
+        //Set the current process to null. The CPU will see this and enter an idle state
+        return null;
+      }
+
+
     }
   }
 }

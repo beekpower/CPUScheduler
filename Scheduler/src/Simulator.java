@@ -30,10 +30,10 @@ public class Simulator {
 		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
 		sjfCPU.execute();
 
-		// //Create an SJF Scheduler and execute it
-		// Scheduler sjrScheduler = new SJRScheduler(processList);
-		// CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
-		// sjrCPU.execute();
+		//Create an SJF Scheduler and execute it
+		Scheduler sjrScheduler = new SJRScheduler(processList);
+		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
+		sjrCPU.execute();
 		//
 		// //Create a PS Scheduler and execute it
 		// Scheduler psScheduler = new PSScheduler(processList);
