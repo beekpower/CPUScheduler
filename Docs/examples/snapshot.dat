@@ -1,0 +1,10004 @@
+==================================================
+FCFS Snapshot at Cycle 0
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 1
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 2
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 3
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 4
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 5
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 5
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>0
+==================================================
+FCFS Snapshot at Cycle 6
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>0
+==================================================
+FCFS Snapshot at Cycle 7
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>0
+==================================================
+FCFS Snapshot at Cycle 8
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>0
+==================================================
+FCFS Snapshot at Cycle 9
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 9
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+>1
+==================================================
+FCFS Snapshot at Cycle 10
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+>1
+==================================================
+FCFS Snapshot at Cycle 11
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 12
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 13
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 14
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 15
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 16
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 17
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 18
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 19
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 20
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 21
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 21
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 22
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 22
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+>3
+==================================================
+FCFS Snapshot at Cycle 23
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+>3
+==================================================
+FCFS Snapshot at Cycle 24
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+>3
+==================================================
+FCFS Snapshot at Cycle 25
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+>3
+==================================================
+FCFS Snapshot at Cycle 26
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>3
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 26
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>3
+
+Processes in IO
+>4
+==================================================
+FCFS Snapshot at Cycle 27
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>3
+
+Processes in IO
+>4
+==================================================
+FCFS Snapshot at Cycle 28
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>3
+
+Processes in IO
+>4
+==================================================
+FCFS Snapshot at Cycle 29
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 29
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+
+Processes in IO
+>5
+==================================================
+FCFS Snapshot at Cycle 30
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+
+Processes in IO
+>5
+==================================================
+FCFS Snapshot at Cycle 31
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+
+Processes in IO
+>5
+==================================================
+FCFS Snapshot at Cycle 32
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+
+Processes in IO
+>5
+==================================================
+FCFS Snapshot at Cycle 33
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 33
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 34
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 35
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 36
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 37
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 38
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 39
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 40
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 41
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 41
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 42
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 43
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 44
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 45
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 46
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 47
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+
+Processes in IO
+>7
+==================================================
+FCFS Snapshot at Cycle 48
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 49
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 50
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 51
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 52
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 53
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 54
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 55
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 55
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 56
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 56
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 57
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 58
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 59
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 60
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 61
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 61
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 62
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 63
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 64
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 65
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>3
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 65
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>7
+
+Processes in IO
+>9
+==================================================
+FCFS Snapshot at Cycle 66
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 66
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 67
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 68
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 69
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 70
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 70
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 71
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 72
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 73
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 75
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 76
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 77
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 78
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 79
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 80
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 81
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>9
+
+Processes in IO
+None
+==================================================
+FCFS Snapshot at Cycle 81
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 0
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 1
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 1
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+SJF Snapshot at Cycle 2
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+SJF Snapshot at Cycle 2
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJF Snapshot at Cycle 3
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJF Snapshot at Cycle 4
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJF Snapshot at Cycle 5
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 6
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 6
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 7
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 7
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 8
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 9
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 10
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJF Snapshot at Cycle 10
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJF Snapshot at Cycle 11
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJF Snapshot at Cycle 12
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJF Snapshot at Cycle 13
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>9
+
+Processes in IO
+>5
+==================================================
+SJF Snapshot at Cycle 14
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>9
+
+Processes in IO
+>5
+==================================================
+SJF Snapshot at Cycle 14
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>5
+>1
+==================================================
+SJF Snapshot at Cycle 15
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>5
+
+Processes in IO
+>1
+==================================================
+SJF Snapshot at Cycle 15
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+SJF Snapshot at Cycle 16
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+SJF Snapshot at Cycle 17
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 18
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 18
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 19
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 20
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 21
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 22
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 22
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 23
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 24
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 25
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 26
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 26
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJF Snapshot at Cycle 27
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJF Snapshot at Cycle 28
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJF Snapshot at Cycle 29
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+>4
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 30
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+>4
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 31
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+>4
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 31
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJF Snapshot at Cycle 32
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJF Snapshot at Cycle 33
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJF Snapshot at Cycle 34
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJF Snapshot at Cycle 35
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 35
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 36
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 37
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 38
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 39
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 40
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 40
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 41
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 42
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 43
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 44
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 45
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 46
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 47
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 48
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 49
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 50
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 51
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 52
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 52
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 53
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 54
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 55
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 56
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 57
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 58
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 59
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 60
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 61
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 62
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 63
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 64
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 65
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 66
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 66
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 67
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 68
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 69
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 70
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 71
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 72
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 74
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 75
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 76
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 77
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 78
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 79
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 80
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJF Snapshot at Cycle 81
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 82
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 83
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 84
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 85
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 86
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 87
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 88
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJF Snapshot at Cycle 89
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 0
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 1
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 2
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 3
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 3
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 4
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 5
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 6
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 6
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 7
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 8
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 9
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>3
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 9
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 10
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>4
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 10
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+>3
+==================================================
+RR Snapshot at Cycle 11
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+>3
+==================================================
+RR Snapshot at Cycle 12
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+>3
+==================================================
+RR Snapshot at Cycle 13
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>5
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+
+Processes in IO
+>3
+==================================================
+RR Snapshot at Cycle 13
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+
+Processes in IO
+>3
+==================================================
+RR Snapshot at Cycle 14
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 15
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 16
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>6
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 16
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+>5
+==================================================
+RR Snapshot at Cycle 17
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+>5
+==================================================
+RR Snapshot at Cycle 18
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+>5
+==================================================
+RR Snapshot at Cycle 19
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+
+Processes in IO
+>5
+==================================================
+RR Snapshot at Cycle 19
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+
+Processes in IO
+>5
+==================================================
+RR Snapshot at Cycle 20
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 21
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 22
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 22
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 23
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 24
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 25
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>9
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 25
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 26
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 26
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 27
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 28
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>1
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 28
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+>0
+==================================================
+RR Snapshot at Cycle 29
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+>0
+==================================================
+RR Snapshot at Cycle 29
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+>0
+>1
+==================================================
+RR Snapshot at Cycle 30
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>3
+>6
+>5
+>7
+>8
+
+Processes in IO
+>9
+>0
+>1
+==================================================
+RR Snapshot at Cycle 31
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>3
+>6
+>5
+>7
+>8
+>1
+
+Processes in IO
+>9
+>0
+==================================================
+RR Snapshot at Cycle 32
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>3
+>6
+>5
+>7
+>8
+>1
+>0
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 32
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>3
+>6
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 33
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>3
+>6
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+==================================================
+RR Snapshot at Cycle 33
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>6
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+>4
+==================================================
+RR Snapshot at Cycle 34
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>6
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+>4
+==================================================
+RR Snapshot at Cycle 34
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+>4
+==================================================
+RR Snapshot at Cycle 35
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>5
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+>4
+==================================================
+RR Snapshot at Cycle 35
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+>9
+>4
+==================================================
+RR Snapshot at Cycle 36
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+>9
+
+Processes in IO
+>4
+==================================================
+RR Snapshot at Cycle 37
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 38
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 38
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 39
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 40
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 41
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>9
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 41
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>9
+>4
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 42
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>9
+>4
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 43
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>9
+>4
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 44
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>9
+>4
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 44
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>9
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 45
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>9
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 46
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>9
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 47
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>9
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 47
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>9
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 48
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>9
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 49
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>9
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 50
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>9
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 50
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>9
+>4
+>7
+>8
+>1
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 51
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>9
+>4
+>7
+>8
+>1
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 52
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>9
+>4
+>7
+>8
+>1
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 53
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>9
+>4
+>7
+>8
+>1
+>0
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 53
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>4
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 54
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>4
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 54
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 55
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 56
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 57
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>2
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 57
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 58
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 59
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+>1
+>0
+>2
+>4
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 59
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>4
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 60
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>4
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 61
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>4
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 62
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>1
+>0
+>2
+>4
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 62
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 63
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 63
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 64
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 65
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 65
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>8
+
+Processes in IO
+>7
+==================================================
+RR Snapshot at Cycle 66
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>8
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 67
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>8
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 68
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>4
+>8
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 68
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>8
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 69
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>8
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 69
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 70
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 71
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 72
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 72
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 75
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>8
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 75
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 76
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 77
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 77
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 78
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 79
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 80
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 80
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+RR Snapshot at Cycle 81
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 0
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 1
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 1
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+SJR Snapshot at Cycle 2
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+SJR Snapshot at Cycle 2
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJR Snapshot at Cycle 3
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJR Snapshot at Cycle 4
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+SJR Snapshot at Cycle 5
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 6
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 6
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 7
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 7
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 8
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 9
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 10
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+SJR Snapshot at Cycle 10
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJR Snapshot at Cycle 11
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJR Snapshot at Cycle 12
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>9
+>5
+==================================================
+SJR Snapshot at Cycle 13
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>9
+
+Processes in IO
+>5
+==================================================
+SJR Snapshot at Cycle 13
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+>5
+==================================================
+SJR Snapshot at Cycle 14
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+>5
+==================================================
+SJR Snapshot at Cycle 14
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>5
+==================================================
+SJR Snapshot at Cycle 15
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>5
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 15
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+SJR Snapshot at Cycle 16
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+SJR Snapshot at Cycle 17
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 18
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 18
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 19
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 20
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 21
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 22
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>4
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 22
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 23
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 24
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 25
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 26
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 26
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJR Snapshot at Cycle 27
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJR Snapshot at Cycle 28
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+SJR Snapshot at Cycle 29
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+>4
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 29
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 30
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 31
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 32
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 33
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>2
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 33
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 34
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 35
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 35
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJR Snapshot at Cycle 36
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJR Snapshot at Cycle 37
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJR Snapshot at Cycle 38
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+SJR Snapshot at Cycle 39
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 39
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 40
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 41
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 42
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 43
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 44
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 44
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 45
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 46
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 47
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 48
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 49
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 50
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 51
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 52
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 52
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 53
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 54
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 55
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 56
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 57
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 58
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 59
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 60
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 61
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 62
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 63
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 64
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 65
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 66
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 66
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 67
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 68
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 69
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 70
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 71
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 72
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 74
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 75
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 76
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 77
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 78
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 79
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 80
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+SJR Snapshot at Cycle 81
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 82
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 83
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 84
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 85
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 86
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 87
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 88
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+SJR Snapshot at Cycle 89
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 0
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 1
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 2
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 3
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 4
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 4
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+Priority Snapshot at Cycle 5
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+Priority Snapshot at Cycle 6
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+Priority Snapshot at Cycle 7
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>4
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 7
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 8
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 9
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 10
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 11
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 11
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 12
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 12
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+>1
+==================================================
+Priority Snapshot at Cycle 13
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+>1
+==================================================
+Priority Snapshot at Cycle 14
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 15
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 16
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 17
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 18
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 19
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 20
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 21
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 22
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 23
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 24
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 25
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 26
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+>1
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 26
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 27
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 28
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 29
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 30
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+>9
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 30
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 31
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 31
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 32
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 33
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 34
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 35
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 36
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>3
+>5
+>6
+>7
+
+Processes in IO
+>9
+==================================================
+Priority Snapshot at Cycle 36
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>3
+>6
+>7
+
+Processes in IO
+>9
+>0
+==================================================
+Priority Snapshot at Cycle 37
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>3
+>6
+>7
+
+Processes in IO
+>9
+>0
+==================================================
+Priority Snapshot at Cycle 38
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>3
+>6
+>7
+
+Processes in IO
+>9
+>0
+==================================================
+Priority Snapshot at Cycle 39
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>3
+>6
+>7
+
+Processes in IO
+>9
+>0
+==================================================
+Priority Snapshot at Cycle 39
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+>9
+>0
+>5
+==================================================
+Priority Snapshot at Cycle 40
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>2
+>6
+>7
+>0
+
+Processes in IO
+>9
+>5
+==================================================
+Priority Snapshot at Cycle 40
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+>9
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 41
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+>9
+
+Processes in IO
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 41
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>2
+>6
+>7
+>0
+
+Processes in IO
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 42
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>2
+>6
+>7
+>0
+
+Processes in IO
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 42
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 43
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+>5
+>3
+==================================================
+Priority Snapshot at Cycle 44
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+
+Processes in IO
+>5
+==================================================
+Priority Snapshot at Cycle 45
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+>5
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 46
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+>5
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 46
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 47
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 48
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 49
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>6
+>7
+>3
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 49
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 50
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>2
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 50
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 51
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 52
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 53
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 54
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 55
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 56
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 57
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 58
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 59
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 60
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 61
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 62
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>6
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 62
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 63
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 64
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 65
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 66
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 66
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 67
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 68
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 69
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 70
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 71
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 72
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 74
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 75
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 76
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 77
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 78
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 79
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 80
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+Priority Snapshot at Cycle 81
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 82
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 83
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 84
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 85
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 86
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 87
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 88
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+Priority Snapshot at Cycle 89
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 0
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 1
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 1
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+PRM Snapshot at Cycle 2
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+PRM Snapshot at Cycle 2
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+PRM Snapshot at Cycle 3
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+PRM Snapshot at Cycle 4
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+PRM Snapshot at Cycle 5
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 5
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>6
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 6
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>6
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 6
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 7
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 7
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 8
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 9
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 10
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 11
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+PRM Snapshot at Cycle 11
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+>4
+==================================================
+PRM Snapshot at Cycle 12
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+>4
+==================================================
+PRM Snapshot at Cycle 13
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+PRM Snapshot at Cycle 13
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+>4
+==================================================
+PRM Snapshot at Cycle 14
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+>4
+==================================================
+PRM Snapshot at Cycle 14
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+>4
+==================================================
+PRM Snapshot at Cycle 15
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>4
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 15
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 16
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 17
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 18
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 19
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 19
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 20
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 20
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+PRM Snapshot at Cycle 21
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+>1
+==================================================
+PRM Snapshot at Cycle 22
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>1
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 22
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 23
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 24
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 25
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 26
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>0
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 26
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 27
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 28
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 29
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 29
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+PRM Snapshot at Cycle 30
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+PRM Snapshot at Cycle 31
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+PRM Snapshot at Cycle 32
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+
+Processes in IO
+>0
+==================================================
+PRM Snapshot at Cycle 32
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+>0
+>5
+==================================================
+PRM Snapshot at Cycle 33
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>0
+
+Processes in IO
+>5
+==================================================
+PRM Snapshot at Cycle 33
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+>5
+==================================================
+PRM Snapshot at Cycle 34
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+>5
+==================================================
+PRM Snapshot at Cycle 35
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+>5
+==================================================
+PRM Snapshot at Cycle 36
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+>5
+==================================================
+PRM Snapshot at Cycle 37
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+>5
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 38
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>7
+>8
+>2
+>5
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 38
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 39
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 40
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 41
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+>8
+>2
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 41
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 42
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 43
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 44
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 45
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 46
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 47
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 48
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 49
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 50
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 51
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 52
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 52
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 53
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 54
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 55
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 56
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 57
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 58
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 59
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 60
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 61
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 62
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 63
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 64
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 65
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 66
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 66
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 67
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 68
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 69
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 70
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 71
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 72
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 73
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 74
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 75
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 76
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 77
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 78
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 79
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 80
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+PRM Snapshot at Cycle 81
+
+Process Currently Processing: None
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 82
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 83
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 84
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 85
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 86
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 87
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 88
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+PRM Snapshot at Cycle 89
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 0
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 1
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+>9
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 1
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+EDF Snapshot at Cycle 2
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>6
+>7
+>8
+
+Processes in IO
+>3
+==================================================
+EDF Snapshot at Cycle 2
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+EDF Snapshot at Cycle 3
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+EDF Snapshot at Cycle 4
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>3
+>9
+==================================================
+EDF Snapshot at Cycle 5
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>3
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 5
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>6
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 6
+
+Process Currently Processing: 3
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+>6
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 6
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 7
+
+Process Currently Processing: 6
+
+Processes in Ready Queue
+>0
+>1
+>2
+>4
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 7
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 8
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 9
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 10
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 11
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>0
+>1
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+==================================================
+EDF Snapshot at Cycle 11
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+>4
+==================================================
+EDF Snapshot at Cycle 12
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+
+Processes in IO
+>9
+>4
+==================================================
+EDF Snapshot at Cycle 13
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+EDF Snapshot at Cycle 14
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>9
+
+Processes in IO
+>4
+==================================================
+EDF Snapshot at Cycle 15
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>0
+>2
+>5
+>7
+>8
+>9
+>4
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 15
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+
+Processes in IO
+>1
+==================================================
+EDF Snapshot at Cycle 16
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+
+Processes in IO
+>1
+==================================================
+EDF Snapshot at Cycle 17
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 18
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 19
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 20
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>2
+>5
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 20
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+>0
+==================================================
+EDF Snapshot at Cycle 21
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+>0
+==================================================
+EDF Snapshot at Cycle 22
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+>0
+==================================================
+EDF Snapshot at Cycle 23
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>2
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+>0
+==================================================
+EDF Snapshot at Cycle 23
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+
+Processes in IO
+>0
+>5
+==================================================
+EDF Snapshot at Cycle 24
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+
+Processes in IO
+>5
+==================================================
+EDF Snapshot at Cycle 25
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+
+Processes in IO
+>5
+==================================================
+EDF Snapshot at Cycle 26
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+
+Processes in IO
+>5
+==================================================
+EDF Snapshot at Cycle 27
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+
+Processes in IO
+>5
+==================================================
+EDF Snapshot at Cycle 28
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 29
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 30
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 31
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 32
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 33
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 34
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 35
+
+Process Currently Processing: 2
+
+Processes in Ready Queue
+>7
+>8
+>9
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 35
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>7
+>8
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 36
+
+Process Currently Processing: 9
+
+Processes in Ready Queue
+>7
+>8
+>4
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 36
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 37
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 38
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 39
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 40
+
+Process Currently Processing: 4
+
+Processes in Ready Queue
+>7
+>8
+>1
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 40
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>7
+>8
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 41
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>7
+>8
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 42
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>7
+>8
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 43
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>7
+>8
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 44
+
+Process Currently Processing: 1
+
+Processes in Ready Queue
+>7
+>8
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 44
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 45
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 46
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 47
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 48
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 49
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 50
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 51
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 52
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 53
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 54
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 55
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 56
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 57
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 58
+
+Process Currently Processing: 8
+
+Processes in Ready Queue
+>7
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 58
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 59
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 60
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 61
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 62
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 63
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 64
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 65
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 66
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+>0
+>5
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 66
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 67
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 68
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 69
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 70
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 71
+
+Process Currently Processing: 0
+
+Processes in Ready Queue
+>5
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 71
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 72
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+None
+
+Processes in IO
+>7
+==================================================
+EDF Snapshot at Cycle 73
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 74
+
+Process Currently Processing: 5
+
+Processes in Ready Queue
+>7
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 74
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 75
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 76
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 77
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 78
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 79
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 80
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None
+==================================================
+EDF Snapshot at Cycle 81
+
+Process Currently Processing: 7
+
+Processes in Ready Queue
+None
+
+Processes in IO
+None

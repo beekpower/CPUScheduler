@@ -1,0 +1,100 @@
+======================================================
+Final Report for FCFS
+CPU Execution Order for FCFS
+	PID0 >> PID1 >> PID2 >> PID3 >> PID4 >> PID5 >> 
+	PID6 >> PID7 >> PID8 >> PID9 >> PID0 >> PID1 >> 
+	PID3 >> PID4 >> PID5 >> PID7 >> PID9 >> Done
+Throughput for FCFS = 0.12195121951219512
+Total Turn-around Time for FCFS = 82
+Average Wait Time for FCFS = 49.1
+CPU Utilization for FCFS = 100.0%
+======================================================
+======================================================
+Final Report for SJF
+CPU Execution Order for SJF
+	PID3 >> PID9 >> PID6 >> PID3 >> PID5 >> PID1 >> 
+	PID9 >> PID5 >> PID1 >> PID4 >> PID0 >> PID4 >> 
+	PID0 >> PID2 >> PID8 >> PID7 >> PID7 >> Done
+Throughput for SJF = 0.1111111111111111
+Total Turn-around Time for SJF = 90
+Average Wait Time for SJF = 23.1
+CPU Utilization for SJF = 91.11111111111111%
+======================================================
+======================================================
+Final Report for RR
+CPU Execution Order for RR
+	PID0 >> PID1 >> PID2 >> PID3 >> PID4 >> PID5 >> 
+	PID6 >> PID7 >> PID8 >> PID9 >> PID0 >> PID1 >> 
+	PID2 >> PID4 >> PID3 >> PID6 >> PID5 >> PID7 >> 
+	PID8 >> PID1 >> PID0 >> PID2 >> PID9 >> PID4 >> 
+	PID7 >> PID8 >> PID1 >> PID0 >> PID2 >> PID4 >> 
+	PID8 >> PID7 >> PID8 >> PID7 >> PID7 >> Done
+Throughput for RR = 0.12195121951219512
+Total Turn-around Time for RR = 82
+Average Wait Time for RR = 46.8
+CPU Utilization for RR = 100.0%
+======================================================
+======================================================
+Final Report for SJR
+CPU Execution Order for SJR
+	PID3 >> PID9 >> PID6 >> PID3 >> PID5 >> PID1 >> 
+	PID9 >> PID1 >> PID5 >> PID1 >> PID4 >> PID0 >> 
+	PID4 >> PID0 >> PID2 >> PID0 >> PID2 >> PID8 >> 
+	PID7 >> PID7 >> Done
+Throughput for SJR = 0.1111111111111111
+Total Turn-around Time for SJR = 90
+Average Wait Time for SJR = 23.3
+CPU Utilization for SJR = 91.11111111111111%
+======================================================
+======================================================
+Final Report for Priority
+CPU Execution Order for Priority
+	PID4 >> PID1 >> PID4 >> PID1 >> PID8 >> PID1 >> 
+	PID9 >> PID0 >> PID5 >> PID3 >> PID0 >> PID9 >> 
+	PID0 >> PID5 >> PID3 >> PID2 >> PID6 >> PID7 >> 
+	PID7 >> Done
+Throughput for Priority = 0.1111111111111111
+Total Turn-around Time for Priority = 90
+Average Wait Time for Priority = 35.3
+CPU Utilization for Priority = 91.11111111111111%
+======================================================
+======================================================
+Final Report for PRM
+CPU Execution Order for PRM
+	PID3 >> PID9 >> PID6 >> PID3 >> PID6 >> PID4 >> 
+	PID1 >> PID9 >> PID1 >> PID4 >> PID1 >> PID0 >> 
+	PID1 >> PID0 >> PID5 >> PID2 >> PID0 >> PID5 >> 
+	PID2 >> PID8 >> PID7 >> PID7 >> Done
+Throughput for PRM = 0.1111111111111111
+Total Turn-around Time for PRM = 90
+Average Wait Time for PRM = 23.9
+CPU Utilization for PRM = 91.11111111111111%
+Deadline Violations for PRM = 3
+======================================================
+======================================================
+Final Report for EDF
+CPU Execution Order for EDF
+	PID3 >> PID9 >> PID6 >> PID3 >> PID6 >> PID4 >> 
+	PID1 >> PID0 >> PID5 >> PID2 >> PID9 >> PID4 >> 
+	PID1 >> PID8 >> PID7 >> PID0 >> PID5 >> PID7 >> 
+	Done
+Throughput for EDF = 0.12195121951219512
+Total Turn-around Time for EDF = 82
+Average Wait Time for EDF = 33.4
+CPU Utilization for EDF = 100.0%
+Deadline Violations for EDF = 2
+======================================================
+
+======================================================
+            Scheduling Algorithm Placement            
+======================================================
+Standard Schedulers
+1. RR
+2. FCFS
+3. SJF
+4. SJR
+5. Priority
+
+Real Time Schedulers
+1. EDF
+2. PRM
