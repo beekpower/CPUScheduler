@@ -40,7 +40,11 @@ public class Snapshot {
 			fileWriter.write("==================================================\n");
 			fileWriter.write(scheduler.readableName+" Snapshot at Cycle "+cycle+"\n");
 			fileWriter.write("\n");
-			fileWriter.write("Process Currently Processing: "+processCurrentlyProcessing+"\n");
+			if(processCurrentlyProcessing == -1) {
+				fileWriter.write("Process Currently Processing:\n");
+			} else {
+				fileWriter.write("Process Currently Processing: "+processCurrentlyProcessing+"\n");
+			}
 			fileWriter.write("\n");
 			fileWriter.write("Processes in Ready Queue\n");
 			if(processesInReadyQueue.size() > 0) {
