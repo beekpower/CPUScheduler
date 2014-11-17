@@ -13,7 +13,7 @@ public class SJRScheduler extends Scheduler {
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
           return processList.takeProcessWithShortestCPUBurst();
-        } else if (currentProcess.getCPUBurst() > processList.getProcessWithShortestCPUBurst().getCPUBurst()) {
+        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
           processList.addtoReadyQueue(currentProcess);
           return processList.takeProcessWithShortestCPUBurst();
         } else {
@@ -21,16 +21,16 @@ public class SJRScheduler extends Scheduler {
         }
       }
     } else {
-
-      if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-        //current process could still be executing, so return it
-        return currentProcess;
+      if (currentProcess != null) {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+          //current process could still be executing, so return it
+          return null;
+        } else {
+          return currentProcess;
+        }
       } else {
-        //Set the current process to null. The CPU will see this and enter an idle state
         return null;
       }
-
-
     }
   }
 }
