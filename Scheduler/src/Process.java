@@ -43,7 +43,9 @@ public class Process {
 		//If we have processed half of the CPU burst
 		//then it is time to enter the I/O burst and enter the waiting state
 		if (initCPUBurst / 2 == cpuBurst) {
-			setWaiting(true);
+			if (ioBurst != 0) {
+				setWaiting(true);
+			}
 		}
 	}
 
