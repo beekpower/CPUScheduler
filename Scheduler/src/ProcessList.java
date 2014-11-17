@@ -240,7 +240,11 @@ public class ProcessList {
 	 * @param cpu CPU to take a snapshot of
 	 */
 	public void takeSnapshot(CPU cpu) {
-		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), cpu.currentProcessProcessing.getPID(), cpu.cycleCount);
+		int pid = -1;
+		if(cpu.currentProcessProcessing != null) {
+			pid = cpu.currentProcessProcessing.getPID();
+		}
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), pid, cpu.cycleCount);
 		// PI now print the snapshot
 		try {
 			FileWriter fileWriter = new FileWriter("snapshot.dat", true); // PI make a new file writer
