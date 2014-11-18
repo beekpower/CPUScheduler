@@ -36,7 +36,6 @@ public abstract class Scheduler {
 
   public void updateCPU(CPU cpu) {
 	  this.cpu = cpu;
-	  currentProcess = getNextProcess();
   }
 
   public abstract Process getNextProcess();
