@@ -60,7 +60,7 @@ public class FinalReport {
 			} else {
 				this.CPUUtilization = 100 - (this.cpu.busyCycles/this.cpu.idleCycles);
 			}
-			this.turnAroundTime = (int) this.cpu.busyCycles;
+			this.turnAroundTime = (int) this.cpu.cycleCount;
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
 			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
 			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" TODO\n");
