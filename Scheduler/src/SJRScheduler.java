@@ -35,7 +35,8 @@ public class SJRScheduler extends Scheduler {
   }
 
   private Process processWithShortestCPUBurst() {
-	cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
-	return processList.takeProcessWithShortestCPUBurst();
+	Process returnProcess = processList.takeProcessWithShortestCPUBurst();
+	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+	return returnProcess;
   }
 }
