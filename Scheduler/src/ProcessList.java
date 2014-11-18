@@ -231,6 +231,16 @@ public class ProcessList {
 		return processWithHighestPriority; // PI return the process with highest priority
 	}
 
+	public Process getProcessWithHighestPriority() {
+		Process processWithHighestPriority = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getPriority() < processWithHighestPriority.getPriority()) { // PI if the cur process' priority test is less...
+				processWithHighestPriority = process; // PI current process' priority is higher - let's use this process as the highest priority
+			}
+		}
+		return processWithHighestPriority; // PI return the process with highest priority
+	}
+
 	public int getQuantum() {
 		return quantum;
 	}
@@ -259,6 +269,6 @@ public class ProcessList {
 		for(Process process: this.readyQueue) {
 			process.waitTime++;
 		}
-		
+
 	}
 }
