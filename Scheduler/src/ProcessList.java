@@ -271,4 +271,15 @@ public class ProcessList {
 		}
 
 	}
+
+	public Process takeFirstProcessInReadyQueueNotWaiting() {
+		Process p = null;
+		for(Process process: this.readyQueue) {
+			if(!process.isWaiting() && process.getCPUBurst() > 0) {
+				p = process;
+				break;
+			}
+		}
+		return p;
+	}
 }
