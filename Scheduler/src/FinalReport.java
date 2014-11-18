@@ -54,6 +54,17 @@ public class FinalReport {
 				}
 			}
 			fileWriter.write("Done\n");
+			// PI let's do some data cals
+			if(this.cpu.idleCycles == 0) {
+				this.CPUUtilization = 100;
+			} else {
+				this.CPUUtilization = 100 - (this.cpu.busyCycles/this.cpu.idleCycles);
+			}
+			this.turnAroundTime = (int) this.cpu.busyCycles;
+			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
+			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
+			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" TODO\n");
+			fileWriter.write("CPU Utilization for "+this.cpu.scheduler.readableName+" = "+this.CPUUtilization+"%\n");
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
