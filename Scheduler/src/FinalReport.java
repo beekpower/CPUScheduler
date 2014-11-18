@@ -56,6 +56,7 @@ public class FinalReport {
 			}
 			fileWriter.write("Done\n");
 			// PI let's do some data cals
+			int numberOfProcesses = this.cpu.scheduler.processList.processes.size();
 			if(this.cpu.idleCycles == 0) {
 				this.CPUUtilization = 100;
 			} else {
@@ -67,7 +68,8 @@ public class FinalReport {
 			for(Process process: this.cpu.scheduler.processList.processes) {
 				runningTotal += process.waitTime;
 			}
-			this.averageWaitTime = runningTotal / this.cpu.scheduler.processList.processes.size();
+			this.averageWaitTime = runningTotal / numberOfProcesses;
+			this.throughput = (double) numberOfProcesses / (double) this.cpu.cycleCount;
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
 			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
 			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" = "+averageWaitTime+"\n");
