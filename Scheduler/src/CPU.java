@@ -18,6 +18,7 @@ public class CPU {
 
   public void execute() {
     while (scheduler.processList.anyJobsLeft()) {
+      scheduler.schedule();
       currentProcessProcessing = scheduler.getCurrentProcess();
       if (currentProcessProcessing != null) {
     	  currentProcessProcessing.processInstruction();
@@ -30,7 +31,6 @@ public class CPU {
       if(cycleCount % snapshotInterval == 0) { // PI see if the total # cycles divides evenly w/ the snapshot interval
     	  this.scheduler.processList.takeSnapshot(this); // PI take a snapshot
       }
-      scheduler.schedule();
     }
     // PI now print out the report
     finalReport.printFinalReport();
