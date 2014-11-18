@@ -23,26 +23,29 @@ public class Simulator {
   	//Create an FCFSScheduler and execute it
   	Scheduler fcfsScheduler = new FCFSScheduler(processList);
   	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
+  	fcfsScheduler.updateCPU(fcfsCPU);
   	fcfsCPU.execute();
 
-		//Create an SJF Scheduler and execute it
-		Scheduler sjfScheduler = new SJFScheduler(processList);
-		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
-		sjfCPU.execute();
+	//Create an SJF Scheduler and execute it
+	Scheduler sjfScheduler = new SJFScheduler(processList);
+	CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
+	sjfScheduler.updateCPU(sjfCPU);
+	sjfCPU.execute();
 
-		//Create an SJF Scheduler and execute it
-		Scheduler sjrScheduler = new SJRScheduler(processList);
-		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
-		sjrCPU.execute();
-		//
-		// //Create a PS Scheduler and execute it
-		// Scheduler psScheduler = new PSScheduler(processList);
-		// CPU psCPU = new CPU(psScheduler, snapshotInterval);
-		// psCPU.execute();
-		//
-		// //Create a RR Scheduler and execute it
-		// Scheduler rrScheduler = new RRScheduler(processList);
-		// CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
-		// rrCPU.execute();
+	//Create an SJF Scheduler and execute it
+	Scheduler sjrScheduler = new SJRScheduler(processList);
+	CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
+	sjrScheduler.updateCPU(sjrCPU);
+	sjrCPU.execute();
+	//
+	// //Create a PS Scheduler and execute it
+	// Scheduler psScheduler = new PSScheduler(processList);
+	// CPU psCPU = new CPU(psScheduler, snapshotInterval);
+	// psCPU.execute();
+	//
+	// //Create a RR Scheduler and execute it
+	// Scheduler rrScheduler = new RRScheduler(processList);
+	// CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
+	// rrCPU.execute();
   }
 }

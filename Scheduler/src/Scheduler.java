@@ -4,26 +4,25 @@ public abstract class Scheduler {
   ProcessList processList;
   Boolean preemptive = false;
   public String readableName;
+  public CPU cpu;
 
 
   public Scheduler(ProcessList processList) {
     this.processList = processList;
     //Move all the processes into the ready queue to start;
     processList.reinitialize();
-
-    this.currentProcess = this.getNextProcess();
   }
 
   public void schedule() {
 
     if (preemptive) {
-      currentProcess = getNextProcess();
+    	updateCurrentProcess();
     } else {
       if (currentProcess == null) {
-        currentProcess = getNextProcess();
+    	  updateCurrentProcess();
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-          currentProcess = getNextProcess();
+        	updateCurrentProcess();
         }
       }
     }
@@ -33,6 +32,16 @@ public abstract class Scheduler {
   public Process getCurrentProcess() {
     return currentProcess;
   }
+  
+  public void updateCPU(CPU cpu) {
+	  this.cpu = cpu;
+	  this.updateCurrentProcess();
+  }
 
+  private void updateCurrentProcess() {
+	  currentProcess = getNextProcess();
+	  cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
+  }
+  
   public abstract Process getNextProcess();
 }

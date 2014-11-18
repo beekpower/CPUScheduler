@@ -30,7 +30,6 @@ public class CPU {
       if(cycleCount % snapshotInterval == 0) { // PI see if the total # cycles divides evenly w/ the snapshot interval
     	  this.scheduler.processList.takeSnapshot(this); // PI take a snapshot
       }
-      finalReport.addProcess(currentProcessProcessing); // PI add the current process to the final report
       scheduler.schedule();
     }
     // PI now print out the report

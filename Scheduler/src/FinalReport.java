@@ -30,16 +30,7 @@ public class FinalReport {
 	 */
 	public void addProcess(Process process) {
 		if(process != null) {
-			int pid = process.getPID();
-			if(lastAddedPID > -1) {
-				if(lastAddedPID != pid) {
-					lastAddedPID = pid;
-					executionOrder.add(pid);
-				}
-			} else {
-				lastAddedPID = pid;
-				executionOrder.add(pid);
-			}
+			executionOrder.add(process.getPID());
 		}
 	}
 
