@@ -9,15 +9,15 @@ public class RRScheduler extends Scheduler {
   public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
       if (currentProcess == null) {
-        return processList.takeFirstProcessInReadyQueue();
+    	  return this.takeFirstProcessInReadyQueue();
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
           currentProcess.resetCounter();
-          return processList.takeFirstProcessInReadyQueue();
+          return this.takeFirstProcessInReadyQueue();
         } else if (currentProcess.getCounter() == processList.getQuantum()) {
           currentProcess.resetCounter();
           processList.addtoReadyQueue(currentProcess);
-          return processList.takeFirstProcessInReadyQueue();
+          return this.takeFirstProcessInReadyQueue();
         } else {
           return currentProcess;
         }
@@ -27,4 +27,9 @@ public class RRScheduler extends Scheduler {
       return null;
     }
   }
+
+	private Process takeFirstProcessInReadyQueue() {
+		cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
+		return processList.takeFirstProcessInReadyQueue();
+	}
 }
