@@ -7,6 +7,7 @@ public class Process {
 	private int period;
 	private int priority;
 	private int counter;
+	public int waitTime;
 	private boolean terminated = false;
 	private boolean waiting = false;
 
@@ -19,6 +20,7 @@ public class Process {
 		this.priority = priority;
 		this.period = period;
 		this.counter = 0;
+		waitTime = 0;
 	}
 
 	/**
@@ -64,6 +66,7 @@ public class Process {
 		setTerminated(false);
 		setWaiting(false);
 		counter = 0;
+		waitTime = 0;
 	}
 
 	//Decrement the IO Burst

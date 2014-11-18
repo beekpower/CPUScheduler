@@ -10,6 +10,7 @@ public class FinalReport {
 	public double throughput;
 	public int turnAroundTime;
 	public double CPUUtilization;
+	public float averageWaitTime;
 	
 	private int lastAddedPID = -1;
 	
@@ -61,9 +62,15 @@ public class FinalReport {
 				this.CPUUtilization = 100 - (this.cpu.busyCycles/this.cpu.idleCycles);
 			}
 			this.turnAroundTime = (int) this.cpu.cycleCount;
+			// PI calculate wait time for all processes
+			int runningTotal = 0;
+			for(Process process: this.cpu.scheduler.processList.processes) {
+				runningTotal += process.waitTime;
+			}
+			this.averageWaitTime = runningTotal / this.cpu.scheduler.processList.processes.size();
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
 			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
-			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" TODO\n");
+			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" = "+averageWaitTime+"\n");
 			fileWriter.write("CPU Utilization for "+this.cpu.scheduler.readableName+" = "+this.CPUUtilization+"%\n");
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer

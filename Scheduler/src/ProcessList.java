@@ -11,8 +11,8 @@ import java.util.ArrayList;
  *
  */
 public class ProcessList {
-	private ArrayList<Process> processes;
-	private ArrayList<Process> readyQueue;
+	public ArrayList<Process> processes;
+	public ArrayList<Process> readyQueue;
 	private int numberProcesses;
 	private int quantum;
 
@@ -253,5 +253,12 @@ public class ProcessList {
 		} catch (IOException e) {
 			// uh oh
 		}
+	}
+
+	public void incrementWaitTimeForProcessesInReadyQueue() {
+		for(Process process: this.readyQueue) {
+			process.waitTime++;
+		}
+		
 	}
 }

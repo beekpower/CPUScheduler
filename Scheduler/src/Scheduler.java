@@ -26,6 +26,7 @@ public abstract class Scheduler {
         }
       }
     }
+    processList.incrementWaitTimeForProcessesInReadyQueue();
     processList.decrementCurentProcessesWaiting();
   }
 
