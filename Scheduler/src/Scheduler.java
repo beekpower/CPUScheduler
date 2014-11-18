@@ -34,6 +34,9 @@ public abstract class Scheduler {
     return currentProcess;
   }
   
+  /**
+   * PI this is used to update the reference o the CPU
+   */
   public void updateCPU(CPU cpu) {
 	  this.cpu = cpu;
 	  this.updateCurrentProcess();
