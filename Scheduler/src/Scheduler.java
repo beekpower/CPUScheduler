@@ -16,13 +16,13 @@ public abstract class Scheduler {
   public void schedule() {
 
     if (preemptive) {
-    	updateCurrentProcess();
+    	currentProcess = getNextProcess();
     } else {
       if (currentProcess == null) {
-    	  updateCurrentProcess();
+    	  currentProcess = getNextProcess();
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-        	updateCurrentProcess();
+          currentProcess = getNextProcess();
         }
       }
     }
@@ -39,12 +39,8 @@ public abstract class Scheduler {
    */
   public void updateCPU(CPU cpu) {
 	  this.cpu = cpu;
-	  this.updateCurrentProcess();
-  }
-
-  private void updateCurrentProcess() {
 	  currentProcess = getNextProcess();
   }
-  
+
   public abstract Process getNextProcess();
 }
