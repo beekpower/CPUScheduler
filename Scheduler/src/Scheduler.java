@@ -41,7 +41,6 @@ public abstract class Scheduler {
 
   private void updateCurrentProcess() {
 	  currentProcess = getNextProcess();
-	  cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
   }
   
   public abstract Process getNextProcess();

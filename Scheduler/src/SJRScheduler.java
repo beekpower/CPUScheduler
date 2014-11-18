@@ -9,13 +9,13 @@ public class SJRScheduler extends Scheduler {
   public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
       if (currentProcess == null) {
-        return processList.takeProcessWithShortestCPUBurst();
+    	  return processWithShortestCPUBurst();
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-          return processList.takeProcessWithShortestCPUBurst();
+          return processWithShortestCPUBurst();
         } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
           processList.addtoReadyQueue(currentProcess);
-          return processList.takeProcessWithShortestCPUBurst();
+          return processWithShortestCPUBurst();
         } else {
           return currentProcess;
         }
@@ -32,5 +32,10 @@ public class SJRScheduler extends Scheduler {
         return null;
       }
     }
+  }
+
+  private Process processWithShortestCPUBurst() {
+	cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
+	return processList.takeProcessWithShortestCPUBurst();
   }
 }

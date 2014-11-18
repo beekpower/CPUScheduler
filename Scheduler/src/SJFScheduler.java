@@ -7,7 +7,8 @@ public class SJFScheduler extends Scheduler {
 
   public Process getNextProcess() {
     if (processList.hasProcessInReadyQueue()) {
-      return processList.takeProcessWithShortestCPUBurst();
+    	cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
+    	return processList.takeProcessWithShortestCPUBurst();
     } else {
       //Set the current process to null. The CPU will see this and enter an idle state
       return null;
