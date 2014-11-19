@@ -36,13 +36,13 @@ public class Simulator {
 	Scheduler sjrScheduler = new SJRScheduler(processList);
 	CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 	sjrScheduler.updateCPU(sjrCPU);
-	sjrCPU.execute();
+	//sjrCPU.execute();
 
 	//Create a PS Scheduler and execute it
 	Scheduler psScheduler = new PSScheduler(processList);
 	CPU psCPU = new CPU(psScheduler, snapshotInterval);
 	psScheduler.updateCPU(psCPU);
-	//psCPU.execute();
+	psCPU.execute();
 
 	//Create a RR Scheduler and execute it
 	Scheduler rrScheduler = new RRScheduler(processList);

@@ -7,14 +7,13 @@ public class PSScheduler extends Scheduler {
 	 }
 
   public Process getNextProcess() {
-
 		if (processList.hasProcessInReadyQueue()) {
 			if (currentProcess == null) {
 				return processWithHighestPriority();
 			} else {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
 					return processWithHighestPriority();
-				} else if (processList.getProcessWithHighestPriority().getCPUBurst() < currentProcess.getPriority()) {
+				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
 					processList.addtoReadyQueue(currentProcess);
 					return processWithHighestPriority();
 				} else {
