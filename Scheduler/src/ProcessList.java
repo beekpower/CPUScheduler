@@ -122,10 +122,14 @@ public class ProcessList {
 	 */
 	public void decrementCurentProcessesWaiting() {
 		for(Process process: this.processes) { // PI loop through all processes
+			if(process.addedToReadyQueue) {
+				process.addedToReadyQueue = false;
+			}
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
 				process.decrementIOBurst(); // PI decrement process' I/O burst
 				if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
 					process.setWaiting(false); // PI set the waiting to false
+					process.addedToReadyQueue = true;
 					this.readyQueue.add(process); // PI put it back in ready queue
 				}
 			}
