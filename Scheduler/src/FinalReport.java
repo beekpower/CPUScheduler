@@ -60,7 +60,7 @@ public class FinalReport {
 			if(this.cpu.idleCycles == 0) {
 				this.CPUUtilization = 100;
 			} else {
-				this.CPUUtilization = 100 - (this.cpu.busyCycles/this.cpu.idleCycles);
+				this.CPUUtilization = ((double)this.cpu.busyCycles / (double)(this.cpu.idleCycles + this.cpu.busyCycles)) * 100;
 			}
 			this.turnAroundTime = (int) this.cpu.cycleCount;
 			// PI calculate wait time for all processes
