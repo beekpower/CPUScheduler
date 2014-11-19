@@ -282,4 +282,40 @@ public class ProcessList {
 		}
 		return p;
 	}
+
+	public void printTable(Process currentProcess, CPU cpu, Scheduler scheduler) {
+		System.out.println("==================================================");
+		System.out.println(scheduler.readableName + " Table at Cycle " + cpu.cycleCount);
+
+		System.out.println("Current Process:");
+		System.out.format("%s%15s%15s\n", "PID", "CPU Burst", "IO Burst");
+		if (currentProcess != null) {
+			System.out.format("%s%15s%15s\n", currentProcess.getPID(), currentProcess.getCPUBurst(), currentProcess.getIOBurst());
+		} else {
+			System.out.format("%s%15s%15s\n", "none", "none", "none");
+		}
+
+
+		System.out.println("");
+
+		System.out.println("Ready Queue:");
+		System.out.format("%s%15s%15s\n", "PID", "CPU Burst", "IO Burst");
+		for(Process process: this.readyQueue) {
+			System.out.format("%s%15s%15s\n", process.getPID(), process.getCPUBurst(), process.getIOBurst());
+		}
+
+		System.out.println("");
+
+		System.out.println("Waiting for IO:");
+		System.out.format("%s%15s%15s\n", "PID", "CPU Burst", "IO Burst");
+		for(Process process: this.processes) {
+			if (process.isWaiting()) {
+				System.out.format("%s%15s%15s\n", process.getPID(), process.getCPUBurst(), process.getIOBurst());
+			}
+		}
+
+
+
+
+	}
 }
