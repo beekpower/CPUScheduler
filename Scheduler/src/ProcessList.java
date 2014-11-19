@@ -225,6 +225,9 @@ public class ProcessList {
 	 * @return
 	 */
 	public Process takeProcessWithHighestPriority() {
+		if(this.readyQueue.size() == 0) {
+			return null;
+		}
 		Process processWithHighestPriority = this.readyQueue.get(0); // PI set the least process
 		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
 			if(process.getPriority() < processWithHighestPriority.getPriority()) { // PI if the cur process' priority test is less...
