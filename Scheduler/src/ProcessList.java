@@ -322,4 +322,15 @@ public class ProcessList {
 
 
 	}
+
+	public Process getProcessWithShortestCPUBurstJustAddedToReadyQueue() {
+		Process processWithLeastCPUBurst = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getCPUBurst() < processWithLeastCPUBurst.getCPUBurst() && process.addedToReadyQueue) { // PI if the cur process' CPU test is less...
+				processWithLeastCPUBurst = process; // PI current process' CPU burst is less - let's use this process as the least
+			}
+		}
+		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
+		return processWithLeastCPUBurst; // PI return the process with least CPU burst
+	}
 }
