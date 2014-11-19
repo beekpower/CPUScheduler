@@ -34,6 +34,8 @@ public class CPU {
     	  this.scheduler.processList.takeSnapshot(this); // PI take a snapshot
       }
     }
+    this.idleCycles--;
+    this.cycleCount--;
     // PI now print out the report
     finalReport.printFinalReport();
   }
