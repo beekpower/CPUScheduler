@@ -72,9 +72,9 @@ public class Process {
 	//Decrement the IO Burst
 	public void decrementIOBurst() {
 		ioBurst--;
-		if (ioBurst == 0) {
-			setWaiting(false);
-		}
+		// if (ioBurst < 0) {
+		// 	setWaiting(false);
+		// }
 	}
 
 	//Return the CPU Burst of the process
