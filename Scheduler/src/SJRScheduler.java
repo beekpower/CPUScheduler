@@ -21,7 +21,16 @@ public class SJRScheduler extends Scheduler {
         }
       }
     } else {
-      return currentProcess;
+      if (currentProcess != null) {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+          //current process could still be executing, so return it
+          return null;
+        } else {
+          return currentProcess;
+        }
+      } else {
+        return null;
+      }
     }
   }
 
