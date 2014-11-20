@@ -12,7 +12,7 @@ public class RRScheduler extends Scheduler {
 	    processList.decrementCurrentProcessesWaiting();
 	    
 	    if (currentProcess != null) {
-	    	currentProcess.processInstruction();
+	    	currentProcess.processInstruction(cpu.cycleCount);
 	    }
 	
 	    if (processList.hasProcessInReadyQueue()) {

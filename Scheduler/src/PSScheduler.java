@@ -9,7 +9,7 @@ public class PSScheduler extends Scheduler {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
 		processList.decrementCurrentProcessesWaiting();
 		if (currentProcess != null) {
-			currentProcess.processInstruction();
+			currentProcess.processInstruction(cpu.cycleCount);
 		}
 
 		if (processList.hasProcessInReadyQueue()) {

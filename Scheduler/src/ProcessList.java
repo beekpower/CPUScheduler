@@ -94,8 +94,8 @@ public class ProcessList {
 		boolean added = false; //  PI return bool
 		if(process != null) { // PI make sure the process isnt null
 			this.readyQueue.add(process); // PI add process to ready queue
-			if(process.periodStart == -1) {
-				process.periodStart = cycle;
+			if(process.cycleStart == -1) {
+				process.cycleEnd = cycle;
 			}
 			added = true;
 		}
