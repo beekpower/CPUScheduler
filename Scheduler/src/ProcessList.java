@@ -321,4 +321,18 @@ public class ProcessList {
 
 
 	}
+
+	public Process takeProcessWithShortestPeriod() {
+		if(this.readyQueue.size() == 0) {
+			return null;
+		}
+		Process processWithShortestPeriod = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getPeriod() < processWithShortestPeriod.getPeriod()) { // PI if the cur process' priority test is less...
+				processWithShortestPeriod = process; // PI current process' priority is higher - let's use this process as the highest priority
+			}
+		}
+		this.readyQueue.remove(processWithShortestPeriod);
+		return processWithShortestPeriod; // PI return the process with highest priority
+	}
 }
