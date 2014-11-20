@@ -15,6 +15,7 @@ public abstract class Scheduler {
 
   public void schedule() {
 
+	Process current = currentProcess;
     if (preemptive) {
     	currentProcess = getNextProcess();
     } else {
@@ -27,7 +28,7 @@ public abstract class Scheduler {
       }
     }
     processList.incrementWaitTimeForProcessesInReadyQueue();
-    processList.decrementCurentProcessesWaiting();
+    processList.decrementCurentProcessesWaiting(current);
   }
 
   public Process getCurrentProcess() {
