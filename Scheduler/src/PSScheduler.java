@@ -9,7 +9,7 @@ public class PSScheduler extends Scheduler {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
 		processList.decrementCurrentProcessesWaiting();
 		if (currentProcess != null) {
-			currentProcess.processInstruction();
+			currentProcess.processInstruction(cpu.cycleCount);
 		}
 
 		if (processList.hasProcessInReadyQueue()) {
@@ -19,7 +19,7 @@ public class PSScheduler extends Scheduler {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
 					currentProcess = processWithHighestPriority();
 				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
-					processList.addtoReadyQueue(currentProcess);
+					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
 					currentProcess = processWithHighestPriority();
 				}
 			}

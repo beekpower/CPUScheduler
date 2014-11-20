@@ -10,7 +10,7 @@ public class FCFSScheduler extends Scheduler{
     processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
     processList.decrementCurrentProcessesWaiting();
     if (currentProcess != null) {
-      currentProcess.processInstruction();
+      currentProcess.processInstruction(cpu.cycleCount);
       if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
         if (processList.hasProcessInReadyQueue()) {
           Process returnProcess = processList.takeFirstProcessInReadyQueue();

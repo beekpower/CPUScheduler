@@ -7,6 +7,8 @@ public class Process {
 	private int period;
 	private int priority;
 	private int counter;
+	public int cycleStart;
+	public int cycleEnd;
 	public int waitTime;
 	private boolean terminated = false;
 	private boolean waiting = false;
@@ -20,6 +22,8 @@ public class Process {
 		this.priority = priority;
 		this.period = period;
 		this.counter = 0;
+		this.cycleStart = -1;
+		this.cycleEnd = -1;
 		waitTime = 0;
 	}
 
@@ -32,7 +36,7 @@ public class Process {
 	}
 
   //The CPU calls this to process the next inrcution/CPU burst
-	public void processInstruction() {
+	public void processInstruction(int cycle) {
 		//increment the counter for RR
 		counter++;
 		//Decrement the CPU burst
@@ -47,6 +51,7 @@ public class Process {
 		if (initCPUBurst / 2 == cpuBurst) {
 			if (ioBurst != 0) {
 				setWaiting(true);
+				this.cycleEnd = cycle;
 			}
 		}
 	}
@@ -67,6 +72,8 @@ public class Process {
 		setWaiting(false);
 		counter = 0;
 		waitTime = 0;
+		cycleStart = -1;
+		cycleEnd = -1;
 	}
 
 	//Decrement the IO Burst

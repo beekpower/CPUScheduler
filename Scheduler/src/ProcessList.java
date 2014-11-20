@@ -90,10 +90,13 @@ public class ProcessList {
 	 * PI Adds the given process to the ready queue
 	 * @param process process to add
 	 */
-	public boolean addtoReadyQueue(Process process) {
+	public boolean addtoReadyQueue(Process process, int cycle) {
 		boolean added = false; //  PI return bool
 		if(process != null) { // PI make sure the process isnt null
 			this.readyQueue.add(process); // PI add process to ready queue
+			if(process.cycleStart == -1) {
+				process.cycleEnd = cycle;
+			}
 			added = true;
 		}
 		return added;
@@ -340,5 +343,19 @@ public class ProcessList {
 
 
 
+	}
+
+	public Process takeProcessWithShortestPeriod() {
+		if(this.readyQueue.size() == 0) {
+			return null;
+		}
+		Process processWithShortestPeriod = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.getPeriod() < processWithShortestPeriod.getPeriod()) { // PI if the cur process' priority test is less...
+				processWithShortestPeriod = process; // PI current process' priority is higher - let's use this process as the highest priority
+			}
+		}
+		this.readyQueue.remove(processWithShortestPeriod);
+		return processWithShortestPeriod; // PI return the process with highest priority
 	}
 }
