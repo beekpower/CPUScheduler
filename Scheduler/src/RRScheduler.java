@@ -11,7 +11,7 @@ public class RRScheduler extends Scheduler {
       if (currentProcess == null) {
     	  return this.takeFirstProcessInReadyQueue();
       } else {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
           currentProcess.resetCounter();
           return this.takeFirstProcessInReadyQueue();
         } else if (currentProcess.getCounter() == processList.getQuantum()) {
@@ -25,7 +25,7 @@ public class RRScheduler extends Scheduler {
     } else {
       //Set the current process to null. The CPU will see this and enter an idle state
       if (currentProcess != null) {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
           //current process could still be executing, so return it
           return null;
         } else {

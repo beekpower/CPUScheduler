@@ -11,7 +11,7 @@ public class PSScheduler extends Scheduler {
 			if (currentProcess == null) {
 				return processWithHighestPriority();
 			} else {
-				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+				if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
 					return processWithHighestPriority();
 				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
 					processList.addtoReadyQueue(currentProcess);
@@ -22,7 +22,7 @@ public class PSScheduler extends Scheduler {
 			}
 		} else {
 			if (currentProcess != null) {
-				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+				if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
 					//current process could still be executing, so return it
 					return null;
 				} else {

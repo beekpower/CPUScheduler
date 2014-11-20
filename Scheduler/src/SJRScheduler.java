@@ -11,7 +11,7 @@ public class SJRScheduler extends Scheduler {
       if (currentProcess == null) {
     	  return processWithShortestCPUBurst();
       } else {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
           return processWithShortestCPUBurst();
         } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
           processList.addtoReadyQueue(currentProcess);
@@ -22,7 +22,7 @@ public class SJRScheduler extends Scheduler {
       }
     } else {
       if (currentProcess != null) {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || processList.ioQueue.contains(currentProcess)) {
           //current process could still be executing, so return it
           return null;
         } else {
