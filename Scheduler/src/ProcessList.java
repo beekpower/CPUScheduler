@@ -134,7 +134,7 @@ public class ProcessList {
 				}
 				if(decrement) {
 					process.decrementIOBurst(); // PI decrement process' I/O burst
-					if(process.getIOBurst() <= -1) { // PI if IO burst is leq 0
+					if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
 						process.setWaiting(false); // PI set the waiting to false
 						process.addedToReadyQueue = true;
 						this.readyQueue.add(process); // PI put it back in ready queue
