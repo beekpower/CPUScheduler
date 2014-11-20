@@ -68,7 +68,7 @@ public class FinalReport {
 			for(Process process: this.cpu.scheduler.processList.processes) {
 				runningTotal += process.waitTime;
 			}
-			this.averageWaitTime = runningTotal / numberOfProcesses;
+			this.averageWaitTime = (float) runningTotal / (float)numberOfProcesses;
 			this.throughput = (double) numberOfProcesses / (double) this.cpu.cycleCount;
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
 			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
