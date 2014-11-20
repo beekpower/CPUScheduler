@@ -13,23 +13,6 @@ public abstract class Scheduler {
     processList.reinitialize();
   }
 
-  public void schedule() {
-
-	Process current = currentProcess;
-    if (preemptive) {
-    	currentProcess = getNextProcess();
-    } else {
-      if (currentProcess == null) {
-    	  currentProcess = getNextProcess();
-      } else {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-          currentProcess = getNextProcess();
-        }
-      }
-    }
-    processList.incrementWaitTimeForProcessesInReadyQueue();
-    processList.decrementCurentProcessesWaiting(current);
-  }
 
   public Process getCurrentProcess() {
     return currentProcess;
@@ -40,8 +23,7 @@ public abstract class Scheduler {
    */
   public void updateCPU(CPU cpu) {
 	  this.cpu = cpu;
-	  currentProcess = getNextProcess();
   }
 
-  public abstract Process getNextProcess();
+  public abstract void schedule();
 }

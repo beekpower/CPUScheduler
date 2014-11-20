@@ -2,41 +2,42 @@ public class SJRScheduler extends Scheduler {
 
   public SJRScheduler(ProcessList processList) {
     super(processList);
-    preemptive = true;
     this.readableName = "SJR";
   }
 
-  public Process getNextProcess() {
+  public void schedule() {
+    processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
+    processList.decrementCurrentProcessesWaiting();
+    if (currentProcess != null) {
+      currentProcess.processInstruction();
+    }
+
     if (processList.hasProcessInReadyQueue()) {
       if (currentProcess == null) {
-    	  return processWithShortestCPUBurst();
+        currentProcess = processWithShortestCPUBurst();
       } else {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-          return processWithShortestCPUBurst();
+          currentProcess = processWithShortestCPUBurst();
         } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
           processList.addtoReadyQueue(currentProcess);
-          return processWithShortestCPUBurst();
-        } else {
-          return currentProcess;
+          currentProcess = processWithShortestCPUBurst();
         }
       }
     } else {
       if (currentProcess != null) {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
           //current process could still be executing, so return it
-          return null;
-        } else {
-          return currentProcess;
+          currentProcess = null;
         }
       } else {
-        return null;
+        currentProcess = null;
       }
     }
   }
 
   private Process processWithShortestCPUBurst() {
-	Process returnProcess = processList.takeProcessWithShortestCPUBurst();
-	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
-	return returnProcess;
+  	Process returnProcess = processList.takeProcessWithShortestCPUBurst();
+  	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+  	return returnProcess;
   }
 }

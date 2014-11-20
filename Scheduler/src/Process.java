@@ -10,7 +10,6 @@ public class Process {
 	public int waitTime;
 	private boolean terminated = false;
 	private boolean waiting = false;
-	public boolean addedToReadyQueue = false;
 
 	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
 		this.PID = PID;
@@ -68,7 +67,6 @@ public class Process {
 		setWaiting(false);
 		counter = 0;
 		waitTime = 0;
-		this.addedToReadyQueue = false;
 	}
 
 	//Decrement the IO Burst

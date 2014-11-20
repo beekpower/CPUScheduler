@@ -6,15 +6,32 @@ public class FCFSScheduler extends Scheduler{
 	  this.readableName = "FCFS";
   }
 
-  public Process getNextProcess() {
-    if (processList.hasProcessInReadyQueue()) {
-    	Process returnProcess = processList.takeFirstProcessInReadyQueue();
-    	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
-    	return returnProcess;
-    } else {
-      //Set the current process to null. The CPU will see this and enter an idle state
-      return null;
+  public void schedule() {
+    processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
+    processList.decrementCurrentProcessesWaiting();
+    if (currentProcess != null) {
+      currentProcess.processInstruction();
+      if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (processList.hasProcessInReadyQueue()) {
+          Process returnProcess = processList.takeFirstProcessInReadyQueue();
+          cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+          currentProcess = returnProcess;
+        } else {
+          //Set the current process to null. The CPU will see this and enter an idle state
+          currentProcess = null;
+        }
+      }
+    } else  {
+      if (processList.hasProcessInReadyQueue()) {
+        Process returnProcess = processList.takeFirstProcessInReadyQueue();
+        cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+        currentProcess = returnProcess;
+      } else {
+        //Set the current process to null. The CPU will see this and enter an idle state
+        currentProcess = null;
+      }
     }
+
   }
 
 }

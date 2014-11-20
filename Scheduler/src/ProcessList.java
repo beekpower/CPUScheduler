@@ -120,25 +120,13 @@ public class ProcessList {
 	 * PI this method loops through all the processes, and for all processes
 	 * that have the isWaiting flag set to true, it decrements that processes IO burst time
 	 */
-	public void decrementCurentProcessesWaiting(Process p) {
+	public void decrementCurrentProcessesWaiting() {
 		for(Process process: this.processes) { // PI loop through all processes
-			if(process.addedToReadyQueue) {
-				process.addedToReadyQueue = false;
-			}
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
-				boolean decrement = true;
-				if(p != null) {
-					if(process.getPID() == p.getPID()) {
-						decrement = false;
-					}
-				}
-				if(decrement) {
-					process.decrementIOBurst(); // PI decrement process' I/O burst
-					if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
-						process.setWaiting(false); // PI set the waiting to false
-						process.addedToReadyQueue = true;
-						this.readyQueue.add(process); // PI put it back in ready queue
-					}
+				process.decrementIOBurst(); // PI decrement process' I/O burst
+				if(process.getIOBurst() < 0) { // PI if IO burst is leq 0
+					process.setWaiting(false); // PI set the waiting to false
+					this.readyQueue.add(process); // PI put it back in ready queue
 				}
 			}
 		}
@@ -266,8 +254,8 @@ public class ProcessList {
 	 */
 	public void takeSnapshot(CPU cpu) {
 		int pid = -1;
-		if(cpu.currentProcessProcessing != null) {
-			pid = cpu.currentProcessProcessing.getPID();
+		if(cpu.scheduler.getCurrentProcess() != null) {
+			pid = cpu.scheduler.getCurrentProcess().getPID();
 		}
 		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), pid, cpu.cycleCount);
 		// PI now print the snapshot
@@ -332,16 +320,5 @@ public class ProcessList {
 
 
 
-	}
-
-	public Process getProcessWithShortestCPUBurstJustAddedToReadyQueue() {
-		Process processWithLeastCPUBurst = this.readyQueue.get(0); // PI set the least process
-		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
-			if(process.getCPUBurst() < processWithLeastCPUBurst.getCPUBurst() && process.addedToReadyQueue) { // PI if the cur process' CPU test is less...
-				processWithLeastCPUBurst = process; // PI current process' CPU burst is less - let's use this process as the least
-			}
-		}
-		this.readyQueue.remove(processWithLeastCPUBurst); // PI remove the process with least CPU burst from the ready queue
-		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
 }
