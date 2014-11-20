@@ -19,7 +19,7 @@ public class SJRScheduler extends Scheduler {
         if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
           currentProcess = processWithShortestCPUBurst();
         } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
-          processList.addtoReadyQueue(currentProcess);
+          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
           currentProcess = processWithShortestCPUBurst();
         }
       }

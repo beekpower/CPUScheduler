@@ -90,10 +90,13 @@ public class ProcessList {
 	 * PI Adds the given process to the ready queue
 	 * @param process process to add
 	 */
-	public boolean addtoReadyQueue(Process process) {
+	public boolean addtoReadyQueue(Process process, int cycle) {
 		boolean added = false; //  PI return bool
 		if(process != null) { // PI make sure the process isnt null
 			this.readyQueue.add(process); // PI add process to ready queue
+			if(process.periodStart == -1) {
+				process.periodStart = cycle;
+			}
 			added = true;
 		}
 		return added;

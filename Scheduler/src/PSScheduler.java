@@ -19,7 +19,7 @@ public class PSScheduler extends Scheduler {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
 					currentProcess = processWithHighestPriority();
 				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
-					processList.addtoReadyQueue(currentProcess);
+					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
 					currentProcess = processWithHighestPriority();
 				}
 			}

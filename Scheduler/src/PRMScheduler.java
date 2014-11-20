@@ -21,7 +21,7 @@ public class PRMScheduler extends Scheduler {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
 	          currentProcess = processWithShortestPeriod();
 	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
-	          processList.addtoReadyQueue(currentProcess);
+	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
 	          currentProcess = processWithShortestPeriod();
 	        }
 	      }

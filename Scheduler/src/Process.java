@@ -7,7 +7,7 @@ public class Process {
 	private int period;
 	private int priority;
 	private int counter;
-	private int periodStart;
+	public int periodStart;
 	public int waitTime;
 	private boolean terminated = false;
 	private boolean waiting = false;

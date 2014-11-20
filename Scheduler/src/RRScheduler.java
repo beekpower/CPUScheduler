@@ -24,7 +24,7 @@ public class RRScheduler extends Scheduler {
 	        	  currentProcess =  this.takeFirstProcessInReadyQueue();
 	          } else if (currentProcess.getCounter() == processList.getQuantum()) {
 	        	  currentProcess.resetCounter();
-	        	  processList.addtoReadyQueue(currentProcess);
+	        	  processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
 	        	  currentProcess = this.takeFirstProcessInReadyQueue();
 	          }
 	        }
