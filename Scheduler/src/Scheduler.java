@@ -14,21 +14,13 @@ public abstract class Scheduler {
   }
 
   public void schedule() {
-
-	Process current = currentProcess;
-    if (preemptive) {
-    	currentProcess = getNextProcess();
-    } else {
-      if (currentProcess == null) {
-    	  currentProcess = getNextProcess();
-      } else {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-          currentProcess = getNextProcess();
-        }
-      }
-    }
-    processList.incrementWaitTimeForProcessesInReadyQueue();
-    processList.decrementCurentProcessesWaiting(current);
+	  processList.incrementWaitTimeForProcessesInReadyQueue();
+	  processList.decrementProcessesInIO();
+	  processList.moveProcessesBackToReadyQueue();
+	  processList.addAnyProcessesToWaitingQueue(currentProcess);
+	  
+	  currentProcess = getNextProcess();
+    //processList.addAnyProcessesToWaitingQueue(currentProcess);
   }
 
   public Process getCurrentProcess() {

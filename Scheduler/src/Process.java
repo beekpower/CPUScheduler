@@ -9,7 +9,6 @@ public class Process {
 	private int counter;
 	public int waitTime;
 	private boolean terminated = false;
-	private boolean waiting = false;
 	public boolean addedToReadyQueue = false;
 
 	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
@@ -42,14 +41,6 @@ public class Process {
 		if (cpuBurst == 0) {
 			setTerminated(true);
 		}
-
-		//If we have processed half of the CPU burst
-		//then it is time to enter the I/O burst and enter the waiting state
-		if (initCPUBurst / 2 == cpuBurst) {
-			if (ioBurst != 0) {
-				setWaiting(true);
-			}
-		}
 	}
 
 	public void resetCounter() {
@@ -65,7 +56,6 @@ public class Process {
 		this.cpuBurst = initCPUBurst;
 		this.ioBurst = initIOBurst;
 		setTerminated(false);
-		setWaiting(false);
 		counter = 0;
 		waitTime = 0;
 		this.addedToReadyQueue = false;
@@ -74,9 +64,6 @@ public class Process {
 	//Decrement the IO Burst
 	public void decrementIOBurst() {
 		ioBurst--;
-		// if (ioBurst < 0) {
-		// 	setWaiting(false);
-		// }
 	}
 
 	//Return the CPU Burst of the process
@@ -139,13 +126,12 @@ public class Process {
 		this.terminated = terminated;
 	}
 
-	//Check the waiting state of teh process
-	public boolean isWaiting() {
-		return waiting;
-	}
-
-	//Set the waiting state of the process
-	public void setWaiting(boolean waiting) {
-		this.waiting = waiting;
+	public boolean readyForIO() {
+		if (getInitCPUBurst() / 2 == getCPUBurst()) {
+			if (getIOBurst() != 0) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

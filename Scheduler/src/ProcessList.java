@@ -13,12 +13,14 @@ import java.util.ArrayList;
 public class ProcessList {
 	public ArrayList<Process> processes;
 	public ArrayList<Process> readyQueue;
+	public ArrayList<Process> ioQueue;
 	private int numberProcesses;
 	private int quantum;
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
+		ioQueue = new ArrayList<Process>();
 		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
 		snapshotFile.delete();
 		File finalReportFile = new File("FinalReport.txt");// P IDelete the existing snapshot.dat file
@@ -81,11 +83,45 @@ public class ProcessList {
 		Process process = this.findProcessInProcessList(pid); // PI grab process based on PID
 		if(process != null) { // PI make sure the process isnt null
 			this.readyQueue.add(process); // PI add process to ready queue
+			this.ioQueue.remove(process);
 			added = true;
 		}
 		return added;
 	}
-
+	
+	public void addAnyProcessesToWaitingQueue(Process currentProcessing) {
+		for(int i = 0; i < this.readyQueue.size(); i++) {
+			Process p = this.readyQueue.get(i);
+			if(p.readyForIO()) {
+				this.readyQueue.remove(p);
+				this.addToIOQueue(p);
+			}
+		}
+		if(currentProcessing != null) {
+			if(currentProcessing.readyForIO()) {
+				this.readyQueue.remove(currentProcessing);
+				this.addToIOQueue(currentProcessing);
+			}
+		}
+	}
+	
+	public void moveProcessesBackToReadyQueue() {
+		for(int i = 0; i < ioQueue.size(); i++) {
+			Process p = this.ioQueue.get(i);
+			if(p.getIOBurst() <= 0) {
+				this.ioQueue.remove(p);
+				this.addtoReadyQueue(p);
+			}
+		}
+	}
+	
+	public void addToIOQueue(Process process) {
+		this.readyQueue.remove(process);
+		if(!ioQueue.contains(process)) {
+			this.ioQueue.add(process);
+		}
+	}
+	
 	/**
 	 * PI Adds the given process to the ready queue
 	 * @param process process to add
@@ -115,32 +151,10 @@ public class ProcessList {
 		}
 		return returnProcess;
 	}
-
-	/**
-	 * PI this method loops through all the processes, and for all processes
-	 * that have the isWaiting flag set to true, it decrements that processes IO burst time
-	 */
-	public void decrementCurentProcessesWaiting(Process p) {
-		for(Process process: this.processes) { // PI loop through all processes
-			if(process.addedToReadyQueue) {
-				process.addedToReadyQueue = false;
-			}
-			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
-				boolean decrement = true;
-				if(p != null) {
-					if(process.getPID() == p.getPID()) {
-						decrement = false;
-					}
-				}
-				if(decrement) {
-					process.decrementIOBurst(); // PI decrement process' I/O burst
-					if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
-						process.setWaiting(false); // PI set the waiting to false
-						process.addedToReadyQueue = true;
-						this.readyQueue.add(process); // PI put it back in ready queue
-					}
-				}
-			}
+	
+	public void decrementProcessesInIO() {
+		for(Process p: this.ioQueue) {
+			p.decrementIOBurst();
 		}
 	}
 
@@ -209,7 +223,10 @@ public class ProcessList {
 	}
 
 	public Process getProcessWithShortestCPUBurst() {
-		Process processWithLeastCPUBurst = this.readyQueue.get(0); // PI set the least process
+		if(readyQueue.size() == 0) {
+			return null;
+		}
+		Process processWithLeastCPUBurst = this.findFirstActiveProcessInReadyQueue(); // PI set the least process
 		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
 			if(process.getCPUBurst() < processWithLeastCPUBurst.getCPUBurst()) { // PI if the cur process' CPU test is less...
 				processWithLeastCPUBurst = process; // PI current process' CPU burst is less - let's use this process as the least
@@ -217,15 +234,18 @@ public class ProcessList {
 		}
 		return processWithLeastCPUBurst; // PI return the process with least CPU burst
 	}
-
-	public ArrayList<Process> getProcessesInIO() {
-		ArrayList<Process> returnProcesses = new ArrayList<Process>();
-		for(Process process: this.processes) {
-			if(process.isWaiting() && !process.isTerminated()) {
-				returnProcesses.add(process);
+	
+	private Process findFirstActiveProcessInReadyQueue() {
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(!process.isTerminated()) {
+				return process;
 			}
 		}
-		return returnProcesses;
+		return null;
+	}
+
+	public ArrayList<Process> getProcessesInIO() {
+		return this.ioQueue;
 	}
 
 	/**
@@ -269,7 +289,7 @@ public class ProcessList {
 		if(cpu.currentProcessProcessing != null) {
 			pid = cpu.currentProcessProcessing.getPID();
 		}
-		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), pid, cpu.cycleCount);
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.ioQueue, pid, cpu.cycleCount);
 		// PI now print the snapshot
 		try {
 			FileWriter fileWriter = new FileWriter("snapshot.dat", true); // PI make a new file writer
@@ -288,14 +308,11 @@ public class ProcessList {
 	}
 
 	public Process takeFirstProcessInReadyQueueNotWaiting() {
-		Process p = null;
-		for(Process process: this.readyQueue) {
-			if(!process.isWaiting() && process.getCPUBurst() > 0) {
-				p = process;
-				break;
-			}
+		if(this.readyQueue.size() > 0) {
+			return null;
+		} else {
+			return this.readyQueue.get(0);
 		}
-		return p;
 	}
 
 	public void printTable(Process currentProcess, CPU cpu, Scheduler scheduler) {
@@ -323,15 +340,9 @@ public class ProcessList {
 
 		System.out.println("Waiting for IO:");
 		System.out.format("%s%15s%15s\n", "PID", "CPU Burst", "IO Burst");
-		for(Process process: this.processes) {
-			if (process.isWaiting()) {
-				System.out.format("%s%15s%15s\n", process.getPID(), process.getCPUBurst(), process.getIOBurst());
-			}
+		for(Process process: this.ioQueue) {
+			System.out.format("%s%15s%15s\n", process.getPID(), process.getCPUBurst(), process.getIOBurst());
 		}
-
-
-
-
 	}
 
 	public Process getProcessWithShortestCPUBurstJustAddedToReadyQueue() {
