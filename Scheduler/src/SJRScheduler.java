@@ -7,7 +7,7 @@ public class SJRScheduler extends Scheduler {
 
   public void schedule() {
     processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
-    processList.decrementCurrentProcessesWaiting();
+    processList.decrementCurrentProcessesWaiting(currentProcess);
     if (currentProcess != null) {
       currentProcess.processInstruction(cpu.cycleCount);
     }
