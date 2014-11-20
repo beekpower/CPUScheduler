@@ -68,12 +68,24 @@ public class FinalReport {
 			for(Process process: this.cpu.scheduler.processList.processes) {
 				runningTotal += process.waitTime;
 			}
+			// PI calculate deadline violations
+			if(this.cpu.scheduler.readableName == "PRM" || this.cpu.scheduler.readableName == "EDF") {
+				this.deadlineViolations = 0;
+				for(Process process: this.cpu.scheduler.processList.processes) {
+					if(process.getPeriod() > (process.cycleEnd - process.cycleStart)) {
+						this.deadlineViolations++;
+					}
+				}
+			}
 			this.averageWaitTime = (float) runningTotal / (float)numberOfProcesses;
 			this.throughput = (double) numberOfProcesses / (double) this.cpu.cycleCount;
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");
 			fileWriter.write("Total Turn-around Time for "+this.cpu.scheduler.readableName+" = "+this.turnAroundTime+"\n");
 			fileWriter.write("Average Wait Time for "+this.cpu.scheduler.readableName+" = "+averageWaitTime+"\n");
 			fileWriter.write("CPU Utilization for "+this.cpu.scheduler.readableName+" = "+this.CPUUtilization+"%\n");
+			if(this.deadlineViolations != -1) {
+				fileWriter.write("Deadline violations for "+this.cpu.scheduler.readableName+" = "+this.deadlineViolations+"\n");
+			}
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
