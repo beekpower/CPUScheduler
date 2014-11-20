@@ -26,13 +26,12 @@ public class CPU {
         }
       scheduler.schedule();
       currentProcessProcessing = scheduler.getCurrentProcess();
-
-      cycleCount++;
       // PI see if we need to take a snapshot
       if(cycleCount % snapshotInterval == 0) { // PI see if the total # cycles divides evenly w/ the snapshot interval
         scheduler.processList.printTable(currentProcessProcessing, this, scheduler);
     	  this.scheduler.processList.takeSnapshot(this); // PI take a snapshot
       }
+      cycleCount++;
     }
     this.idleCycles--;
     this.cycleCount--;
