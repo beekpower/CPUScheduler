@@ -1,18 +1,18 @@
 public class Process {
-	private int PID;
-	private int initCPUBurst;
-	private int cpuBurst;
-	private int initIOBurst;
-	private int ioBurst;
-	private int period;
-	private int priority;
-	private int counter;
-	public int cycleStart;
-	public int cycleEnd;
-	public int waitTime;
-	public int deadline;
-	private boolean terminated = false;
-	private boolean waiting = false;
+	private int PID;			// NV pid of this process
+	private int initCPUBurst;	// NV the initial CPU burst of this process
+	private int cpuBurst;		// NV current CPU burst
+	private int initIOBurst;	// NV initial io burst
+	private int ioBurst;		// NV current io burst
+	private int period;			// NV initial period
+	private int priority;		// NV intial priority
+	private int counter;		// NV counter used for RR
+	public int cycleStart;		// PI cycle start keeping track of when this process started executing
+	public int cycleEnd;		// PI cycle end keeping track when this process finished executing
+	public int waitTime;		// PI time this process has waited to execute
+	public int deadline;		// PI deadline calculation for this process
+	private boolean terminated = false;	// NV has this process terminated?
+	private boolean waiting = false;	// NV is this process currently waiting in IO
 
 	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
 		this.PID = PID;
@@ -58,15 +58,24 @@ public class Process {
 		}
 	}
 
+	/**
+	 * NV reset the counter for RR
+	 */
 	public void resetCounter() {
 		counter = 0;
 	}
 
+	/**
+	 * NV return the current count
+	 * @return int
+	 */
 	public int getCounter() {
 		return counter;
 	}
 
-	//Reset the state of the process back to when it was first loaded in
+	/** 
+	 * NV Reset the state of the process back to when it was first loaded in
+	 */
 	public void reset() {
 		this.cpuBurst = initCPUBurst;
 		this.ioBurst = initIOBurst;
@@ -78,7 +87,9 @@ public class Process {
 		cycleEnd = -1;
 	}
 
-	//Decrement the IO Burst
+	/**
+	 * NV Decrement the IO Burst
+	 */
 	public void decrementIOBurst() {
 		ioBurst--;
 		// if (ioBurst < 0) {
@@ -86,62 +97,97 @@ public class Process {
 		// }
 	}
 
-	//Return the CPU Burst of the process
+	/**
+	 * Return the CPU Burst of the process
+	 * @return
+	 */
 	public int getCPUBurst() {
 		return cpuBurst;
 	}
 
-  //Set the CPU Burst of the process
+	/**
+	 * Set the CPU Burst of the process
+	 * @param cpuBurst
+	 */
 	public void setCPUBurst(int cpuBurst) {
 		this.cpuBurst = cpuBurst;
 	}
 
-	//Set the period of the process
+	/**
+	 * NV Set the period of the process
+	 * @param period
+	 */
 	public void setPeriod(int period) {
 		this.period = period;
 	}
 
-	//Get the PID of the process
+	/**
+	 * NV Get the PID of the process
+	 * @return
+	 */
 	public int getPID() {
 		return PID;
 	}
 
-	//Get the initial CPU Burst of the process
+	/**
+	 * NV Get the initial CPU Burst of the process
+	 * @return
+	 */
 	public int getInitCPUBurst() {
 		return initCPUBurst;
 	}
 
-  //Get the remaining IO Burst of the process
+	/**
+	 * NV Get the remaining IO Burst of the process
+	 * @return
+	 */
 	public int getIOBurst() {
 		return ioBurst;
 	}
 
-  //Get the period of the process
+	/**
+	 * NV Get the period of the process
+	 * @return
+	 */
 	public int getPeriod() {
 		return period;
 	}
 
-	//Get the priority of the process
+	/**
+	 * NV Get the priority of the process
+	 * @return
+	 */
 	public int getPriority() {
 		return priority;
 	}
 
-	//Set the priority of the process
+	/**
+	 * NV Set the priority of the process
+	 * @param priority
+	 */
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
 
-	//Convert the propreties to string format
+	/**
+	 * NV Convert the propreties to string format
+	 */
 	public String toString() {
 		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCPUBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
 	}
 
-	//Check the terminated state of the process
+	/**
+	 * NV Check the terminated state of the process
+	 * @return
+	 */
 	public boolean isTerminated() {
 		return terminated;
 	}
 
-  //Set the terminated state of the process
+    /**
+     * NV Set the terminated state of the process
+     * @param terminated
+     */
 	public void setTerminated(boolean terminated) {
 		this.terminated = terminated;
 	}

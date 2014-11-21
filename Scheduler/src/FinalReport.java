@@ -77,6 +77,7 @@ public class FinalReport {
 					}
 				}
 			}
+			// PI let's do some calcs for the average wait time + throughput
 			this.averageWaitTime = (float) runningTotal / (float)numberOfProcesses;
 			this.throughput = (double) numberOfProcesses / (double) this.cpu.cycleCount;
 			fileWriter.write("Throughput for "+this.cpu.scheduler.readableName+" = "+this.throughput+"\n");

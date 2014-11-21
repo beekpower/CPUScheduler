@@ -2,25 +2,33 @@
 public class CPU {
 
   Scheduler scheduler;
-  long busyCycles = 0;
-  long idleCycles = 0;
+  long busyCycles = 0;	// NV number of busy cycles in this CPU
+  long idleCycles = 0; 	// NV number of idle cycles in this CPU
   int cycleCount = 0; // PI add in a cycle counter
-  int snapshotInterval = 0;
+  int snapshotInterval = 0;	// NV snapshot interval
   public FinalReport finalReport; // PI final report object
 
+  /**
+   * NV constructs a CPU
+   * @param scheduler scheduler object
+   * @param snapshotInterval interval to take snapshots at
+   */
   public CPU(Scheduler scheduler, int snapshotInterval) {
-    this.scheduler = scheduler;
+    this.scheduler = scheduler;	// NV update scheduler reference
     this.snapshotInterval = snapshotInterval; // PI set the snapshot interval
     cycleCount = 0; // PI set cycle counter to 0
     finalReport = new FinalReport(this); // PI make a new final report for this CPU
   }
 
+  /**
+   * NV execute, which is called every cycle, executes current process / takes care of keeping track of busy/idle cycles and printing final report
+   */
   public void execute() {
-    while (scheduler.processList.anyJobsLeft()) {
-      scheduler.schedule();
-    	if (scheduler.getCurrentProcess() != null) {
+    while (scheduler.processList.anyJobsLeft()) { // NV only execute if we have jobs left
+      scheduler.schedule();	// NV call the child's schedule method
+    	if (scheduler.getCurrentProcess() != null) { // NV if the current process is actually a process, this is a busy cycle
           busyCycles++;
-      } else {
+      } else {	// NV else, this is an idle cycle
           idleCycles++;
       }
 
@@ -32,6 +40,7 @@ public class CPU {
       cycleCount++;
     }
 
+    // NV take care of decrementing our counts
     this.idleCycles--;
     this.cycleCount--;
     // PI now print out the report
