@@ -10,6 +10,7 @@ public class Process {
 	public int cycleStart;
 	public int cycleEnd;
 	public int waitTime;
+	public int deadline;
 	private boolean terminated = false;
 	private boolean waiting = false;
 
@@ -24,6 +25,7 @@ public class Process {
 		this.counter = 0;
 		this.cycleStart = -1;
 		this.cycleEnd = -1;
+		this.deadline = period - cpuBurst;
 		waitTime = 0;
 	}
 

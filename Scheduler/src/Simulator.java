@@ -55,5 +55,11 @@ public class Simulator {
 		CPU prmCPU = new CPU(prmScheduler, snapshotInterval);
 		prmScheduler.updateCPU(prmCPU);
 		prmCPU.execute();
+		
+		//Create a EDF Scheduler and execute it
+		Scheduler edfScheduler = new EDFScheduler(processList);
+		CPU edfCPU = new CPU(edfScheduler, snapshotInterval);
+		edfScheduler.updateCPU(edfCPU);
+		edfCPU.execute();
   }
 }

@@ -358,4 +358,18 @@ public class ProcessList {
 		this.readyQueue.remove(processWithShortestPeriod);
 		return processWithShortestPeriod; // PI return the process with highest priority
 	}
+	
+	public Process takeProcessWithSoonestDeadline() {
+		if(this.readyQueue.size() == 0) {
+			return null;
+		}
+		Process processWithSoonestDeadline = this.readyQueue.get(0); // PI set the least process
+		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
+			if(process.deadline < processWithSoonestDeadline.deadline) { // PI if the cur process' priority test is less...
+				processWithSoonestDeadline = process; // PI current process' priority is higher - let's use this process as the highest priority
+			}
+		}
+		this.readyQueue.remove(processWithSoonestDeadline);
+		return processWithSoonestDeadline; // PI return the process with highest priority
+	}
 }
