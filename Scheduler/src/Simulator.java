@@ -43,19 +43,19 @@ public class Simulator {
 		Scheduler rrScheduler = new RRScheduler(processList);
 		CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
 		rrScheduler.updateCPU(rrCPU);
-		//rrCPU.execute();
+		rrCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjrScheduler = new SJRScheduler(processList);
 		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 		sjrScheduler.updateCPU(sjrCPU);
-		//sjrCPU.execute();
+		sjrCPU.execute();
 
 		//Create a PS Scheduler and execute it
 		Scheduler psScheduler = new PSScheduler(processList);
 		CPU psCPU = new CPU(psScheduler, snapshotInterval);
 		psScheduler.updateCPU(psCPU);
-		psCPU.execute();
+		//psCPU.execute();
 
 		//Create a PRM Scheduler and execute it
 		Scheduler prmScheduler = new PRMScheduler(processList);
@@ -68,7 +68,7 @@ public class Simulator {
 		CPU edfCPU = new CPU(edfScheduler, snapshotInterval);
 		edfScheduler.updateCPU(edfCPU);
 		//edfCPU.execute();
-		
+
 		// PI let's do some ranking for the different schedulers
 		ArrayList<Scheduler> firstStats = new ArrayList<Scheduler>();
 		firstStats.add(fcfsScheduler);
@@ -76,12 +76,12 @@ public class Simulator {
 		firstStats.add(rrScheduler);
 		firstStats.add(sjrScheduler);
 		firstStats.add(psScheduler);
-		
+
 		// PI let's do ranking for the real time schedulers
 		ArrayList<Scheduler> secondStats = new ArrayList<Scheduler>();
 		secondStats.add(prmScheduler);
 		secondStats.add(edfScheduler);
-		
+
 		// PI now let's print out some rankings
 		try {
 			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer

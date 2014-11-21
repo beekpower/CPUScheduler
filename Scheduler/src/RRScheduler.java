@@ -10,11 +10,13 @@ public class RRScheduler extends Scheduler {
 	public void schedule() {
 	  	processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
 	    processList.decrementCurrentProcessesWaiting();
-      processList.moveWaitingToReady();
+
 
 	    if (currentProcess != null) {
 	    	currentProcess.processInstruction(cpu.cycleCount);
 	    }
+
+      processList.moveWaitingToReady();
 
 	    if (processList.hasProcessInReadyQueue()) {
 	        if (currentProcess == null) {
@@ -41,6 +43,7 @@ public class RRScheduler extends Scheduler {
 	    	  currentProcess = null;
 	      }
 	    }
+
 	}
 
 	private Process takeFirstProcessInReadyQueue() {
