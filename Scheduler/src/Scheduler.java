@@ -32,4 +32,8 @@ public abstract class Scheduler {
   }
 
   public abstract void schedule();
+  
+  public double getCalculatedRating() {
+	  return (double) this.throughput + ((double)1 / (double)this.turnAroundTime) + ((double)1/this.waitTime) + this.cpuUtilization;
+  }
 }

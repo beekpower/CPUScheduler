@@ -1,5 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public class Simulator {
@@ -65,6 +70,14 @@ public class Simulator {
 		edfScheduler.updateCPU(edfCPU);
 		edfCPU.execute();
 		
+		// PI let's do some ranking for the different schedulers
+		ArrayList<Scheduler> schedulers = new ArrayList<Scheduler>();
+		schedulers.add(fcfsScheduler);
+		schedulers.add(sjfScheduler);
+		schedulers.add(rrScheduler);
+		schedulers.add(sjrScheduler);
+		schedulers.add(psScheduler);
+		
 		// PI now let's print out some rankings
 		try {
 			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer
@@ -73,6 +86,7 @@ public class Simulator {
 			fileWriter.write("\t\tScheduling Algorithm Placement\n");
 			fileWriter.write("==================================================\n");
 			fileWriter.write("Standard Schedulers:\n");
+			fileWriter.write("1. "+findLargestCalculatedRating(schedulers).readableName+":\n");
 			fileWriter.write("\n");
 			fileWriter.write("Real Time Schedulers:\n");
 			fileWriter.write("\n");
@@ -81,4 +95,18 @@ public class Simulator {
 			
 		}
   }
+
+	private static Scheduler findLargestCalculatedRating(ArrayList<Scheduler> schedulers) {
+		Scheduler largest = schedulers.get(0);
+		int index = 0;
+		for(int i = 0; i < schedulers.size(); i++) {
+			Scheduler scheduler = schedulers.get(i);
+			if(scheduler.getCalculatedRating() > largest.getCalculatedRating()) {
+				largest = scheduler;
+				index = i;
+			}
+		}
+		schedulers.remove(index);
+		return largest;
+	}
 }
