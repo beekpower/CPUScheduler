@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Simulator {
 	private static ProcessList processList; // PI handle to the ProcessList object
@@ -61,5 +64,21 @@ public class Simulator {
 		CPU edfCPU = new CPU(edfScheduler, snapshotInterval);
 		edfScheduler.updateCPU(edfCPU);
 		edfCPU.execute();
+		
+		// PI now let's print out some rankings
+		try {
+			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer
+			// PI now output all the junk needed
+			fileWriter.write("==================================================\n");
+			fileWriter.write("\t\tScheduling Algorithm Placement\n");
+			fileWriter.write("==================================================\n");
+			fileWriter.write("Standard Schedulers:\n");
+			fileWriter.write("\n");
+			fileWriter.write("Real Time Schedulers:\n");
+			fileWriter.write("\n");
+			fileWriter.close(); // PI close the file writer
+		} catch (IOException e) {
+			
+		}
   }
 }
