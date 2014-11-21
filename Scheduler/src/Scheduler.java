@@ -1,6 +1,6 @@
 /**
  * Scheduler class acts as the abstract class, and allows for easy implementations of child classes
- * @author Phil & Nick
+ * @author Phillip Igoe & Nick Van Beek
  *
  */
 public abstract class Scheduler {

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Class for the process list that retains all the processes loaded in from the data file
- * @author Phil & Nick
+ * @author Phillip Igoe & Nick Van Beek
  *
  */
 public class ProcessList {

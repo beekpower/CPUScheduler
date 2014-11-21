@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class Process {
 	private int PID;			// NV pid of this process
 	private int initCPUBurst;	// NV the initial CPU burst of this process

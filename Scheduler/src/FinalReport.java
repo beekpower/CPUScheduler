@@ -2,7 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class FinalReport {
 	public CPU cpu; // PI ref to the CPU
 	// PI whole bunch of stats

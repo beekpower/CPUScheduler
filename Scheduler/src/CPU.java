@@ -1,4 +1,8 @@
-
+/**
+ * The CPU class handles executing processes, calling the schedule method, and keeping track of the busy/idle/total cycle count
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class CPU {
 
   Scheduler scheduler;

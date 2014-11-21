@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class PRMScheduler extends Scheduler {
 
 	public PRMScheduler(ProcessList processList) {

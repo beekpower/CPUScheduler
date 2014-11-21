@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class RRScheduler extends Scheduler {
 
   public RRScheduler(ProcessList processList) {

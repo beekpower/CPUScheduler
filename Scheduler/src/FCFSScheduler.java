@@ -1,4 +1,8 @@
-
+/**
+ * FCFSS Scheduler
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class FCFSScheduler extends Scheduler{
 
   public FCFSScheduler(ProcessList processList) {

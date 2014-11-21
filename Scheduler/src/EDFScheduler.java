@@ -1,4 +1,8 @@
-
+/**
+ * The EDF scheduler implementation
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class EDFScheduler extends Scheduler {
 
 	public EDFScheduler(ProcessList processList) {

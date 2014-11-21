@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class SJRScheduler extends Scheduler {
 
   public SJRScheduler(ProcessList processList) {

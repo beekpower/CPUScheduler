@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class PSScheduler extends Scheduler {
 	public PSScheduler(ProcessList processList) {
     super(processList);

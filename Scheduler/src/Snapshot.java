@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * The snapshot class is used to easily capture what is going on in a CPU instance and output different metrics about it
- * @author Phil & Nick
+ * @author Phillip Igoe & Nick Van Beek
  *
  */
 public class Snapshot {

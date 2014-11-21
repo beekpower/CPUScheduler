@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Simulator class which drives all the simulations for the different schedulers
- * @author Phil & Nick
+ * @author Phillip Igoe & Nick Van Beek
  *
  */
 public class Simulator {

@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class SJFScheduler extends Scheduler {
 
   public SJFScheduler(ProcessList processList) {
