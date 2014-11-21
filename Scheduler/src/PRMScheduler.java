@@ -17,32 +17,33 @@ public class PRMScheduler extends Scheduler {
 	@Override
 	public void schedule() {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); // NV increment the wait time for all processes in ready queue
-	    processList.decrementCurrentProcessesWaiting(); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
+	    processList.decrementCurrentProcessesWaiting(currentProcess); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
 	    if (currentProcess != null) { // PI ensure current process isn't null
-	      currentProcess.processInstruction(cpu.cycleCount); // NV process the instruction
+	      currentProcess.processInstruction(cpu.cycleCount);
 	    }
 
 	    if (processList.hasProcessInReadyQueue()) { // NV are there processes in the ready queue?
 	      if (currentProcess == null) { // PI ensure current process isn't null
-	        currentProcess = processWithShortestPeriod(); // NV grab the process with the shortest period
+	        currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
 	      } else {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
-	          currentProcess = processWithShortestPeriod();
-	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
-	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
-	          currentProcess = processWithShortestPeriod(); // NV grab the process with the shortest period
+	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
+	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) { // NV does the process we found have a lower CPU burst than the current processor's CPU burst?
+	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
+	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
 	        }
 	      }
 	    } else {
 	      if (currentProcess != null) { // PI ensure current process isn't null
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
-	          //NV current process could still be executing, so return it
+	          //current process could still be executing, so return it
 	          currentProcess = null;
 	        }
 	      } else {
 	        currentProcess = null;
 	      }
 	    }
+	    processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
 	  }
 
 	/**
