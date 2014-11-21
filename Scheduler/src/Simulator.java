@@ -32,13 +32,13 @@ public class Simulator {
   	Scheduler fcfsScheduler = new FCFSScheduler(processList);
   	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
   	fcfsScheduler.updateCPU(fcfsCPU);
-  	//fcfsCPU.execute();
+  	fcfsCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjfScheduler = new SJFScheduler(processList);
 		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
 		sjfScheduler.updateCPU(sjfCPU);
-		//sjfCPU.execute();
+		sjfCPU.execute();
 
 		// //Create a RR Scheduler and execute it
 		Scheduler rrScheduler = new RRScheduler(processList);
@@ -50,7 +50,7 @@ public class Simulator {
 		Scheduler sjrScheduler = new SJRScheduler(processList);
 		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 		sjrScheduler.updateCPU(sjrCPU);
-		//sjrCPU.execute();
+		sjrCPU.execute();
 
 		//Create a PS Scheduler and execute it
 		Scheduler psScheduler = new PSScheduler(processList);
@@ -68,7 +68,7 @@ public class Simulator {
 		Scheduler edfScheduler = new EDFScheduler(processList);
 		CPU edfCPU = new CPU(edfScheduler, snapshotInterval);
 		edfScheduler.updateCPU(edfCPU);
-		edfCPU.execute();
+		//edfCPU.execute();
 		
 		// PI let's do some ranking for the different schedulers
 		ArrayList<Scheduler> schedulers = new ArrayList<Scheduler>();
@@ -86,7 +86,11 @@ public class Simulator {
 			fileWriter.write("\t\tScheduling Algorithm Placement\n");
 			fileWriter.write("==================================================\n");
 			fileWriter.write("Standard Schedulers:\n");
-			fileWriter.write("1. "+findLargestCalculatedRating(schedulers).readableName+":\n");
+			fileWriter.write("1. "+findLargestCalculatedRating(schedulers).readableName+"\n");
+			fileWriter.write("2. "+findLargestCalculatedRating(schedulers).readableName+"\n");
+			fileWriter.write("3. "+findLargestCalculatedRating(schedulers).readableName+"\n");
+			fileWriter.write("4. "+findLargestCalculatedRating(schedulers).readableName+"\n");
+			fileWriter.write("5. "+findLargestCalculatedRating(schedulers).readableName+"\n");
 			fileWriter.write("\n");
 			fileWriter.write("Real Time Schedulers:\n");
 			fileWriter.write("\n");
