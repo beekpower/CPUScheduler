@@ -35,6 +35,9 @@ public class FinalReport {
 		}
 	}
 
+	/**
+	 * PI print the final report by appending a bunch of stats to the FinalReport.txt file
+	 */
 	public void printFinalReport() {
 		try {
 			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer

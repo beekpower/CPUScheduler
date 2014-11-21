@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Class for the process list that retains all the processes loaded in from the data file
- * @author phil
+ * @author Phil & Nick
  *
  */
 public class ProcessList {
@@ -259,7 +259,7 @@ public class ProcessList {
 
 	/**
 	 * PI get process with highest priority
-	 * @return
+	 * @return a process
 	 */
 	public Process takeProcessWithHighestPriority() {
 		Process returnProcess = findProcessWithLowestPIDAndLowestPriorityInReadyQueue();
@@ -269,10 +269,18 @@ public class ProcessList {
 		return returnProcess;
 	}
 
+	/**
+	 * PI return the process with the highest priority
+	 * @return a process
+	 */
 	public Process getProcessWithHighestPriority() {
 		return findProcessWithLowestPIDAndLowestPriorityInReadyQueue();
 	}
 	
+	/**
+	 * NV find the process with the lowest PID and the lowest priority within the ready queue
+	 * @return a process
+	 */
 	private Process findProcessWithLowestPIDAndLowestPriorityInReadyQueue() {
 		Process lowestPriority = this.readyQueue.get(0);
 		for(Process p: this.readyQueue) {
@@ -289,6 +297,10 @@ public class ProcessList {
 		return lowestPriority;
 	}
 
+	/**
+	 * NV get the quantum
+	 * @return
+	 */
 	public int getQuantum() {
 		return quantum;
 	}
@@ -302,7 +314,7 @@ public class ProcessList {
 		if(cpu.scheduler.getCurrentProcess() != null) {
 			pid = cpu.scheduler.getCurrentProcess().getPID();
 		}
-		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), pid, cpu.cycleCount);
+		Snapshot snapshot = new Snapshot(cpu.scheduler, this.readyQueue, this.getProcessesInIO(), pid, cpu.cycleCount); // NV build a snapshot of the current state of the CPU
 		// PI now print the snapshot
 		try {
 			FileWriter fileWriter = new FileWriter("snapshot.dat", true); // PI make a new file writer
@@ -383,7 +395,7 @@ public class ProcessList {
 				processWithShortestPeriod = process; // PI current process' priority is higher - let's use this process as the highest priority
 			}
 		}
-		this.readyQueue.remove(processWithShortestPeriod);
+		this.readyQueue.remove(processWithShortestPeriod); // NV remove the process with the shortest period from the ready queue
 		return processWithShortestPeriod; // PI return the process with highest priority
 	}
 
@@ -401,7 +413,7 @@ public class ProcessList {
 				processWithSoonestDeadline = process; // PI current process' priority is higher - let's use this process as the highest priority
 			}
 		}
-		this.readyQueue.remove(processWithSoonestDeadline);
+		this.readyQueue.remove(processWithSoonestDeadline); // NV remove the process with the shortest period from the ready queue
 		return processWithSoonestDeadline; // PI return the process with highest priority
 	}
 }
