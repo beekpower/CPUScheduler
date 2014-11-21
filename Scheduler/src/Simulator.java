@@ -50,19 +50,19 @@ public class Simulator {
 		Scheduler sjrScheduler = new SJRScheduler(processList);
 		CPU sjrCPU = new CPU(sjrScheduler, snapshotInterval);
 		sjrScheduler.updateCPU(sjrCPU);
-		sjrCPU.execute();
+		//sjrCPU.execute();
 
 		//Create a PS Scheduler and execute it
 		Scheduler psScheduler = new PSScheduler(processList);
 		CPU psCPU = new CPU(psScheduler, snapshotInterval);
 		psScheduler.updateCPU(psCPU);
-		//psCPU.execute();
+		psCPU.execute();
 
 		//Create a PRM Scheduler and execute it
 		Scheduler prmScheduler = new PRMScheduler(processList);
 		CPU prmCPU = new CPU(prmScheduler, snapshotInterval);
 		prmScheduler.updateCPU(prmCPU);
-		prmCPU.execute();
+		//prmCPU.execute();
 
 		//Create a EDF Scheduler and execute it
 		Scheduler edfScheduler = new EDFScheduler(processList);
@@ -92,7 +92,7 @@ public class Simulator {
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
-			
+
 		}
   }
 
