@@ -20,6 +20,7 @@ public class Process {
 	private boolean waiting = false;	// NV is this process currently waiting in IO
 
 	public Process(int PID, int cpuBurst, int ioBurst, int priority, int period) {
+		// NV set a bunch of instance fields according to the passed params / default values:
 		this.PID = PID;
 		this.cpuBurst = cpuBurst;
 		this.initCPUBurst = cpuBurst;
@@ -27,6 +28,7 @@ public class Process {
 		this.initIOBurst = ioBurst;
 		this.priority = priority;
 		this.period = period;
+		// NV set some default values:
 		this.counter = 0;
 		this.cycleStart = -1;
 		this.cycleEnd = -1;
@@ -36,29 +38,31 @@ public class Process {
 
 	/**
 	 * PI copy's this process and returns a new one
-	 * @return
+	 * @return a copied version of this process
 	 */
 	public Process copyProcess() {
 		return new Process(this.getPID(), this.getCPUBurst(), this.getIOBurst(), this.getPriority(), this.getPriority());
 	}
 
-  //The CPU calls this to process the next inrcution/CPU burst
+  /**
+   * NV The CPU calls this to process the next instruction/CPU burst
+   * @param cycle cycle that the CPU is currently on
+   */
 	public void processInstruction(int cycle) {
-		//increment the counter for RR
+		//NV increment the counter for RR
 		counter++;
-		//Decrement the CPU burst
+		//NV Decrement the CPU burst
 		cpuBurst--;
-		//If the CPU burst reaches 0, then the process is terminated
+		//NV If the CPU burst reaches 0, then the process is terminated
 		if (cpuBurst == 0) {
 			setTerminated(true);
 		}
 
-		//If we have processed half of the CPU burst
-		//then it is time to enter the I/O burst and enter the waiting state
+		//NV If we have processed half of the CPU burst then it is time to enter the I/O burst and enter the waiting state
 		if (initCPUBurst / 2 == cpuBurst) {
-			if (ioBurst != 0) {
+			if (ioBurst != 0) { // NV if the io burst isn't zero...
 				setWaiting(true);
-				this.cycleEnd = cycle;
+				this.cycleEnd = cycle; // PI set the end cycle to the current cycle
 			}
 		}
 	}
@@ -82,18 +86,18 @@ public class Process {
 	 * NV Reset the state of the process back to when it was first loaded in
 	 */
 	public void reset() {
-		this.cpuBurst = initCPUBurst;
-		this.ioBurst = initIOBurst;
-		setTerminated(false);
-		setWaiting(false);
-		counter = 0;
-		waitTime = 0;
-		cycleStart = -1;
-		cycleEnd = -1;
+		this.cpuBurst = initCPUBurst; 	// NV set the cpu burst to the initial cpu burst
+		this.ioBurst = initIOBurst;		// NV set the io burst to the initial io burst
+		setTerminated(false);			// NV set the terminated flag to false
+		setWaiting(false);				// NV set the waiting flag to false
+		counter = 0;					// NV set the counter to zero
+		waitTime = 0;					// PI set the wait time to zero
+		cycleStart = -1;				// PI set the cycle start to -1
+		cycleEnd = -1;					// PI set the cyle start to -1
 	}
 
 	/**
-	 * NV Decrement the IO Burst
+	 * NV Decrement the IO Burst of this process
 	 */
 	public void decrementIOBurst() {
 		ioBurst--;
@@ -104,7 +108,7 @@ public class Process {
 
 	/**
 	 * Return the CPU Burst of the process
-	 * @return
+	 * @return cpuBurst
 	 */
 	public int getCPUBurst() {
 		return cpuBurst;
@@ -112,7 +116,7 @@ public class Process {
 
 	/**
 	 * Set the CPU Burst of the process
-	 * @param cpuBurst
+	 * @param cpuBurst int
 	 */
 	public void setCPUBurst(int cpuBurst) {
 		this.cpuBurst = cpuBurst;
@@ -120,7 +124,7 @@ public class Process {
 
 	/**
 	 * NV Set the period of the process
-	 * @param period
+	 * @param period int
 	 */
 	public void setPeriod(int period) {
 		this.period = period;
@@ -128,7 +132,7 @@ public class Process {
 
 	/**
 	 * NV Get the PID of the process
-	 * @return
+	 * @return PID
 	 */
 	public int getPID() {
 		return PID;
@@ -136,7 +140,7 @@ public class Process {
 
 	/**
 	 * NV Get the initial CPU Burst of the process
-	 * @return
+	 * @return initCPUBurst
 	 */
 	public int getInitCPUBurst() {
 		return initCPUBurst;
@@ -152,7 +156,7 @@ public class Process {
 
 	/**
 	 * NV Get the period of the process
-	 * @return
+	 * @return period
 	 */
 	public int getPeriod() {
 		return period;
@@ -160,7 +164,7 @@ public class Process {
 
 	/**
 	 * NV Get the priority of the process
-	 * @return
+	 * @return priority
 	 */
 	public int getPriority() {
 		return priority;
@@ -168,7 +172,7 @@ public class Process {
 
 	/**
 	 * NV Set the priority of the process
-	 * @param priority
+	 * @param priority int
 	 */
 	public void setPriority(int priority) {
 		this.priority = priority;
@@ -176,6 +180,7 @@ public class Process {
 
 	/**
 	 * NV Convert the propreties to string format
+	 * @return toString representation of this process object
 	 */
 	public String toString() {
 		return "PID: "+this.getPID()+" || CPU Burst: "+this.getCPUBurst()+" || IO Burst: "+this.getIOBurst()+" || Priority: "+this.getPriority()+" || Period: "+this.getPeriod();
@@ -183,7 +188,7 @@ public class Process {
 
 	/**
 	 * NV Check the terminated state of the process
-	 * @return
+	 * @return isTerminated
 	 */
 	public boolean isTerminated() {
 		return terminated;
@@ -191,18 +196,24 @@ public class Process {
 
     /**
      * NV Set the terminated state of the process
-     * @param terminated
+     * @param terminated boolean
      */
 	public void setTerminated(boolean terminated) {
 		this.terminated = terminated;
 	}
 
-	//Check the waiting state of teh process
+	/**
+	 * NV Check the waiting state of teh process
+	 * @return isWaiting
+	 */
 	public boolean isWaiting() {
 		return waiting;
 	}
 
-	//Set the waiting state of the process
+	/**
+	 * NV Set the waiting state of the process
+	 * @param waiting boolean
+	 */
 	public void setWaiting(boolean waiting) {
 		this.waiting = waiting;
 	}

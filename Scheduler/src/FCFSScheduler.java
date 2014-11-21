@@ -5,9 +5,13 @@
  */
 public class FCFSScheduler extends Scheduler{
 
+	/**
+	 * NV construct a FCFS scheduler
+	 * @param processList reference to the process list
+	 */
   public FCFSScheduler(ProcessList processList) {
 	  super(processList);
-	  this.readableName = "FCFS";
+	  this.readableName = "FCFS"; // NV set the readable name
   }
 
   public void schedule() {
