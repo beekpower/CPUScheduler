@@ -42,7 +42,7 @@ public class CPU {
 
 			// PI see if we need to take a snapshot
 			if (cycleCount % snapshotInterval == 0) { // PI see if the total # cycles divides evenly w/ the snapshot interval
-				scheduler.processList.printTable(scheduler.getCurrentProcess(), this, scheduler);
+				// scheduler.processList.printTable(scheduler.getCurrentProcess(), this, scheduler);
 				scheduler.processList.takeSnapshot(this); // PI take a snapshot
 			}
 			cycleCount++; // NV increment the cycle count
