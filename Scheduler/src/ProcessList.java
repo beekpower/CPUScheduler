@@ -127,12 +127,23 @@ public class ProcessList {
 		for(Process process: this.processes) { // PI loop through all processes
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
 				process.decrementIOBurst(); // PI decrement process' I/O burst
+				// if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
+				// 	process.setWaiting(false); // PI set the waiting to false
+				// 	this.readyQueue.add(process); // PI put it back in ready queue
+				// }
+			}
+		}
+	}
+
+	public void moveWaitingToReady(boolean isPreemptive) {
+		for(Process process: this.processes) { // PI loop through all processes
+			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
 				if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
 					process.setWaiting(false); // PI set the waiting to false
 					this.readyQueue.add(process); // PI put it back in ready queue
 				}
-			}
-		}
+		  }
+	  }
 	}
 
 	public void decrementCurrentProcessesWaiting(Process p) {
@@ -146,10 +157,10 @@ public class ProcessList {
 				}
 				if(decrement) {
 					process.decrementIOBurst(); // PI decrement process' I/O burst
-					if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
-						process.setWaiting(false); // PI set the waiting to false
-						this.readyQueue.add(process); // PI put it back in ready queue
-					}
+					// if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
+					// 	process.setWaiting(false); // PI set the waiting to false
+					// 	this.readyQueue.add(process); // PI put it back in ready queue
+					// }
 				}
 		  }
 	  }

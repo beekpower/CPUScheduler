@@ -24,19 +24,19 @@ public class Simulator {
   	Scheduler fcfsScheduler = new FCFSScheduler(processList);
   	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
   	fcfsScheduler.updateCPU(fcfsCPU);
-  	fcfsCPU.execute();
+  	//fcfsCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjfScheduler = new SJFScheduler(processList);
 		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
 		sjfScheduler.updateCPU(sjfCPU);
-		sjfCPU.execute();
+		//sjfCPU.execute();
 
 		// //Create a RR Scheduler and execute it
 		Scheduler rrScheduler = new RRScheduler(processList);
 		CPU rrCPU = new CPU(rrScheduler, snapshotInterval);
 		rrScheduler.updateCPU(rrCPU);
-		rrCPU.execute();
+		//rrCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjrScheduler = new SJRScheduler(processList);
@@ -48,12 +48,12 @@ public class Simulator {
 		Scheduler psScheduler = new PSScheduler(processList);
 		CPU psCPU = new CPU(psScheduler, snapshotInterval);
 		psScheduler.updateCPU(psCPU);
-		psCPU.execute();
-		
+		//psCPU.execute();
+
 		//Create a PRM Scheduler and execute it
 		Scheduler prmScheduler = new PRMScheduler(processList);
 		CPU prmCPU = new CPU(prmScheduler, snapshotInterval);
 		prmScheduler.updateCPU(prmCPU);
-		prmCPU.execute();
+		//prmCPU.execute();
   }
 }
