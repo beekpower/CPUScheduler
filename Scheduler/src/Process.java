@@ -1,5 +1,5 @@
 /**
- * 
+ * Process class that handles everything that a process needs to be
  * @author Phillip Igoe & Nick Van Beek
  *
  */

@@ -1,5 +1,5 @@
 /**
- * FCFSS Scheduler
+ * FCFSS Scheduler scheduler implementation
  * @author Phillip Igoe & Nick Van Beek
  *
  */

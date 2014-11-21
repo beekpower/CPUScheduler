@@ -1,5 +1,5 @@
 /**
- * 
+ * PS scheduler implementation
  * @author Phillip Igoe & Nick Van Beek
  *
  */
