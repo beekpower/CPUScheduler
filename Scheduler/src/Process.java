@@ -57,9 +57,9 @@ public class Process {
 		counter++;
 		// NV Decrement the CPU burst
 		cpuBurst--;
-		
+
 		this.deadline = this.period - this.cpuBurst;
-		
+
 		// NV If the CPU burst reaches 0, then the process is terminated
 		if (cpuBurst == 0) {
 			setTerminated(true);

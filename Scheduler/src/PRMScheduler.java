@@ -1,14 +1,14 @@
 /**
  * PRM scheduler implementation
- *
+ * 
  * @author Phillip Igoe & Nick Van Beek
- *
+ * 
  */
 public class PRMScheduler extends Scheduler {
 
 	/**
 	 * Construct a PRM scheduler
-	 *
+	 * 
 	 * @param processList
 	 *            reference to the process list
 	 */
@@ -52,7 +52,7 @@ public class PRMScheduler extends Scheduler {
 
 	/**
 	 * PI take the process with the shortest period from the ready queue and return it
-	 *
+	 * 
 	 * @return process
 	 */
 	private Process processWithShortestPeriod(Process p) {

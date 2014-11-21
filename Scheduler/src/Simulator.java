@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 /**
  * Simulator class which drives all the simulations for the different schedulers
- *
+ * 
  * @author Phillip Igoe & Nick Van Beek
- *
+ * 
  */
 public class Simulator {
 	private static ProcessList processList; // PI handle to the ProcessList object
@@ -14,7 +14,7 @@ public class Simulator {
 
 	/**
 	 * PI the main method is what will be executed when the class is run
-	 *
+	 * 
 	 * @param args
 	 *            String[] of args passed along to the method
 	 */
@@ -75,7 +75,7 @@ public class Simulator {
 		Scheduler edfScheduler = new EDFScheduler(processList);
 		CPU edfCPU = new CPU(edfScheduler, snapshotInterval);
 		edfScheduler.updateCPU(edfCPU);
-		 edfCPU.execute();
+		edfCPU.execute();
 
 		// PI let's do some ranking for the different schedulers
 		ArrayList<Scheduler> firstStats = new ArrayList<Scheduler>();
@@ -116,7 +116,7 @@ public class Simulator {
 
 	/**
 	 * PI finds the largest calculated rating in the arraylist, removes it, and returns it
-	 *
+	 * 
 	 * @param schedulers
 	 *            list of schedulers to choose from
 	 * @return scheduler with the largest calculated rating in the list

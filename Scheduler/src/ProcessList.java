@@ -484,7 +484,7 @@ public class ProcessList {
 		for (Process p : this.readyQueue) { // PI cycle through all processes in the ready queue
 			boolean go = true;
 			if (current != null) {
-				if (p.getPID() == current.getPID()) {  // PI Is this PID matching?
+				if (p.getPID() == current.getPID()) { // PI Is this PID matching?
 					go = false;
 				}
 			}
