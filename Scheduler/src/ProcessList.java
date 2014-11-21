@@ -11,17 +11,17 @@ import java.util.ArrayList;
  *
  */
 public class ProcessList {
-	public ArrayList<Process> processes;
-	public ArrayList<Process> readyQueue;
+	public ArrayList<Process> processes;	// PI array list containing all the processes
+	public ArrayList<Process> readyQueue;	// PI array list containing all the processes in the ready queue
 	private int numberProcesses;
 	private int quantum;
 
 	public ProcessList(String dataFile, int numberOfCyclesToSnapshot) {
 		processes = new ArrayList<Process>(); // PI instantiate the array list of Processes
 		readyQueue = new ArrayList<Process>(); // PI instantiate the array list of the ready queue
-		File snapshotFile = new File("snapshot.dat");// P IDelete the existing snapshot.dat file
+		File snapshotFile = new File("snapshot.dat");// PI Delete the existing snapshot.dat file
 		snapshotFile.delete();
-		File finalReportFile = new File("FinalReport.txt");// P IDelete the existing snapshot.dat file
+		File finalReportFile = new File("FinalReport.txt");// PI Delete the existing snapshot.dat file
 		finalReportFile.delete();
 
 		try {
@@ -135,6 +135,9 @@ public class ProcessList {
 		}
 	}
 
+	/**
+	 * PI moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
+	 */
 	public void moveWaitingToReady() {
 		for(Process process: this.processes) { // PI loop through all processes
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
@@ -146,6 +149,10 @@ public class ProcessList {
 	  }
 	}
 
+	/**
+	 * PI loop through all the processes that are currently waiting, and decrement their IO burst by 1
+	 * @param p process to NOT decrement
+	 */
 	public void decrementCurrentProcessesWaiting(Process p) {
 		for(Process process: this.processes) { // PI loop through all processes
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
@@ -302,6 +309,9 @@ public class ProcessList {
 		}
 	}
 
+	/** 
+	 * PI increment the wait time for any process that is in the ready queue (used for calculating the average wait time metric)
+	 */
 	public void incrementWaitTimeForProcessesInReadyQueue() {
 		for(Process process: this.readyQueue) {
 			process.waitTime++;
@@ -309,10 +319,14 @@ public class ProcessList {
 
 	}
 
+	/**
+	 * PI take the first process from the ready queue that isn't waiting, remove it, and return it
+	 * @return
+	 */
 	public Process takeFirstProcessInReadyQueueNotWaiting() {
 		Process p = null;
-		for(Process process: this.readyQueue) {
-			if(!process.isWaiting() && process.getCPUBurst() > 0) {
+		for(Process process: this.readyQueue) { // PI cycle through all processes
+			if(!process.isWaiting() && process.getCPUBurst() > 0) { // PI Process has a positive CPU burst and isn't waiting
 				p = process;
 				break;
 			}
@@ -332,7 +346,6 @@ public class ProcessList {
 			System.out.format("%s%15s%15s\n", "none", "none", "none");
 		}
 
-
 		System.out.println("");
 
 		System.out.println("Ready Queue:");
@@ -350,12 +363,12 @@ public class ProcessList {
 				System.out.format("%s%15s%15s\n", process.getPID(), process.getCPUBurst(), process.getIOBurst());
 			}
 		}
-
-
-
-
 	}
 
+	/**
+	 * PI searches through the ready queue and returns the process with the shortest period, removing it from the ready queue
+	 * @return process to return
+	 */
 	public Process takeProcessWithShortestPeriod() {
 		if(this.readyQueue.size() == 0) {
 			return null;
@@ -370,8 +383,12 @@ public class ProcessList {
 		return processWithShortestPeriod; // PI return the process with highest priority
 	}
 
+	/**
+	 * PI searches through the ready queue and returns the process with the soonest deadline, removing it from the ready queue
+	 * @return process to return
+	 */
 	public Process takeProcessWithSoonestDeadline() {
-		if(this.readyQueue.size() == 0) {
+		if(this.readyQueue.size() == 0) { // PI if ready queue doesn't have anything in it, return nothing
 			return null;
 		}
 		Process processWithSoonestDeadline = this.readyQueue.get(0); // PI set the least process
