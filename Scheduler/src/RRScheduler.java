@@ -5,16 +5,17 @@ public class RRScheduler extends Scheduler {
     preemptive = true;
     this.readableName = "RR";
   }
-  
+
   @Override
 	public void schedule() {
 	  	processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
 	    processList.decrementCurrentProcessesWaiting();
-	    
+      processList.moveWaitingToReady();
+
 	    if (currentProcess != null) {
 	    	currentProcess.processInstruction(cpu.cycleCount);
 	    }
-	
+
 	    if (processList.hasProcessInReadyQueue()) {
 	        if (currentProcess == null) {
 	      	  currentProcess = takeFirstProcessInReadyQueue();
@@ -29,7 +30,7 @@ public class RRScheduler extends Scheduler {
 	          }
 	        }
 	      }
-	    
+
 	    else {
 	      if (currentProcess != null) {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
@@ -41,7 +42,7 @@ public class RRScheduler extends Scheduler {
 	      }
 	    }
 	}
-  
+
 	private Process takeFirstProcessInReadyQueue() {
 		cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
 		return processList.takeFirstProcessInReadyQueue();
