@@ -19,21 +19,22 @@ public class Simulator {
 	 *            String[] of args passed along to the method
 	 */
 	public static void main(String[] args) {
+		snapshotInterval = 10;
 		if (args.length > 0) { // PI check to see if we were actually passed the name of the data file + # of cycles to snapshot
 			if (args.length >= 1) { // PI check to see if we got the right # of args
 				// PI parse the args
 				String dataFile = args[0];
 				if (args.length == 2) {
 					snapshotInterval = Integer.parseInt(args[1]); // PI parse the snapshot interval from the CL arg
-				} else {
-					snapshotInterval = 10; // PI else default to 10
 				}
 				processList = new ProcessList(dataFile, snapshotInterval); // PI create a new PList
 			} else {
 				System.out.println("Wrong number of command line arguments");
+				return;
 			}
 		} else {
-			System.out.println("You must enter in the name of the datafile + number of cycles to snapshot as an argument!");
+			System.out.println("You must at least enter in the name of the datafile! You can also enter the number of cycles to snapshot as an argument!");
+			return;
 		}
 		// Create an FCFSScheduler and execute it
 		Scheduler fcfsScheduler = new FCFSScheduler(processList);
