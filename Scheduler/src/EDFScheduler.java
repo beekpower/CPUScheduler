@@ -28,7 +28,7 @@ public class EDFScheduler extends Scheduler {
 	      } else {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          currentProcess = processWithSoonestDeadline(); // PI grab the process with the shortest CPU burst
-	        } else if (processList.getProcessWithShortestPeriod().deadline < currentProcess.deadline) { // NV does the process we found have a lower deadline than the current processor's deadline?
+	        } else if (processList.getProcessWithShortestPeriod(currentProcess).deadline < currentProcess.deadline) { // NV does the process we found have a lower deadline than the current processor's deadline?
 	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
 	          currentProcess = processWithSoonestDeadline(); // PI grab the process with the shortest CPU burst
 	        }
