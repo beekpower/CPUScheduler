@@ -2,7 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/**
+ * 
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class FinalReport {
 	public CPU cpu; // PI ref to the CPU
 	// PI whole bunch of stats
@@ -35,6 +39,9 @@ public class FinalReport {
 		}
 	}
 
+	/**
+	 * PI print the final report by appending a bunch of stats to the FinalReport.txt file
+	 */
 	public void printFinalReport() {
 		try {
 			FileWriter fileWriter = new FileWriter("FinalReport.txt", true); // PI make a new file writer

@@ -1,7 +1,11 @@
-
+/**
+ * The CPU class handles executing processes, calling the schedule method, and keeping track of the busy/idle/total cycle count
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class CPU {
 
-  Scheduler scheduler;
+  Scheduler scheduler;	// NV reference to the scheduler
   long busyCycles = 0;	// NV number of busy cycles in this CPU
   long idleCycles = 0; 	// NV number of idle cycles in this CPU
   int cycleCount = 0; // PI add in a cycle counter
@@ -27,9 +31,9 @@ public class CPU {
     while (scheduler.processList.anyJobsLeft()) { // NV only execute if we have jobs left
       scheduler.schedule();	// NV call the child's schedule method
     	if (scheduler.getCurrentProcess() != null) { // NV if the current process is actually a process, this is a busy cycle
-          busyCycles++;
+          busyCycles++;	// NV increment the busy cycles
       } else {	// NV else, this is an idle cycle
-          idleCycles++;
+          idleCycles++;	// NV increment the idle cycles
       }
 
       // PI see if we need to take a snapshot
@@ -37,7 +41,7 @@ public class CPU {
         scheduler.processList.printTable(scheduler.getCurrentProcess(), this, scheduler);
     	  scheduler.processList.takeSnapshot(this); // PI take a snapshot
       }
-      cycleCount++;
+      cycleCount++;	// NV increment the cycle count
     }
 
     // NV take care of decrementing our counts

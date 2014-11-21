@@ -2,6 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Simulator class which drives all the simulations for the different schedulers
+ * @author Phillip Igoe & Nick Van Beek
+ *
+ */
 public class Simulator {
 	private static ProcessList processList; // PI handle to the ProcessList object
 	private static int snapshotInterval; // PI handle to the snapshot interval
@@ -31,13 +36,13 @@ public class Simulator {
   	Scheduler fcfsScheduler = new FCFSScheduler(processList);
   	CPU fcfsCPU = new CPU(fcfsScheduler, snapshotInterval);
   	fcfsScheduler.updateCPU(fcfsCPU);
-  	//fcfsCPU.execute();
+  	fcfsCPU.execute();
 
 		//Create an SJF Scheduler and execute it
 		Scheduler sjfScheduler = new SJFScheduler(processList);
 		CPU sjfCPU = new CPU(sjfScheduler, snapshotInterval);
 		sjfScheduler.updateCPU(sjfCPU);
-		//sjfCPU.execute();
+		sjfCPU.execute();
 
 		// //Create a RR Scheduler and execute it
 		Scheduler rrScheduler = new RRScheduler(processList);
