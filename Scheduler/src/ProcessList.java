@@ -135,7 +135,7 @@ public class ProcessList {
 		}
 	}
 
-	public void moveWaitingToReady(boolean isPreemptive) {
+	public void moveWaitingToReady() {
 		for(Process process: this.processes) { // PI loop through all processes
 			if(process.isWaiting()) { // PI this program is currently waiting for I/O, let's decrement the I/O burst
 				if(process.getIOBurst() <= 0) { // PI if IO burst is leq 0
@@ -369,7 +369,7 @@ public class ProcessList {
 		this.readyQueue.remove(processWithShortestPeriod);
 		return processWithShortestPeriod; // PI return the process with highest priority
 	}
-	
+
 	public Process takeProcessWithSoonestDeadline() {
 		if(this.readyQueue.size() == 0) {
 			return null;

@@ -33,7 +33,7 @@ public class SJRScheduler extends Scheduler {
         currentProcess = null;
       }
     }
-    processList.moveWaitingToReady(false);
+    processList.moveWaitingToReady();
   }
 
   private Process processWithShortestCPUBurst() {
