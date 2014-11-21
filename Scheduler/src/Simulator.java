@@ -13,7 +13,7 @@ public class Simulator {
 	 */
 	public static void main (String[] args) {
     if(args.length > 0) { // PI check to see if we were actually passed the name of the data file + # of cycles to snapshot
-    	if(args.length == 1) { // PI check to see if we got the right # of args
+    	if(args.length >= 1) { // PI check to see if we got the right # of args
     	  	// PI parse the args
     		String dataFile = args[0];
     		if(args.length == 2) {
