@@ -1,14 +1,14 @@
 /**
  * PRM scheduler implementation
- * 
+ *
  * @author Phillip Igoe & Nick Van Beek
- * 
+ *
  */
 public class PRMScheduler extends Scheduler {
 
 	/**
 	 * Construct a PRM scheduler
-	 * 
+	 *
 	 * @param processList
 	 *            reference to the process list
 	 */
@@ -21,6 +21,8 @@ public class PRMScheduler extends Scheduler {
 	public void schedule() {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); // NV increment the wait time for all processes in ready queue
 		processList.decrementCurrentProcessesWaiting(currentProcess); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
+		processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
+
 		if (currentProcess != null) { // PI ensure current process isn't null
 			currentProcess.processInstruction(cpu.cycleCount);
 		}
@@ -46,12 +48,12 @@ public class PRMScheduler extends Scheduler {
 				currentProcess = null;
 			}
 		}
-		processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
+
 	}
 
 	/**
 	 * PI take the process with the shortest period from the ready queue and return it
-	 * 
+	 *
 	 * @return process
 	 */
 	private Process processWithShortestPeriod(Process p) {
