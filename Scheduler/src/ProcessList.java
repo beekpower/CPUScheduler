@@ -385,24 +385,45 @@ public class ProcessList {
 	 * PI searches through the ready queue and returns the process with the shortest period, removing it from the ready queue
 	 * @return process to return
 	 */
-	public Process getProcessWithShortestPeriod() {
+	public Process getProcessWithShortestPeriod(Process current) {
 		Process lowestPeriod = this.readyQueue.get(0);
+		
 		for(Process p: this.readyQueue) {
-			if(p.getPeriod() < lowestPeriod.getPeriod()) {
-				lowestPeriod = p;
+			boolean go = true;
+			if(current != null) {
+				if(p.getPID() == current.getPID()) {
+					go = false;
+				}
+			}
+			if(go) {
+				if(p.getPeriod() < lowestPeriod.getPeriod()) {
+					lowestPeriod = p;
+				}
 			}
 		}
 		
 		for(Process p: this.readyQueue) {
-			if(p.getPID() < lowestPeriod.getPID() && p.getPeriod() == lowestPeriod.getPeriod()) {
-				lowestPeriod = p;
+			boolean go = true;
+			if(current != null) {
+				if(p.getPID() == current.getPID()) {
+					go = false;
+				}
+			}
+			if(go) {
+				if(p.getPID() < lowestPeriod.getPID() && p.getPeriod() == lowestPeriod.getPeriod()) {
+					lowestPeriod = p;
+				}
 			}
 		}
 		return lowestPeriod; // PI return the process with highest priority
 	}
 	
-	public Process takeProcessWithShortestPeriod() {
-		Process p = this.getProcessWithShortestPeriod();
+	/**
+	 * PI take the process with the shortest period
+	 * @return
+	 */
+	public Process takeProcessWithShortestPeriod(Process current) {
+		Process p = this.getProcessWithShortestPeriod(current);
 		this.readyQueue.remove(p); // NV remove the process with the shortest period from the ready queue
 		return p;
 	}
@@ -412,16 +433,28 @@ public class ProcessList {
 	 * @return process to return
 	 */
 	public Process takeProcessWithSoonestDeadline() {
-		if(this.readyQueue.size() == 0) { // PI if ready queue doesn't have anything in it, return nothing
-			return null;
-		}
-		Process processWithSoonestDeadline = this.readyQueue.get(0); // PI set the least process
-		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
-			if(process.deadline < processWithSoonestDeadline.deadline) { // PI if the cur process' priority test is less...
-				processWithSoonestDeadline = process; // PI current process' priority is higher - let's use this process as the highest priority
+		Process p = getProcessWithLowestDeadline();
+		this.readyQueue.remove(p); // NV remove the process with the shortest period from the ready queue
+		return p; // PI return the process with highest priority
+	}
+	
+	/**
+	 * PI searches through the ready queue and returns the process with the shortest period, removing it from the ready queue
+	 * @return process to return
+	 */
+	public Process getProcessWithLowestDeadline() {
+		Process lowestDeadline = this.readyQueue.get(0);
+		for(Process p: this.readyQueue) {
+			if(p.deadline < lowestDeadline.deadline) {
+				lowestDeadline = p;
 			}
 		}
-		this.readyQueue.remove(processWithSoonestDeadline); // NV remove the process with the shortest period from the ready queue
-		return processWithSoonestDeadline; // PI return the process with highest priority
+		
+		for(Process p: this.readyQueue) {
+			if(p.getPID() < lowestDeadline.getPID() && p.deadline == lowestDeadline.deadline) {
+				lowestDeadline = p;
+			}
+		}
+		return lowestDeadline; // PI return the process with highest priority
 	}
 }

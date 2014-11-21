@@ -24,13 +24,13 @@ public class PRMScheduler extends Scheduler {
 
 	    if (processList.hasProcessInReadyQueue()) { // NV are there processes in the ready queue?
 	      if (currentProcess == null) { // PI ensure current process isn't null
-	        currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
+	        currentProcess = processWithShortestPeriod(null); // PI grab the process with the shortest CPU burst
 	      } else {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
-	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
-	        } else if (processList.getProcessWithShortestPeriod().getPeriod() < currentProcess.getPeriod()) { // NV does the process we found have a lower period than the current processor's period?
+	          currentProcess = processWithShortestPeriod(null); // PI grab the process with the shortest CPU burst
+	        } else if (processList.getProcessWithShortestPeriod(currentProcess).getPeriod() < currentProcess.getPeriod()) { // NV does the process we found have a lower period than the current processor's period?
 	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
-	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
+	          currentProcess = processWithShortestPeriod(currentProcess); // PI grab the process with the shortest CPU burst
 	        }
 	      }
 	    } else {
@@ -50,8 +50,8 @@ public class PRMScheduler extends Scheduler {
 	 * PI take the process with the shortest period from the ready queue and return it
 	 * @return process
 	 */
-	  private Process processWithShortestPeriod() {
-	  	Process returnProcess = processList.takeProcessWithShortestPeriod(); // PI take the process with the shortest period
+	  private Process processWithShortestPeriod(Process p) {
+	  	Process returnProcess = processList.takeProcessWithShortestPeriod(p); // PI take the process with the shortest period
 	  	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
 	  	return returnProcess;
 	  }
