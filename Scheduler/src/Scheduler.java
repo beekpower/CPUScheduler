@@ -6,6 +6,12 @@ public abstract class Scheduler {
   public String readableName;
   public CPU cpu;
 
+  // PI keep track of some stats
+  public double throughput;
+  public int turnAroundTime;
+  public double waitTime;
+  public double cpuUtilization;
+  public int deadlineViolations;
 
   public Scheduler(ProcessList processList) {
     this.processList = processList;
