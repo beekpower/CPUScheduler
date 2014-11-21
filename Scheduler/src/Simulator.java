@@ -2,6 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Simulator class which drives all the simulations for the different schedulers
+ * @author Phil & Nick
+ *
+ */
 public class Simulator {
 	private static ProcessList processList; // PI handle to the ProcessList object
 	private static int snapshotInterval; // PI handle to the snapshot interval
