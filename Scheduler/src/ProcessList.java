@@ -261,28 +261,32 @@ public class ProcessList {
 	 * PI get process with highest priority
 	 * @return
 	 */
-	public Process takeProcessWithHighestPriority(Process currentProcess) {
-		if(this.readyQueue.size() == 0) {
-			return null;
+	public Process takeProcessWithHighestPriority() {
+		Process returnProcess = findProcessWithLowestPIDAndLowestPriorityInReadyQueue();
+		if(this.readyQueue.contains(returnProcess)) {
+			this.readyQueue.remove(returnProcess);
 		}
-		Process processWithHighestPriority = this.readyQueue.get(0); // PI set the least process
-		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
-			if(process.getPriority() < processWithHighestPriority.getPriority()) { // PI if the cur process' priority test is less...
-				processWithHighestPriority = process; // PI current process' priority is higher - let's use this process as the highest priority
-			}
-		}
-		this.readyQueue.remove(processWithHighestPriority);
-		return processWithHighestPriority; // PI return the process with highest priority
+		return returnProcess;
 	}
 
-	public Process getProcessWithHighestPriority(Process currentProcess) {
-		Process processWithHighestPriority = this.readyQueue.get(0); // PI set the least process
-		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
-			if(process.getPriority() < processWithHighestPriority.getPriority()) { // PI if the cur process' priority test is less...
-				processWithHighestPriority = process; // PI current process' priority is higher - let's use this process as the highest priority
+	public Process getProcessWithHighestPriority() {
+		return findProcessWithLowestPIDAndLowestPriorityInReadyQueue();
+	}
+	
+	private Process findProcessWithLowestPIDAndLowestPriorityInReadyQueue() {
+		Process lowestPriority = this.readyQueue.get(0);
+		for(Process p: this.readyQueue) {
+			if(p.getPriority() < lowestPriority.getPriority()) {
+				lowestPriority = p;
 			}
 		}
-		return processWithHighestPriority; // PI return the process with highest priority
+		
+		for(Process p: this.readyQueue) {
+			if(p.getPID() < lowestPriority.getPID() && p.getPriority() == lowestPriority.getPriority()) {
+				lowestPriority = p;
+			}
+		}
+		return lowestPriority;
 	}
 
 	public int getQuantum() {
