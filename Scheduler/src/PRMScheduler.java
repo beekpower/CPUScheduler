@@ -28,7 +28,7 @@ public class PRMScheduler extends Scheduler {
 	      } else {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
-	        } else if (processList.getProcessWithShortestPeriod().getPeriod() < currentProcess.getPeriod()) { // NV does the process we found have a lower CPU burst than the current processor's CPU burst?
+	        } else if (processList.getProcessWithShortestPeriod().getPeriod() < currentProcess.getPeriod()) { // NV does the process we found have a lower period than the current processor's period?
 	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
 	          currentProcess = processWithShortestPeriod(); // PI grab the process with the shortest CPU burst
 	        }
