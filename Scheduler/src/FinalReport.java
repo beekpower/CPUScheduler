@@ -88,6 +88,13 @@ public class FinalReport {
 			}
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer
+			
+			// PI let's save our stats to the scheduler
+			this.cpu.scheduler.throughput = throughput;
+			this.cpu.scheduler.turnAroundTime = turnAroundTime;
+			this.cpu.scheduler.waitTime = averageWaitTime;
+			this.cpu.scheduler.cpuUtilization = CPUUtilization;
+			this.cpu.scheduler.deadlineViolations = deadlineViolations;
 		} catch (IOException e) {
 			// uh oh
 			e.printStackTrace();
