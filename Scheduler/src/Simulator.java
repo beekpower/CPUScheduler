@@ -2,7 +2,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
 public class Simulator {
 	private static ProcessList processList; // PI handle to the ProcessList object
 	private static int snapshotInterval; // PI handle to the snapshot interval
@@ -78,6 +77,7 @@ public class Simulator {
 		firstStats.add(sjrScheduler);
 		firstStats.add(psScheduler);
 		
+		// PI let's do ranking for the real time schedulers
 		ArrayList<Scheduler> secondStats = new ArrayList<Scheduler>();
 		secondStats.add(prmScheduler);
 		secondStats.add(edfScheduler);
@@ -106,17 +106,23 @@ public class Simulator {
 		}
   }
 
+	/**
+	 * PI finds the largest calculated rating in the arraylist, removes it, and returns it
+	 * @param schedulers list of schedulers to choose from
+	 * @return scheduler with the largest calculated rating in the list
+	 */
 	private static Scheduler findLargestCalculatedRating(ArrayList<Scheduler> schedulers) {
-		Scheduler largest = schedulers.get(0);
+		Scheduler largest = schedulers.get(0); // PI set the first element as the largest
 		int index = 0;
+		// PI loop through all schedulers and test em
 		for(int i = 0; i < schedulers.size(); i++) {
 			Scheduler scheduler = schedulers.get(i);
-			if(scheduler.getCalculatedRating() > largest.getCalculatedRating()) {
+			if(scheduler.getCalculatedRating() > largest.getCalculatedRating()) { // PI we found a larger one
 				largest = scheduler;
 				index = i;
 			}
 		}
-		schedulers.remove(index);
-		return largest;
+		schedulers.remove(index); // PI be sure to remove it from the array list
+		return largest; // PI now return the largest
 	}
 }
