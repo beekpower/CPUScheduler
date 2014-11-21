@@ -13,11 +13,15 @@ public class Simulator {
 	 */
 	public static void main (String[] args) {
     if(args.length > 0) { // PI check to see if we were actually passed the name of the data file + # of cycles to snapshot
-    	if(args.length == 2) { // PI check to see if we got the right # of args
+    	if(args.length == 1) { // PI check to see if we got the right # of args
     	  	// PI parse the args
     		String dataFile = args[0];
-        	snapshotInterval = Integer.parseInt(args[1]); // PI parse the snapshot interval from the CL arg
-        	processList = new ProcessList(dataFile, snapshotInterval); // PI create a new PList
+    		if(args.length == 2) {
+    			snapshotInterval = Integer.parseInt(args[1]); // PI parse the snapshot interval from the CL arg
+    		} else {
+    			snapshotInterval = 10; // PI else default to 10
+    		}
+    		processList = new ProcessList(dataFile, snapshotInterval); // PI create a new PList
     	} else {
     		System.out.println("Wrong number of command line arguments");
     	}
