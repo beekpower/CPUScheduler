@@ -26,10 +26,10 @@ public class EDFScheduler extends Scheduler {
 	      if (currentProcess == null) {
 	        currentProcess = processWithSoonestDeadline(); // NV set current process to process with the soonest deadline
 	      } else {
-	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          currentProcess = processWithSoonestDeadline(); // NV set current process to process with the soonest deadline
 	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
-	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
+	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
 	          currentProcess = processWithSoonestDeadline(); // NV set current process to process with the soonest deadline
 	        }
 	      }

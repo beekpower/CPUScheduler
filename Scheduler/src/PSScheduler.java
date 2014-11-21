@@ -21,7 +21,7 @@ public class PSScheduler extends Scheduler {
 			if (currentProcess == null) {
 				currentProcess = processWithHighestPriority();
 			} else {
-				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+				if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 					currentProcess = processWithHighestPriority();
 				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
 					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
@@ -30,8 +30,8 @@ public class PSScheduler extends Scheduler {
 			}
 		} else {
 			if (currentProcess != null) {
-				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-					//current process could still be executing, so return it
+				if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
+					//NV current process could still be executing, so return it
 					currentProcess = null;
 				}
 			} else {

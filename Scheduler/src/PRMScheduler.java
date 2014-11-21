@@ -22,7 +22,7 @@ public class PRMScheduler extends Scheduler {
 	      if (currentProcess == null) {
 	        currentProcess = processWithShortestPeriod();
 	      } else {
-	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          currentProcess = processWithShortestPeriod();
 	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
 	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
@@ -31,8 +31,8 @@ public class PRMScheduler extends Scheduler {
 	      }
 	    } else {
 	      if (currentProcess != null) {
-	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
-	          //current process could still be executing, so return it
+	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
+	          //NV current process could still be executing, so return it
 	          currentProcess = null;
 	        }
 	      } else {

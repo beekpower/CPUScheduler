@@ -25,7 +25,7 @@ public class RRScheduler extends Scheduler {
 	        if (currentProcess == null) {
 	      	  currentProcess = takeFirstProcessInReadyQueue(); // NV grab the first process in ready queue and remove it
 	        } else {
-	          if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+	          if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	        	  currentProcess.resetCounter();
 	        	  currentProcess =  this.takeFirstProcessInReadyQueue(); // NV grab the first process in ready queue and remove it
 	          } else if (currentProcess.getCounter() == processList.getQuantum()) {
@@ -38,7 +38,7 @@ public class RRScheduler extends Scheduler {
 
 	    else {
 	      if (currentProcess != null) {
-	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          //current process could still be executing, so return it
 	          currentProcess = null;
 	        }

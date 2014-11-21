@@ -21,7 +21,7 @@ public class SJRScheduler extends Scheduler {
       if (currentProcess == null) {
         currentProcess = processWithShortestCPUBurst();
       } else {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
           currentProcess = processWithShortestCPUBurst();
         } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
           processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
@@ -30,7 +30,7 @@ public class SJRScheduler extends Scheduler {
       }
     } else {
       if (currentProcess != null) {
-        if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
+        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
           //current process could still be executing, so return it
           currentProcess = null;
         }
