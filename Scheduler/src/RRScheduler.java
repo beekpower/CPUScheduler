@@ -17,12 +17,12 @@ public class RRScheduler extends Scheduler {
 	    processList.decrementCurrentProcessesWaiting(); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
 	    processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
 
-	    if (currentProcess != null) {
+	    if (currentProcess != null) { // PI ensure current process isn't null
 	    	currentProcess.processInstruction(cpu.cycleCount);
 	    }
 
-	    if (processList.hasProcessInReadyQueue()) {
-	        if (currentProcess == null) {
+	    if (processList.hasProcessInReadyQueue()) { // NV are there processes in the ready queue?
+	        if (currentProcess == null) { // PI ensure current process isn't null
 	      	  currentProcess = takeFirstProcessInReadyQueue(); // NV grab the first process in ready queue and remove it
 	        } else {
 	          if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
@@ -37,7 +37,7 @@ public class RRScheduler extends Scheduler {
 	      }
 
 	    else {
-	      if (currentProcess != null) {
+	      if (currentProcess != null) { // PI ensure current process isn't null
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          //current process could still be executing, so return it
 	          currentProcess = null;
