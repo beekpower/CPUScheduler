@@ -50,7 +50,7 @@ public class EDFScheduler extends Scheduler {
 	 * @return process with the soonest deadline
 	 */
 	  private Process processWithSoonestDeadline() {
-	  	Process returnProcess = processList.takeProcessWithSoonestDeadline();
+	  	Process returnProcess = processList.takeProcessWithSoonestDeadline(); // PI search through the ready queue and return the process with the soonest deadline
 	  	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
 	  	return returnProcess;
 	  }

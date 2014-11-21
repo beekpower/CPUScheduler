@@ -4,9 +4,13 @@
  *
  */
 public class PSScheduler extends Scheduler {
+	/**
+	 * NV Construct a PS scheduler
+	 * @param processList reference to the process list
+	 */
 	public PSScheduler(ProcessList processList) {
-    super(processList);
-    this.readableName = "PS";
+	    super(processList);
+	    this.readableName = "PS"; // NV set the readable name
 	 }
 
   public void schedule() {
@@ -22,10 +26,10 @@ public class PSScheduler extends Scheduler {
 				currentProcess = processWithHighestPriority();
 			} else {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
-					currentProcess = processWithHighestPriority();
-				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
-					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
-					currentProcess = processWithHighestPriority();
+					currentProcess = processWithHighestPriority(); // NV get the process with the highest priority
+				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) { // PI Does the priority of the highest process we found less than the priority of the current process?
+					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // PI add the current process to the ready queue
+					currentProcess = processWithHighestPriority(); // PI set the current process to the process we just got
 				}
 			}
 		} else {
@@ -41,9 +45,13 @@ public class PSScheduler extends Scheduler {
 
   }
 
+  /**
+   * NV find the process with the highest priority
+   * @return process
+   */
 	private Process processWithHighestPriority() {
-		Process returnProcess = processList.takeProcessWithHighestPriority();
-		cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+		Process returnProcess = processList.takeProcessWithHighestPriority(); // NV take the process with the highest priority from the ready queue
+		cpu.finalReport.addProcess(returnProcess); // NV add the current process to the final report
 		return returnProcess;
 	}
 }

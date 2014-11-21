@@ -5,9 +5,13 @@
  */
 public class SJFScheduler extends Scheduler {
 
+	/**
+	 * PI Construct a SJF scheduler
+	 * @param processList reference to the process list
+	 */
   public SJFScheduler(ProcessList processList) {
     super(processList);
-    this.readableName = "SJF";
+    this.readableName = "SJF"; // NV set the readable name
   }
 
   public void schedule() {

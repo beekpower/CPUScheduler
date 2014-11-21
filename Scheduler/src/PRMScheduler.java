@@ -5,9 +5,13 @@
  */
 public class PRMScheduler extends Scheduler {
 
+	/**
+	 * Construct a PRM scheduler
+	 * @param processList reference to the process list
+	 */
 	public PRMScheduler(ProcessList processList) {
 		super(processList);
-	    this.readableName = "PRM";
+	    this.readableName = "PRM"; // PI set the readable name
 	}
 
 	@Override
@@ -15,18 +19,18 @@ public class PRMScheduler extends Scheduler {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); // NV increment the wait time for all processes in ready queue
 	    processList.decrementCurrentProcessesWaiting(); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
 	    if (currentProcess != null) { // PI ensure current process isn't null
-	      currentProcess.processInstruction(cpu.cycleCount);
+	      currentProcess.processInstruction(cpu.cycleCount); // NV process the instruction
 	    }
 
 	    if (processList.hasProcessInReadyQueue()) { // NV are there processes in the ready queue?
 	      if (currentProcess == null) { // PI ensure current process isn't null
-	        currentProcess = processWithShortestPeriod();
+	        currentProcess = processWithShortestPeriod(); // NV grab the process with the shortest period
 	      } else {
 	        if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
 	          currentProcess = processWithShortestPeriod();
 	        } else if (processList.getProcessWithShortestCPUBurst().getCPUBurst() < currentProcess.getCPUBurst()) {
 	          processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
-	          currentProcess = processWithShortestPeriod();
+	          currentProcess = processWithShortestPeriod(); // NV grab the process with the shortest period
 	        }
 	      }
 	    } else {
@@ -41,8 +45,12 @@ public class PRMScheduler extends Scheduler {
 	    }
 	  }
 
+	/**
+	 * PI take the process with the shortest period from the ready queue and return it
+	 * @return process
+	 */
 	  private Process processWithShortestPeriod() {
-	  	Process returnProcess = processList.takeProcessWithShortestPeriod();
+	  	Process returnProcess = processList.takeProcessWithShortestPeriod(); // PI take the process with the shortest period
 	  	cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
 	  	return returnProcess;
 	  }
