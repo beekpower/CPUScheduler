@@ -19,7 +19,7 @@ public class PSScheduler extends Scheduler {
 			} else {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) {
 					currentProcess = processWithHighestPriority();
-				} else if (processList.getProcessWithHighestPriority().getPriority() < currentProcess.getPriority()) {
+				} else if (processList.getProcessWithHighestPriority(this.currentProcess).getPriority() < currentProcess.getPriority()) {
 					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount);
 					currentProcess = processWithHighestPriority();
 				}
@@ -38,7 +38,7 @@ public class PSScheduler extends Scheduler {
   }
 
 	private Process processWithHighestPriority() {
-		Process returnProcess = processList.takeProcessWithHighestPriority();
+		Process returnProcess = processList.takeProcessWithHighestPriority(this.currentProcess);
 		cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
 		return returnProcess;
 	}
