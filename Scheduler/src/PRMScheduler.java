@@ -12,8 +12,8 @@ public class PRMScheduler extends Scheduler {
 
 	@Override
 	public void schedule() {
-		processList.incrementWaitTimeForProcessesInReadyQueue(); //fix this skip
-	    processList.decrementCurrentProcessesWaiting();
+		processList.incrementWaitTimeForProcessesInReadyQueue(); // NV increment the wait time for all processes in ready queue
+	    processList.decrementCurrentProcessesWaiting(); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
 	    if (currentProcess != null) {
 	      currentProcess.processInstruction(cpu.cycleCount);
 	    }
