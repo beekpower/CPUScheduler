@@ -63,7 +63,7 @@ public class Simulator {
 		Scheduler psScheduler = new PSScheduler(processList);
 		CPU psCPU = new CPU(psScheduler, snapshotInterval);
 		psScheduler.updateCPU(psCPU);
-		// psCPU.execute();
+		psCPU.execute();
 
 		// Create a PRM Scheduler and execute it
 		Scheduler prmScheduler = new PRMScheduler(processList);

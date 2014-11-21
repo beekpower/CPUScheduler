@@ -33,7 +33,7 @@ public class Process {
 		this.counter = 0;
 		this.cycleStart = -1;
 		this.cycleEnd = -1;
-		this.deadline = period - cpuBurst;
+		this.deadline = this.period - this.cpuBurst;
 		waitTime = 0;
 	}
 
@@ -57,6 +57,9 @@ public class Process {
 		counter++;
 		// NV Decrement the CPU burst
 		cpuBurst--;
+		
+		this.deadline = this.period - this.cpuBurst;
+		
 		// NV If the CPU burst reaches 0, then the process is terminated
 		if (cpuBurst == 0) {
 			setTerminated(true);
@@ -99,6 +102,7 @@ public class Process {
 		waitTime = 0; // PI set the wait time to zero
 		cycleStart = -1; // PI set the cycle start to -1
 		cycleEnd = -1; // PI set the cyle start to -1
+		this.deadline = this.period - this.initCPUBurst;
 	}
 
 	/**

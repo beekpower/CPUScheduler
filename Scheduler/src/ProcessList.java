@@ -407,24 +407,24 @@ public class ProcessList {
 	public Process getProcessWithShortestPeriod(Process current) {
 		Process lowestPeriod = this.readyQueue.get(0);
 
-		for (Process p : this.readyQueue) {
+		for (Process p : this.readyQueue) { // PI cycle through all processes in the ready queue
 			boolean go = true;
 			if (current != null) {
-				if (p.getPID() == current.getPID()) {
+				if (p.getPID() == current.getPID()) { // PI Is this PID matching?
 					go = false;
 				}
 			}
 			if (go) {
-				if (p.getPeriod() < lowestPeriod.getPeriod()) {
+				if (p.getPeriod() < lowestPeriod.getPeriod()) { // PI if thes current period lower?
 					lowestPeriod = p;
 				}
 			}
 		}
 
-		for (Process p : this.readyQueue) {
+		for (Process p : this.readyQueue) { // PI Cyce through all processes in the ready queue
 			boolean go = true;
 			if (current != null) {
-				if (p.getPID() == current.getPID()) {
+				if (p.getPID() == current.getPID()) { // PI Is this PID matching?
 					go = false;
 				}
 			}
@@ -453,8 +453,8 @@ public class ProcessList {
 	 * 
 	 * @return process to return
 	 */
-	public Process takeProcessWithSoonestDeadline() {
-		Process p = getProcessWithLowestDeadline();
+	public Process takeProcessWithSoonestDeadline(Process currentProcess) {
+		Process p = getProcessWithLowestDeadline(currentProcess);
 		this.readyQueue.remove(p); // NV remove the process with the shortest period from the ready queue
 		return p; // PI return the process with highest priority
 	}
@@ -464,19 +464,36 @@ public class ProcessList {
 	 * 
 	 * @return process to return
 	 */
-	public Process getProcessWithLowestDeadline() {
-		Process lowestDeadline = this.readyQueue.get(0);
-		for (Process p : this.readyQueue) {
-			if (p.deadline < lowestDeadline.deadline) {
-				lowestDeadline = p;
+	public Process getProcessWithLowestDeadline(Process current) {
+		Process lowestPeriod = this.readyQueue.get(0);
+
+		for (Process p : this.readyQueue) { // PI Cyce through all processes in the ready queue
+			boolean go = true;
+			if (current != null) {
+				if (p.getPID() == current.getPID()) { // PI Is this PID matching?
+					go = false;
+				}
+			}
+			if (go) {
+				if (p.deadline < lowestPeriod.deadline) { // PI Is this deadline lower?
+					lowestPeriod = p;
+				}
 			}
 		}
 
-		for (Process p : this.readyQueue) {
-			if (p.getPID() < lowestDeadline.getPID() && p.deadline == lowestDeadline.deadline) {
-				lowestDeadline = p;
+		for (Process p : this.readyQueue) { // PI cycle through all processes in the ready queue
+			boolean go = true;
+			if (current != null) {
+				if (p.getPID() == current.getPID()) {  // PI Is this PID matching?
+					go = false;
+				}
+			}
+			if (go) {
+				if (p.getPID() > lowestPeriod.getPID() && p.deadline == lowestPeriod.deadline) {
+					lowestPeriod = p;
+				}
 			}
 		}
-		return lowestDeadline; // PI return the process with highest priority
+		return lowestPeriod; // PI return the process with highest priority
 	}
 }

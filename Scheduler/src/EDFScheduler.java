@@ -21,19 +21,21 @@ public class EDFScheduler extends Scheduler {
 	public void schedule() {
 		processList.incrementWaitTimeForProcessesInReadyQueue(); // NV increment the wait time for all processes in ready queue
 		processList.decrementCurrentProcessesWaiting(currentProcess); // NV decrement the current processes waiting by looping through all processes in IO and decrmenting their IO time
+		processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
+
 		if (currentProcess != null) { // PI ensure current process isn't null
 			currentProcess.processInstruction(cpu.cycleCount);
 		}
 
 		if (processList.hasProcessInReadyQueue()) { // NV are there processes in the ready queue?
 			if (currentProcess == null) { // PI ensure current process isn't null
-				currentProcess = processWithSoonestDeadline(); // PI grab the process with the shortest CPU burst
+				currentProcess = processWithSoonestDeadline(null); // PI grab the process with the shortest CPU burst
 			} else {
 				if (currentProcess.isTerminated() || currentProcess.isWaiting()) { // NV is the current process terminated or waiting?
-					currentProcess = processWithSoonestDeadline(); // PI grab the process with the shortest CPU burst
-				} else if (processList.getProcessWithShortestPeriod(currentProcess).deadline < currentProcess.deadline) { // NV does the process we found have a lower deadline than the current processor's deadline?
+					currentProcess = processWithSoonestDeadline(null); // PI grab the process with the shortest CPU burst
+				} else if (processList.getProcessWithLowestDeadline(currentProcess).deadline < currentProcess.deadline) { // NV does the process we found have a lower period than the current processor's period?
 					processList.addtoReadyQueue(currentProcess, this.cpu.cycleCount); // NV add the current process to the ready queue
-					currentProcess = processWithSoonestDeadline(); // PI grab the process with the shortest CPU burst
+					currentProcess = processWithSoonestDeadline(currentProcess); // PI grab the process with the shortest CPU burst
 				}
 			}
 		} else {
@@ -46,7 +48,7 @@ public class EDFScheduler extends Scheduler {
 				currentProcess = null;
 			}
 		}
-		processList.moveWaitingToReady(); // NV moves all the processes that are waiting, and if the IO burst is less than or equal to 0, moves them to the ready queue
+
 	}
 
 	/**
@@ -54,8 +56,8 @@ public class EDFScheduler extends Scheduler {
 	 * 
 	 * @return process with the soonest deadline
 	 */
-	private Process processWithSoonestDeadline() {
-		Process returnProcess = processList.takeProcessWithSoonestDeadline(); // PI search through the ready queue and return the process with the soonest deadline
+	private Process processWithSoonestDeadline(Process p) {
+		Process returnProcess = processList.takeProcessWithSoonestDeadline(p); // PI search through the ready queue and return the process with the soonest deadline
 		cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
 		return returnProcess;
 	}
