@@ -385,18 +385,26 @@ public class ProcessList {
 	 * PI searches through the ready queue and returns the process with the shortest period, removing it from the ready queue
 	 * @return process to return
 	 */
-	public Process takeProcessWithShortestPeriod() {
-		if(this.readyQueue.size() == 0) {
-			return null;
-		}
-		Process processWithShortestPeriod = this.readyQueue.get(0); // PI set the least process
-		for(Process process: this.readyQueue) { // PI loop through all processes in ready queue
-			if(process.getPeriod() < processWithShortestPeriod.getPeriod()) { // PI if the cur process' priority test is less...
-				processWithShortestPeriod = process; // PI current process' priority is higher - let's use this process as the highest priority
+	public Process getProcessWithShortestPeriod() {
+		Process lowestPeriod = this.readyQueue.get(0);
+		for(Process p: this.readyQueue) {
+			if(p.getPeriod() < lowestPeriod.getPeriod()) {
+				lowestPeriod = p;
 			}
 		}
-		this.readyQueue.remove(processWithShortestPeriod); // NV remove the process with the shortest period from the ready queue
-		return processWithShortestPeriod; // PI return the process with highest priority
+		
+		for(Process p: this.readyQueue) {
+			if(p.getPID() < lowestPeriod.getPID() && p.getPeriod() == lowestPeriod.getPeriod()) {
+				lowestPeriod = p;
+			}
+		}
+		return lowestPeriod; // PI return the process with highest priority
+	}
+	
+	public Process takeProcessWithShortestPeriod() {
+		Process p = this.getProcessWithShortestPeriod();
+		this.readyQueue.remove(p); // NV remove the process with the shortest period from the ready queue
+		return p;
 	}
 
 	/**
