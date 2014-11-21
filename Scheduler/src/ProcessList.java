@@ -47,7 +47,7 @@ public class ProcessList {
 						currentIndex++; // PI increment the current index
 					}
 					Process process = new Process(lineParameters[0], lineParameters[1], lineParameters[2], lineParameters[3], lineParameters[4]); // PI Create a new process based on the lineParams array
-					// System.out.println("Adding process: " + process.toString());
+					System.out.println("Adding process: " + process.toString());
 					processes.add(process); // PI add this process to our master list of processes
 				}
 				lineNumber++; // PI increment our line number so we can parse the next line (if not empty)
