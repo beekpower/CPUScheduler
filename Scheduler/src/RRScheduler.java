@@ -51,7 +51,8 @@ public class RRScheduler extends Scheduler {
 	}
 
 	private Process takeFirstProcessInReadyQueue() {
-		cpu.finalReport.addProcess(currentProcess); // PI add the current process to the final report
-		return processList.takeFirstProcessInReadyQueue();
+    Process returnProcess = processList.takeFirstProcessInReadyQueue(); // NV grab the process with the shortest CPU burst
+    cpu.finalReport.addProcess(returnProcess); // PI add the current process to the final report
+		return returnProcess; //PI return the process
 	}
 }
