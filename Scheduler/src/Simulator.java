@@ -71,12 +71,16 @@ public class Simulator {
 		//edfCPU.execute();
 		
 		// PI let's do some ranking for the different schedulers
-		ArrayList<Scheduler> schedulers = new ArrayList<Scheduler>();
-		schedulers.add(fcfsScheduler);
-		schedulers.add(sjfScheduler);
-		schedulers.add(rrScheduler);
-		schedulers.add(sjrScheduler);
-		schedulers.add(psScheduler);
+		ArrayList<Scheduler> firstStats = new ArrayList<Scheduler>();
+		firstStats.add(fcfsScheduler);
+		firstStats.add(sjfScheduler);
+		firstStats.add(rrScheduler);
+		firstStats.add(sjrScheduler);
+		firstStats.add(psScheduler);
+		
+		ArrayList<Scheduler> secondStats = new ArrayList<Scheduler>();
+		secondStats.add(prmScheduler);
+		secondStats.add(edfScheduler);
 		
 		// PI now let's print out some rankings
 		try {
@@ -86,13 +90,15 @@ public class Simulator {
 			fileWriter.write("\t\tScheduling Algorithm Placement\n");
 			fileWriter.write("==================================================\n");
 			fileWriter.write("Standard Schedulers:\n");
-			fileWriter.write("1. "+findLargestCalculatedRating(schedulers).readableName+"\n");
-			fileWriter.write("2. "+findLargestCalculatedRating(schedulers).readableName+"\n");
-			fileWriter.write("3. "+findLargestCalculatedRating(schedulers).readableName+"\n");
-			fileWriter.write("4. "+findLargestCalculatedRating(schedulers).readableName+"\n");
-			fileWriter.write("5. "+findLargestCalculatedRating(schedulers).readableName+"\n");
+			fileWriter.write("1. "+findLargestCalculatedRating(firstStats).readableName+"\n");
+			fileWriter.write("2. "+findLargestCalculatedRating(firstStats).readableName+"\n");
+			fileWriter.write("3. "+findLargestCalculatedRating(firstStats).readableName+"\n");
+			fileWriter.write("4. "+findLargestCalculatedRating(firstStats).readableName+"\n");
+			fileWriter.write("5. "+findLargestCalculatedRating(firstStats).readableName+"\n");
 			fileWriter.write("\n");
 			fileWriter.write("Real Time Schedulers:\n");
+			fileWriter.write("1. "+findLargestCalculatedRating(secondStats).readableName+"\n");
+			fileWriter.write("2. "+findLargestCalculatedRating(secondStats).readableName+"\n");
 			fileWriter.write("\n");
 			fileWriter.close(); // PI close the file writer
 		} catch (IOException e) {
